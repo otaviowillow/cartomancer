@@ -1,0 +1,836 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <h3>Glossary</h3>
+  <ul class="glossary">
+    <li><strong>Monster: </strong>Enemy AI</li>
+    <li><strong>Querent: </strong>Player controlled character</li>
+  </ul>
+
+  <ol class="tarot-cards">
+    <li>
+      <h2>The Fool</h2>
+
+      <p>The fool is about discard. In combat, the mechanic is <strong>confusion</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+
+            <th>+ Rare Action</th>
+            <th>+ Common Action</th>
+            <th>+ Fight</th>
+
+            <th>- Fight</th>
+            <th>- Common Action</th>
+            <th>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+
+          <td>At the end of your Querent phase, look at target opponent hand and pick a card</td>
+          <td>At the end of your Querent phase, Pick a random card from target opponent's hand</td>
+          <td>Confuses all monsters at the start of turn</td>
+
+          <td>At the end of your Querent phase, Target opponent looks at your hand and picks a card</td>
+          <td>At the end of your Querent phase, Target Opponent picks a random card from your hand</td>
+          <td>Querent gets confused at the start of turn</td>
+        </tr>
+
+        <tr>
+          <td>Yellow</td>
+          <td>Separate that card. At the start of target opponent's turn, that card is used on owner of the card</td>
+          <td>Separate that card. At the start of target opponent's turn, that card is used on owner of the card</td>
+          <td>None</th>
+          
+          <td>Separate that card. At the start of target opponent's turn, that card is used on owner of the card</td>
+          <td>Separate that card. At the start of target opponent's turn, that card is used on owner of the card</td>
+          <td>None</td>
+        </tr>
+
+        <tr>
+          <td>Blue</td>
+          <td>Discard that card</td>
+          <td>Discard that card</td>
+          <td>None</td>
+
+          <td>Discard that card</td>
+          <td>Discard that card</td>
+          <td>None</td>
+        </tr>
+
+        <tr>
+          <td>Other</td>
+          <td>Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</td>
+          <td>Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</td>
+          <td>None</td>
+          
+          <td>Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</td>
+          <td>Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</td>
+          <td>None</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Magician</h2>
+
+      <p>Deception? In combat, the mechanic is <strong>polymorph</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>Polymorphs monsters</td>
+
+          <td>???</td>
+          <td>???</td>
+          <td>Polymorphs your Querent</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The High Priestess</h2>
+
+      <p>The High Priestess is about healing and heal related buffs. In combat, the mechanic is <strong>heal</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>Heal Querent XX%</td>
+          <td>Heal Querent X%</td>
+          <td>Heal Querent</td>
+
+          <td>Heal Monsters</td>
+          <td>Heal Opponents X%</td>
+          <td>Heal Opponents XX%</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Emperess</h2>
+
+      <p>The Emperess is about card aquistion and protective buffs. In combat, the mechanic is <strong>protection</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>Cast Protective Shield on Querent</td>
+
+          <td>Cast Protective Shield on Monster</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Emperor</h2>
+
+      <p>The Emperor is about card stealing and offensive buffs. In combat, the mechanic is <strong>Double Attack</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>Cast Double Attack Aura on Querent</td>
+
+          <td>Cast Double Attack Aura on Monsters</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Hierophant</h2>
+
+      <p>The Hierophant is about summons that buffs and protects. In combat, the mechanic is <strong>Protective Summons</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+
+            <th>+ Rare Action</th>
+            <th>+ Common Action</th>
+            <th>+ Fight</th>
+
+            <th>- Rare Action</th>
+            <th>- Common Action</th>
+            <th>- Fight</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+
+          <td>Summons Archangel: Summon stays with you "permanently". Follows players around while alive.</td>
+          <td>Summons Angel: Summon lasts for X turns. Follows players around while alive.</td>
+          <td>Querent gains a Summon for the duration of the battle</td>
+
+          <td>Summons Fallen Archangel: Summon stays with you "permanently". Follows players around while alive.</td>
+          <td>Summons Fallen Angel: Summon lasts for X turns. Follows players around while alive.</td>
+          <td>Monsters get a Summon for the rest of the battle</td>
+        </tr>
+        <tr>
+          <td>Yellow</td>
+          <td>Tank: Tanks damage for the Querent. Has XXX Health</td>
+          <td>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</td>
+          <td>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</td>
+
+          <td>Tank: Tanks damage for monsters. Has X health. After killed for the first time, Y% of respawning at the start of new battle</td>
+          <td>Tank: Tanks damage for monsters. Has X health.</td>
+          <td>Tank: Tanks damage for monsters. Has X health.</td>
+        </tr>
+
+        <tr>
+          <td>Blue</td>
+          <td>Healer: Heals Querent for X. Y turns to recharge.</td>
+          <td>Healer: Heals Querent for X, Y times</td>
+          <td>Healer: Heals Querent for X for the duration of the battle</td>
+
+          <td>Healer: Heals Monsters for X. After killed for the first time, Y% of respawning at the start of new battle</td>
+          <td>Healer: Heals Monsters for X</td>
+          <td>Healer: Heals Monsters for X</td>
+        </tr>
+
+        <tr>
+          <td>Other</td>
+          <td>Watcher: Opens up a random 5x5 portion of the map permanently</td>
+          <td>Watcher: Opens up a random 5x5 portion of the map for X turns</td>
+          <td>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</td>
+
+          <td>Watcher: Opens up a random 5x5 portion of the map for your opponents permanently</td>
+          <td>Watcher: Opens up a random 5x5 portion of the map for your opponents for X turns</td>
+          <td>Tank: Tanks damage for monsters. Has X health.</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Lovers</h2>
+
+      <p>The Lovers is about providing and sharing player stats and sight. In combat, the mechanic is <strong>Life Steal</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>Applies Life Steal to Querent</td>
+
+          <td>Applies Life Steal to Monsters</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Chariot</h2>
+
+      <p>The Chariot is about mobility. In combat, the mechanic is <strong>Stun</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>Increases Querent mobility "permanently"</td>
+          <td>Increases Querent mobility for X turns</td>
+          <td>Stuns Monsters</td>
+
+          <td>Stuns the Querent</td>
+          <td>Decreases mobility for X turns</td>
+          <td>Stuns the Querent</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>Strength</h2>
+
+      <p>Strength is about combat damage and avoidance. In combat, the mechanic is <strong>Bonus Damages</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>Valiant Lion's Aura: Increased damage "permanently"</td>
+          <td>Lion's Aura: Increased damage next combat</td>
+          <td>Querent's attacks deals bonus damage</td>
+
+          <td>Monster's attacks deals bonus damage</td>
+          <td>Cowardly Lion's Aura: Querent will attempt to flee trough the entire combat next round</td>
+          <td>Super Cowardly Lion's Aura: Querent will attempt to flee trough the entire combat "permanently"</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Hermit</h2>
+
+      <p>The Hermit is about teleportation. In combat, the mechanic is <strong>Dodge</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>Querent has dodge</td>
+
+          <td>Monster has dodge</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>Wheel of Fortune</h2>
+
+      <p>Wheel of Fortune is about randomizing events. In combat, the mechanic is <strong>Random</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>Positive random rare Action</td>
+          <td>Positive random common Action</td>
+          <td>Querent gains a random combat mechanic</td>
+
+          <td>Monster gains a random combat mechani</td>
+          <td>Negative random rare Action</td>
+          <td>Negative random common Action</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>Justice</h2>
+
+      <p>Card advantage? In combat, the mechanic is <strong>Thorns</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>Querent gains Thorns</td>
+
+          <td>Monster gains Thorns</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Hanged Man</h2>
+
+      <p>The Hanged Man is about traps. In combat, the mechanic is <strong>Trap</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+
+            <th>+ Rare Action</th>
+            <th>+ Common Action</th>
+            <th>+ Fight</th>
+
+            <th>- Fight</th>
+            <th>- Common Action</th>
+            <th>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>Querent gets item: Advanced Trap</td>
+          <td>Querent gets item: Trap</td>
+          <td>Querent places Trap</td>
+
+          <td>Querent steps on Advanced Trap</td>
+          <td>Querent steps on Trap</td>
+          <td>Monster places Trap</td>
+        </tr>
+
+        <tr>
+          <td>Yellow</td>
+          <td>Scent Trap: ACTIVE - Players can see target location on Fog of War. Last XX turns</td>
+          <td>Scent Trap: ACTIVE - Players can see target location on Fog of War. Last X turns</td>
+          <td>Attracts minion to assist Querent</td>
+
+          <td>Scent Trap: ACTIVE - Players can see your location on Fog of War. Last XX turns</td>
+          <td>Scent Trap: ACTIVE - Players can see your location on Fog of War. Last X turns</td>
+          <td>Attracts minion to assist Monsters</td>
+        </tr>
+
+        <tr>
+          <td>Blue</td>
+          <td>Macumba Trap: ACTIVE - At the start of your turn, turn all fates facing down</td>
+          <td>Macumba Trap: ACTIVE - At the start of your turn, turn one fate facing down</td>
+          <td>Monsters do X less damage</td>
+
+          <td>Macumba Trap: ACTIVE - At the start of your turn, turn all fates facing down</td>
+          <td>Macumba Trap: ACTIVE - At the start of your turn, turn one fate facing down</td>
+          <td>Querent does X less damage</td>
+        </tr>
+
+        <tr>
+          <td>Other</td>
+          <td>Frozen Trap: ACTIVE - Frozen. Lose your turn</td>
+          <td>Frozen Trap: ACTIVE - You move one less tile. Last X turns</td>
+          <td>Freezes Monsters for one turn</td>
+
+          <td>Frozen Trap: ACTIVE - Frozen. Lose your turn</td>
+          <td>Frozen Trap: ACTIVE - You move one less tile. Last X turns</td>
+          <td>Freezes Querent for one turn</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>Death</h2>
+
+      <p>The Hanged Man is about damage dealing. In combat, the mechanic is <strong>Cripple</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>Overlord Death Knight's Aura: enemies receives a burst of damage "permanently"</td>
+          <td>Death Knight's Aura: enemies receives a burst of damage next combat</td>
+          <td>Querent bursts damage</td>
+
+          <td>Monster bursts damage</td>
+          <td>Querent is damaged</td>
+          <td>Querent is damaged every turn</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>Temperance</h2>
+
+      <p>Distribution??? In combat, the mechanic is <strong>???</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+
+            <th>+ Rare Action</th>
+            <th>+ Common Action</th>
+            <th>+ Fight</th>
+
+            <th>- Fight</th>
+            <th>- Common Action</th>
+            <th>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>???</td>
+
+          <td>???</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Devil</h2>
+
+      <p>The Devil is about summons that are mischievious and damage dealers. In combat, the mechanic is <strong>Agressive Summons</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+
+            <th>+ Rare Action</th>
+            <th>+ Common Action</th>
+            <th>+ Fight</th>
+
+            <th>- Rare Action</th>
+            <th>- Common Action</th>
+            <th>- Fight</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+
+          <td>Summons Demon General: Summon stays with you "permanently". Follows players around while alive.</td>
+          <td>Summons Demon: Summon lasts for X turns. Follows players around while alive.</td>
+          <td>Querent gains a Summon for the duration of the battle</td>
+
+          <td>Summons Evil Demon General: Summon stays with you "permanently". Follows players around while alive.</td>
+          <td>Summons Evil Demon: Summon lasts for X turns. Follows players around while alive.</td>
+          <td>Monsters get a Summon for the rest of the battle</td>
+        </tr>
+        <tr>
+          <td>Yellow</td>
+          <td>Suicidal: At the start of combat turn, blows up dealing X damage to all Monsters. Respawns every X turns</td>
+          <td>Suicidal: At the start of combat turn, blows up dealing X damage to all Monsters.</td>
+          <td>Suicidal: At the start of combat turn, blows up dealing X damage to all Monsters.</td>
+
+          <td>Suicidal: When it meets the player, blows up dealing X damage. Respawns every X turns. Spawns 5 tiles away from player.</td>
+          <td>Suicidal: When it meets the player, blows up dealing X damage. Spawns 5 tiles away from player.</td>
+          <td>Suicidal: Blows up dealing X damage at the start of Monsters combat turn.</td>
+        </tr>
+
+        <tr>
+          <td>Blue</td>
+          <td>Thief: Hunts opponent querent. On contact with it, opponent has to put a card face down on the table. When Thief returns to player, get that card.</td>
+          <td>Thief: Hunts opponent querent. On contact with it, opponent has to put a card face down on the table. When Thief returns to player, get that card and Thief disappears.</td>
+          <td>Thief: Get extra loot</td>
+
+          <td>Thief: When thief contacts you, put a card face down. Thief will run away from you and contact another player. That player then gets your card.</td>
+          <td>Thief: When thief contacts you, put a card face down. Thief will run away from you and contact another player. That player then gets your card and thief Disappears</td>
+          <td>Thief: Lose a Loot</td>
+        </tr>
+
+        <tr>
+          <td>Other</td>
+          <td>Shadow: Follows one random opponent Querent around for X turns. Then changes target</td>
+          <td>Shadow: Follows one random opponent Querent around for X turns. Then disappears</td>
+          <td>Suicidal: At the start of combat turn, blows up dealing X damage to all Monsters.</td>
+
+          <td>Shadow: When it meets the player, blows up dealing X damage. Respawns every X turns. Spawns 5 tiles away from player.</td>
+          <td>Shadow: When it meets the player, blows up dealing X damage. Spawns 5 tiles away from player.</td>
+          <td>Suicidal: At the start of combat turn, blows up dealing X damage to all Monsters.</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Tower</h2>
+
+      <p>The Tower is about visibility. In combat, the mechanic is <strong>Immunity</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>The High Tower Aura: Increased Visibility "permanently"</td>
+          <td>The Tower Aura: Increase Visibility this turn</td>
+          <td>The Querent is immune to a type of a damage</td>
+
+          <td>The Monster deals extra [type] of damage</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Star</h2>
+
+      <p>Goal visibility??? In combat, the mechanic is <strong>Blind</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>The Monsters are blind</td>
+
+          <td>The Querent is blind</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Moon</h2>
+
+      <p>Time of day??? In combat, the mechanic is <strong>Stealth</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>Querent tries to vanish every turn</td>
+
+          <td>Shadow monster spawns</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The Sun</h2>
+
+      <p>Time of day??? In combat, the mechanic is <strong>Damage over Time</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>Querent attacks stack a DoT</td>
+
+          <td>Monsters attacks stack a DoT</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>Judgment</h2>
+
+      <p>??? In combat, the mechanic is <strong>???</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>???</td>
+          <td>???</td>
+          <td>???</td>
+
+          <td>???</td>
+          <td>???</td>
+          <td>???</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>
+      <h2>The World</h2>
+
+      <p>The World is about events spawning. In combat, the mechanic is <strong>Bonus Loot</strong></p>
+
+      <table>
+        <thead>
+          <tr>
+            <td>Type</th>
+            <td>+ Rare Action</th>
+            <td>+ Common Action</th>
+            <td>+ Fight</th>
+            <td>- Fight</th>
+            <td>- Common Action</th>
+            <td>- Rare Action</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Basic</td>
+          <td>Spawns positive random rare or better shrine at the map</td>
+          <td>Spawns random common shrine at the map</td>
+          <td>At the end of combat, Monsters will give Querent loot</td>
+
+          <td>No loot at the end of combat</td>
+          <td>Despawns positive random rare or better shrine at the ma</td>
+          <td>Despawns random common shrine at the map</td>
+        </tr>
+      </table>
+    </li>
+  </ol>
+
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
