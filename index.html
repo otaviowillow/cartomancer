@@ -21,6 +21,9 @@
   <ul class="glossary">
     <li><strong>Monster: </strong>Enemy AI</li>
     <li><strong>Querent: </strong>Player controlled character</li>
+    <li><strong>Charm Cards: </strong>Charm cards are temporary cards, or cards with effects that don't proc every turn</li>
+    <li><strong>Curse Cards: </strong>Curse cards are negative effects for the player that proc every turn. They last until the end of the game or until removed</li>
+    <li><strong>Blessing Cards: </strong>Blessing cards are positive effects that proc every turn. They last until the end of the game or until removed</li>
   </ul>
 
   <ol class="tarot-cards">
@@ -155,29 +158,59 @@
     <li>
       <h2>The Emperess</h2>
 
-      <p>The Emperess is about card aquistion and protective buffs. In combat, the mechanic is <strong>protection</strong></p>
+      <p>The Emperess is about card aquistion and protective buffs. It deals its effects though giving cards and protection, instead of taking away</p>
+
+      <h3>Combat: Protection</h3>
 
       <table>
         <thead>
           <tr>
-            <td>Type</th>
-            <td>+ Rare Action</th>
-            <td>+ Common Action</th>
-            <td>+ Fight</th>
-            <td>- Fight</th>
-            <td>- Common Action</th>
-            <td>- Rare Action</th>
+            <th>Type</th>
+
+            <th>+ Rare Action</th>
+            <th>+ Common Action</th>
+            <th>+ Fight</th>
+
+            <th>- Rare Action</th>
+            <th>- Common Action</th>
+            <th>- Fight</th>
           </tr>
         </thead>
         <tr>
-          <td>Basic</td>
-          <td>???</td>
-          <td>???</td>
-          <td>Cast Protective Shield on Querent</td>
+          <td>Yellow</td>
 
-          <td>Cast Protective Shield on Monster</td>
-          <td>???</td>
-          <td>???</td>
+          <td>At the end of your Querent's Phase, look at the top three cards of the Player's Deck. Buy two and shuffle the other one</td>
+          <td>At the end of your Querent's Phase, buy one card from the Player's Deck</td>
+          <td>Querent gains a protective shield with X health</td>
+
+
+          <td>At the end of your Querent's Phase, get a CHARITY CURSE. CHARITY CURSE: All your opponents buy a card at the beggining of your turn. Flip this card and put three markers on it. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</td>
+          <td>At the end of your Querent's Phase, get a CHARITY CHARM and put a marker on it. CHARITY CHARM: All your opponents buy a card at the beggining of your turn. Remove a marker from this card. If at the beggining of your turn there are no markers left on this card, discard it</td>
+          <td>Monsters gain a protective shield with X health</td>
+        </tr>
+
+        <tr>
+          <td>Blue</td>
+
+          <td>At the end of your Querent's Phase, buy two cards from the discard pile. If it's empty, buy two cards from the Player's Deck</td>
+          <td>At the end of your Querent's Phase, buy a random card from the discard pile. If it's empty, buy a card from the Player's Deck</td>
+          <td>Querent gains a immunity shield that absorbs all damage during this battle</td>
+
+          <td>At the end of your Querent's Phase, get an AUTRUIST CURSE card. AUTRUIST CURSE: Instead of discarding cards, you now move them to a different pile. Players may choose to buy from that pile instead of the Player's Deck</td>
+          <td>At the end of your Querent's Phase, all enemy players buy a random card from the discard pile. If it's empty, they buy a card from the Player's Deck.</td>
+          <td>Monsters gains an immunity shield that absorbs all damage for two turns</td>
+        </tr>
+
+        <tr>
+          <td>Other</td>
+
+          <td>At the end of your Querent's Phase, get a RICH MAN'S BLESSING. RICH MAN'S BLESSING: Buy one card at the beggining of your turn, flip this card and put a marker on it. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</td>
+          <td>At the end of your Querent's Phase, get a RICH MAN'S CHARM and put three markers on it. RICH MAN'S CHARM: Once per turn, buy one extra card at the beggining of your turn and remove a marker. If at the beggining of your turn there are no markers left on this card, discard it</td>
+          <td>Querent attacks generate a shield with health equal to half the damage caused</td>
+
+          <td>At the end of your Querent's Phase, get a ??? CURSE. ??? CURSE: Instead of buying a card at the beggining of your turn, flip this card and put a marker on it. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</td>
+          <td>At the end of your Querent's Phase, get a FEAST CHARM card and put a marker on it. FEAST CHARM: Instead of buying a card this turn, you remove a marker from this card. If at the beggining of your turn there are no markers left on this card, discard it</td>
+          <td>Monsters attacks generate a shield with health equal to half the damage caused</td>
         </tr>
       </table>
     </li>
@@ -562,22 +595,49 @@
     <li>
       <h2>Death</h2>
 
-      <p>The Hanged Man is about damage dealing. In combat, the mechanic is <strong>Cripple</strong></p>
+      <p>The Hanged Man is about dealing direct damage and weakening. In combat, the mechanic is <strong>Cripple</strong></p>
 
       <table>
         <thead>
           <tr>
-            <td>Type</th>
-            <td>+ Rare Action</th>
-            <td>+ Common Action</th>
-            <td>+ Fight</th>
-            <td>- Fight</th>
-            <td>- Common Action</th>
-            <td>- Rare Action</th>
+            <th>Type</th>
+
+            <th>+ Rare Action</th>
+            <th>+ Common Action</th>
+            <th>+ Fight</th>
+
+            <th>- Rare Action</th>
+            <th>- Common Action</th>
+            <th>- Fight</th>
           </tr>
         </thead>
         <tr>
           <td>Basic</td>
+
+          <td>Overlord Death Knight's Aura: enemies receives a burst of damage "permanently"</td>
+          <td>Death Knight's Aura: enemies receives a burst of damage next combat</td>
+          <td>Querent bursts damage</td>
+
+          <td>Monster bursts damage</td>
+          <td>Querent is damaged</td>
+          <td>Querent is damaged every turn</td>
+        </tr>
+
+        <tr>
+          <td>Yellow</td>
+          
+          <td>Overlord Death Knight's Aura: enemies receives a burst of damage "permanently"</td>
+          <td>Death Knight's Aura: enemies receives a burst of damage next combat</td>
+          <td>Querent bursts damage</td>
+
+          <td>Monster bursts damage</td>
+          <td>Querent is damaged</td>
+          <td>Querent is damaged every turn</td>
+        </tr>
+
+        <tr>
+          <td>Basic</td>
+          
           <td>Overlord Death Knight's Aura: enemies receives a burst of damage "permanently"</td>
           <td>Death Knight's Aura: enemies receives a burst of damage next combat</td>
           <td>Querent bursts damage</td>
