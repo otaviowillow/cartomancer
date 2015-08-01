@@ -1,3 +1,135 @@
-table td {
-	border: 1px solid black;
+* {
+  margin: 0;
+  padding: 0;
+}
+.tarot-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.tarot-cards li {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  width: 200px;
+  height: 310px;
+  list-style: none;
+  margin: 25px;
+  margin-right: 0;
+}
+.tarot-cards h3,
+.tarot-cards p,
+.tarot-cards table {
+  display: none;
+}
+.tarot-cards h3,
+.tarot-cards .description {
+  background: white;
+  width: 100%;
+  color: #000;
+  text-align: center;
+}
+.tarot-cards h3,
+.tarot-cards .description {
+  background: white;
+  width: 100%;
+  color: #000 !important;
+}
+.tarot-cards h2 {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  background: #666;
+  color: white;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.tarot-cards table {
+  float: none;
+  width: 225px; 
+  margin: 0 auto;
+  text-align: center;
+    border: 1px solid red;
+}
+.tarot-cards table tr:nth-child(1) td {
+  background: yellow;
+}
+.tarot-cards table tr:nth-child(1) td p {
+  color: black;
+}
+.tarot-cards table tr:nth-child(2) td {
+  background: blue;
+}
+.tarot-cards table tr:nth-child(3) td {
+  background: gray;
+}
+.tarot-cards table td p {
+  display: block;
+  float: left; 
+  width: 50px;
+  height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+    border: 1px solid blue;
+}
+.tarot-cards table .positive {
+  color: blue;
+}
+.tarot-cards table .negative {
+  color: red;
+}
+.tarot-cards table.selected {
+  width: 100%; 
+}
+.tarot-cards table p.selected {
+  white-space: initial;
+  overflow: initial;
+  width: auto;
+  height: auto;
+}
+.tarot-cards table th {
+  text-align: center;
+  font-size: 25px;
+}
+
+.tarot-cards .show {
+  background-size: contain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  margin: 0;
+  padding: 50px 0 0 0;
+}
+.tarot-cards .show:after {
+  content: '';
+  background: rgba(0, 0, 0, 0.8);
+  /*background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%);*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tarot-cards .show h2 {
+  top: 0;
+  font-size: 24px;
+  height: 35px;
+  padding: 14px 0 0 0;
+  z-index: 4;
+}
+.tarot-cards .show h3,
+.tarot-cards .show p,
+.tarot-cards .show table {
+  position: relative;
+  display: inherit;
+  color: white;
+  z-index: 5;
 }
