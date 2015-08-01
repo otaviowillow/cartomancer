@@ -22,8 +22,8 @@
     <li><strong>Monster: </strong>Enemy AI</li>
     <li><strong>Querent: </strong>Player controlled character</li>
     <li><strong>Charm Cards: </strong>Charm cards are temporary cards, or cards with effects that don't proc every turn</li>
-    <li><strong>Curse Cards: </strong>Curse cards are negative effects for the player that proc every turn. They last until the end of the game or until removed</li>
-    <li><strong>Blessing Cards: </strong>Blessing cards are positive effects that proc every turn. They last until the end of the game or until removed</li>
+    <li><strong>Curse Cards: </strong>Curse cards are effects for the player that proc every turn. They last until the end of the game or until removed</li>
+    <li><strong>Blessing Cards: </strong>Blessing cards are effects that proc every turn. They last until the end of the game or until removed</li>
   </ul> -->
 
   <ol class="tarot-cards">
@@ -34,12 +34,12 @@
 
       <h3>Combat: Confusion</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-            <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -61,11 +61,11 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
-          <th><span class="icon-rare negative"></span></th>
-          <th><span class="icon-common negative"></span></th>
-          <th><span class="icon-attack negative"></span></th>
+          <th><span class="icon-rare"></span></th>
+          <th><span class="icon-common"></span></th>
+          <th><span class="icon-attack"></span></th>
         </thead>
 
         <tr>
@@ -95,12 +95,12 @@
 
       <h3>Combat: Polymorph</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -120,12 +120,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -153,12 +153,12 @@
 
       <h3>Combat: Heal</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -178,12 +178,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -211,12 +211,12 @@
 
       <h3>Combat: Protection</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -238,11 +238,11 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
-          <th><span class="icon-rare negative"></span></th>
-          <th><span class="icon-common negative"></span></th>
-          <th><span class="icon-attack negative"></span></th>
+          <th><span class="icon-rare"></span></th>
+          <th><span class="icon-common"></span></th>
+          <th><span class="icon-attack"></span></th>
         </thead>
 
         <tr>
@@ -272,22 +272,50 @@
 
       <h3>Combat: Double Attack</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
-          <td><p>At the end of your Querent's turn, target opponent gets a DEBT CHARM and you get an ENCHANTER TOKEN. DEBT CHARM: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If it has no tokens, pass the ENCHANTER TOKEN to a random player and add three more markers to this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and flip this card.</p></td>
+          <td><p>At the end of your Querent's turn, target opponent gets a DEBT CURSE and you get an ENCHANTER TOKEN. DEBT CURSE: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If it has no tokens, pass the ENCHANTER TOKEN to a random player and add three more markers to this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and flip this card.</p></td>
           <td><p>At the end of your Querent's turn, target opponent gets a DEBT CHARM and you get an ENCHANTER TOKEN. DEBT CHARM: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If this has no tokens, discard this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and discard this card.</p></td>
-          <td><p>Cast Double Attack Aura on Querent</p></td>
+          <td><p>Querent attacks twice. Second attack deals 50% damage from the first one</p></td>
         </tr>
 
         <tr>
-          <td><p></p></td>
+          <td><p>At the end of your Querent's turn, look at target opponent's hand and pick two cards. Steal one card and discard the other.</p></td>
+          <td><p>At the end of your Querent's turn, randomly pick a card from target opponent's hand. Steal that card.</p></td>
+          <td><p>Querent attacks twice. Second attack reduces target armor by X%</p></td>
+        </tr>
+
+        <tr>
+          <td><p>At the end of your Querent's turn, all opponents discard their hand OR give two cards from their hands to you.</p></td>
+          <td><p>At the end of your Querent's turn, all opponents discard three cards OR give you one card from their hands.</p></td>
+          <td><p>Querent attacks twice. Second attack deals 100% of the damage but damages querent for 30% of the attack</p></td>
+        </tr>
+      </table>
+
+      <table class="negative">
+        <tr>
+          <td><p>At the end of your Querent's turn, get a DEBT CURSE and give target opponent an ENCHANTER TOKEN. DEBT CURSE: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If it has no tokens, pass the ENCHANTER TOKEN to a random player and add three more markers to this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and flip this card.</p></td>
+          <td><p>At the end of your Querent's turn, get a DEBT CURSE and give target opponent an ENCHANTER TOKEN. DEBT CHARM: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If this has no tokens, discard this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and discard this card.</p></td>
+          <td><p>Enemy attacks twice. Second attack deals 50% damage from the first one</p></td>
+        </tr>
+
+        <tr>
+          <td><p>At the end of your Querent's turn, target opponent looks at your hand and pick two cards then steals one and discards the other.</p></td>
+          <td><p>At the end of your Querent's turn, target opponent randomly picks a card from your hand and steals that card.</p></td>
+          <td><p>Enemy attacks twice. Second attack reduces target armor by X%</p></td>
+        </tr>
+
+        <tr>
+          <td><p>At the end of your Querent's turn, shuffle your hand back into the Player's Deck.</p></td>
+          <td><p>At the end of your Querent's turn, shuffle two cards back into the Player's Deck.</p></td>
+          <td><p>Enemy attacks twice. Second attack deals 100% of the damage but damages querent for 30% of the attack</p></td>
         </tr>
       </table>
     </li>
@@ -299,12 +327,12 @@
 
       <h3>Combat: Protective Summons</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -326,12 +354,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -361,12 +389,12 @@
 
       <h3>Combat: Life Steal</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -386,12 +414,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -419,12 +447,12 @@
 
       <h3>Combat: Stun</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -448,12 +476,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -485,16 +513,16 @@
 
       <h3>Combat: Bonus Damage</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
             <td><p>Type</th>
-            <td><p><span class="icon-attack positive"></span></th>
-            <td><p><span class="icon-common positive"></span></th>
-            <td><p><span class="icon-attack positive"></span></th>
-            <td><p><span class="icon-attack negative"></span></th>
-            <td><p><span class="icon-common negative"></span></th>
-            <td><p><span class="icon-rare negative"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-common"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-common"></span></th>
+            <td><p><span class="icon-rare"></span></th>
           </tr>
         </thead>
         <tr>
@@ -517,12 +545,12 @@
 
       <h3>Combat: Dodge</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -542,12 +570,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -575,16 +603,16 @@
 
       <h3>Combat: Random</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
             <td><p>Type</th>
-            <td><p><span class="icon-attack positive"></span></th>
-            <td><p><span class="icon-common positive"></span></th>
-            <td><p><span class="icon-attack positive"></span></th>
-            <td><p><span class="icon-attack negative"></span></th>
-            <td><p><span class="icon-common negative"></span></th>
-            <td><p><span class="icon-rare negative"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-common"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-common"></span></th>
+            <td><p><span class="icon-rare"></span></th>
           </tr>
         </thead>
         <tr>
@@ -607,12 +635,12 @@
 
       <h3>Combat: Thorns</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -632,12 +660,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -665,12 +693,12 @@
 
       <h3>Combat: Trap</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -692,12 +720,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-attack negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-rare negative"></span></th>
+            <th><span class="icon-attack"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-rare"></span></th>
           </tr>
         </thead>
 
@@ -728,12 +756,12 @@
 
       <h3>Combat: Cripple</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -753,12 +781,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -786,12 +814,12 @@
 
       <h3>Combat: ???</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -811,12 +839,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -844,12 +872,12 @@
 
       <h3>Aggressive Summons</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -871,12 +899,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -910,12 +938,12 @@
 
       <h3>Combat: Immunity</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -935,12 +963,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -968,12 +996,12 @@
 
       <h3>Combat: Blind</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -993,12 +1021,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -1026,12 +1054,12 @@
 
       <h3>Combat: Stealth</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -1051,12 +1079,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -1084,12 +1112,12 @@
 
       <h3>Combat: Damage over Time</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -1109,12 +1137,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -1142,12 +1170,12 @@
 
       <h3>Combat: ???</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
-              <th><span class="icon-rare positive"></span></th>
-            <th><span class="icon-common positive"></span></th>
-            <th><span class="icon-attack positive"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -1167,12 +1195,12 @@
         </tr>
       </table>
 
-      <table>
+      <table class="negative">
         <thead>
           <tr>
-              <th><span class="icon-rare negative"></span></th>
-            <th><span class="icon-common negative"></span></th>
-            <th><span class="icon-attack negative"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
@@ -1200,26 +1228,26 @@
 
       <h3>Combat: Bonus Loot</h3>
 
-      <table>
+      <table class="positive">
         <thead>
           <tr>
             <td><p>Type</th>
-            <td><p><span class="icon-attack positive"></span></th>
-            <td><p><span class="icon-common positive"></span></th>
-            <td><p><span class="icon-attack positive"></span></th>
-            <td><p><span class="icon-attack negative"></span></th>
-            <td><p><span class="icon-common negative"></span></th>
-            <td><p><span class="icon-rare negative"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-common"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-attack"></span></th>
+            <td><p><span class="icon-common"></span></th>
+            <td><p><span class="icon-rare"></span></th>
           </tr>
         </thead>
         <tr>
           <td><p>Basic</p></td>
-          <td><p>Spawns positive random rare or better shrine at the map</p></td>
+          <td><p>Spawns random rare or better shrine at the map</p></td>
           <td><p>Spawns random common shrine at the map</p></td>
           <td><p>At the end of combat, Monsters will give Querent loot</p></td>
 
           <td><p>No loot at the end of combat</p></td>
-          <td><p>Despawns positive random rare or better shrine at the ma</p></td>
+          <td><p>Despawns random rare or better shrine at the ma</p></td>
           <td><p>Despawns random common shrine at the map</p></td>
         </tr>
       </table>
