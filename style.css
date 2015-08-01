@@ -53,7 +53,6 @@
   width: 225px; 
   margin: 0 auto;
   text-align: center;
-    border: 1px solid red;
 }
 .tarot-cards table tr:nth-child(1) td {
   background: yellow;
@@ -75,7 +74,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-    border: 1px solid blue;
 }
 .tarot-cards table .positive {
   color: blue;
@@ -132,4 +130,26 @@
   display: inherit;
   color: white;
   z-index: 5;
+}
+
+@media all and (min-width:960px) and (max-width: 1024px) {
+  .tarot-cards h2 {
+    font-size: 5em;
+  }
+  .tarot-cards li {
+    width: 90%;
+    height: 1200px;
+    margin: 0 0 100px 0;
+  }
+  .tarot-cards table {
+    width: 100%;
+  }
+  .tarot-cards table td p {
+    width: 200px;
+    height: 200px;
+  }
+  .tarot-cards table td,
+  .tarot-cards table th {
+    font-size: 4em;
+  }
 }
