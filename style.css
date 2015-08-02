@@ -160,32 +160,48 @@ li {
 /* Mobile */
 
 @media all and (min-width:960px) and (max-width: 1024px) {
-  .tarot-cards h2 {
-    font-size: 5em;
-  }
-  .tarot-cards li {
-    width: 90%;
-    height: 1200px;
-    margin: 0 0 100px 0;
-  }
-  .tarot-cards table {
-    width: 100%;
-  }
-  .tarot-cards table td p {
-    width: 200px;
-    height: 200px;
-  }
-  .tarot-cards table td,
-  .tarot-cards table th {
-    font-size: 4em;
-  }
+.tarot-cards li {
+  width: 90%;
+  margin: 5%;
+  margin-bottom: 0;
 }
-
-/*.positive {
-  background: blue;
-  color: white;
+.tarot-cards .show {
+  background: white;
+  margin: 0;
 }
-.negative {
-  background: red;
-  color: white;
-}*/
+.tarot-cards .show article {
+  width: 100%;
+}
+.tarot-cards .show h2 {
+  font-size: 4em;
+}
+.tarot-cards .show h3,
+.tarot-cards .show .description {
+  display: none;
+}
+.tarot-cards .show img {
+  opacity: .1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.tarot-cards .show table {
+  width: 100%;
+}
+.tarot-cards .show th {
+  font-size: 6em;
+}
+.tarot-cards .show td {
+  font-size: 5em;
+}
+.tarot-cards .show td {
+  width: 200px;
+  height: 200px;
+}
+.tarot-cards .show .selected td {
+  width: 0;
+  height: 0;
+}

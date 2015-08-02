@@ -15,7 +15,7 @@ $('.tarot-cards li').each(function(index){
   $('td').on('click', function() {
     $('table').removeClass('selected');
     $('td p').removeClass('selected');
-    $(this).children('p').addClass('selected');
+    $(this).children('p').toggleClass('selected');
     $(this).parents('table').addClass('selected');
   })
 })
