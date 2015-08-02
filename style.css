@@ -2,69 +2,139 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: arial;
+  color: rgba(0, 0, 0, 0.7);
+}
+li {
+  list-style: none;
+}
 .tarot-cards {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   justify-content: center;
+    border: 1px solid red;
 }
 .tarot-cards li {
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-  position: relative;
-  width: 200px;
-  height: 310px;
-  list-style: none;
-  margin: 25px;
-  margin-right: 0;
+  width: 230px;
+  padding: 10px;
+  cursor: pointer;
 }
-.tarot-cards h3,
-.tarot-cards p,
-.tarot-cards table {
-  display: none;
-}
-.tarot-cards h3,
-.tarot-cards .description {
-  background: white;
+.tarot-cards li img {
   width: 100%;
-  color: #000;
-  text-align: center;
 }
-.tarot-cards h3,
-.tarot-cards .description {
-  background: white;
-  width: 100%;
-  color: #000 !important;
-}
-.tarot-cards h2 {
-  position: absolute;
-  bottom: -22px;
-  left: 0;
-  background: #666;
-  color: white;
+.tarot-cards li h2,
+.tarot-cards li h3 {
+  background: #f44336;
   width: 100%;
   font-size: 18px;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  margin: -4px 0 0 0;  
 }
-.tarot-cards table {
-  float: none;
-  width: 225px; 
-  margin: 0 auto;
+.tarot-cards .description,
+.tarot-cards .show h3 {
+  background: #ef9a9a;
+}
+.tarot-cards .done h2,
+.tarot-cards .done h3 {
+  background: #4caf50;
+}
+.tarot-cards .done .description,
+.tarot-cards .done.show h3 {
+  background: #81c784;
+}
+.tarot-cards .incomplete h2,
+.tarot-cards .incomplete h3 {
+  background: #ffc107;
+}
+.tarot-cards .incomplete .description,
+.tarot-cards .incomplete.show h3 {
+  background: #ffe082;
+}
+.tarot-cards li h2 {
+  color: white;
+  padding: .5em 0 0 0;
+  cursor: pointer;
+}
+.tarot-cards li h3 {
+  font-size: 12px;
+  padding: .4em 0 .8em 0;
+}
+.tarot-cards li .description {
+  display: none;
+}
+.tarot-cards li table {
+  display: none;
+}
+
+
+.tarot-cards .show {
+  display: flex;
+  background: rgba(250, 250, 250, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  cursor: default;
+}
+.tarot-cards .show article {
+  display: flex;
+  flex-flow: row wrap;
+  width: 65%;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+.tarot-cards .show img {
+  width: 35%;
+}
+.tarot-cards .show header {
+  display: block;
+  float: left;
+  align-self: flex-start;
+  width: 100%;
+}
+.tarot-cards .show h2,
+.tarot-cards .show h3 {
+  margin: 0;
+}
+.tarot-cards .show .description {
+  display: block;
+  text-align: center;
+  padding: 10px 0 20px 0;
+  margin: 0;
+}
+.tarot-cards .show table {
+  display: table;
+  width: 35%;
+  padding: 0 12%;
+}
+.tarot-cards table th {
+  text-align: center;
+  font-size: 32px;
+}
+.tarot-cards .positive th {
+  color: #2196f3;
+}
+.tarot-cards .negative th {
+  color: #f44336;
+}
+.tarot-cards .show table td {
   text-align: center;
 }
 .tarot-cards table tr:nth-child(1) td {
-  background: yellow;
-}
-.tarot-cards table tr:nth-child(1) td p {
-  color: black;
+  background: #fff176;
 }
 .tarot-cards table tr:nth-child(2) td {
-  background: blue;
+  background: #90caf9;
 }
 .tarot-cards table tr:nth-child(3) td {
-  background: gray;
+  background: #b0bec5;
 }
 .tarot-cards table td p {
   display: block;
@@ -74,12 +144,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.tarot-cards table .positive {
-  color: blue;
-}
-.tarot-cards table .negative {
-  color: red;
+  text-indent: -9999px;
 }
 .tarot-cards table.selected {
   width: 100%; 
@@ -89,67 +154,54 @@
   overflow: initial;
   width: auto;
   height: auto;
-}
-.tarot-cards table th {
-  text-align: center;
-  font-size: 25px;
+  text-indent: initial;
 }
 
-.tarot-cards .show {
-  background-size: contain;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  margin: 0;
-  padding: 50px 0 0 0;
+/* Mobile */
+
+@media all and (min-width:960px) and (max-width: 1024px) {
+.tarot-cards li {
+  width: 90%;
+  margin: 5%;
+  margin-bottom: 0;
 }
-.tarot-cards .show:after {
-  content: '';
-  background: rgba(0, 0, 0, 0.8);
-  /*background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%);*/
+.tarot-cards .show {
+  background: white;
+  margin: 0;
+}
+.tarot-cards .show article {
+  width: 100%;
+}
+.tarot-cards .show h2 {
+  font-size: 4em;
+}
+.tarot-cards .show h3,
+.tarot-cards .show .description {
+  display: none;
+}
+.tarot-cards .show img {
+  opacity: .1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
-.tarot-cards .show h2 {
-  top: 0;
-  font-size: 24px;
-  height: 35px;
-  padding: 14px 0 0 0;
-  z-index: 4;
-}
-.tarot-cards .show h3,
-.tarot-cards .show p,
 .tarot-cards .show table {
-  position: relative;
-  display: inherit;
-  color: white;
-  z-index: 5;
+  width: 100%;
 }
-
-@media all and (min-width:960px) and (max-width: 1024px) {
-  .tarot-cards h2 {
-    font-size: 5em;
-  }
-  .tarot-cards li {
-    width: 90%;
-    height: 1200px;
-    margin: 0 0 100px 0;
-  }
-  .tarot-cards table {
-    width: 100%;
-  }
-  .tarot-cards table td p {
-    width: 200px;
-    height: 200px;
-  }
-  .tarot-cards table td,
-  .tarot-cards table th {
-    font-size: 4em;
-  }
+.tarot-cards .show th {
+  font-size: 6em;
+}
+.tarot-cards .show td {
+  font-size: 5em;
+}
+.tarot-cards .show td {
+  width: 200px;
+  height: 200px;
+}
+.tarot-cards .show .selected td {
+  width: 0;
+  height: 0;
 }
