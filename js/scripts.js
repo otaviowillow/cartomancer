@@ -2,6 +2,7 @@ $('.tarot-cards li').each(function(index){
 	$(this).children('img').attr('src', 'img/'+index+'.jpg');
 
   $(this).on('click', function() {
+    $('body').css('overflow', 'hidden');
     $('li').removeClass('show');
     $(this).addClass('show');
   })
@@ -9,7 +10,8 @@ $('.tarot-cards li').each(function(index){
   $('h2').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    $('li').removeClass('show')
+    $('body').css('overflow', 'auto');
+    $('li').removeClass('show');
   })
 
   $('td').on('click', function() {

@@ -81,6 +81,7 @@ li {
   height: 100%;
   overflow: auto;
   cursor: default;
+  z-index: 5;
 }
 .tarot-cards .show article {
   display: flex;
