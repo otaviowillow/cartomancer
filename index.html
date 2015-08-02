@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   <title>Cartomancer</title>
-  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/be3d399831/UntitledProject1/style.css">
+  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/fdc9382200/UntitledProject1/style.css">
   <meta name="description" content="Let's play">
   <meta name="author" content="SitePoint">
 
@@ -27,367 +27,401 @@
   </ul> -->
 
   <ol class="tarot-cards">
-    <li>
-      <h2>The Fool</h2>
+    <li class="done show">
+      <img />
+        <article>
+          <header>
+          <h2>The Fool</h2>
 
-      <p class="description">The fool is about discarding and self indulgence</p>
+          <p class="description">The fool is about discarding and self indulgence</p>
 
-      <h3>Combat: Confusion</h3>
+          <h3>Confusion</h3>
+        </header>
 
-      <table class="positive">
-        <thead>
+        <table class="positive">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
           <tr>
+            <td><p>At the end of your Querent phase, look at target opponent hand and pick a card. Separate that card. At the start of target opponent's turn, that card is used on owner of the card</p></td>
+            <td><p>At the end of your Querent phase, pick a random card from target opponent's hand. Separate that card. At the start of target opponent's turn, that card is used on owner of the card</p></td>
+            <td><p>Monsters gets confused at the start of turn. X% more damage from confusion hits</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent phase, look at target opponent hand and pick a card. Discard that card</p></td>
+            <td><p>At the end of your Querent phase, pick a random card from target opponent's hand. Separate that card. Discard that card</p></td>
+            <td><p>Monsters gets confused at the start of turn. X% chance to stun on confusion hit</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent phase, look at target opponent hand and pick a card. Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</p></td>
+            <td><p>At the end of your Querent phase, pick a random card from target opponent's hand. Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</p></td>
+            <td><p>Monsters gets confused at the start of turn. X% chance to heal opponent on confusion hit</p></td>
+          </tr>
+        </table>
+
+        <table class="negative">
+          <thead>
             <th><span class="icon-rare"></span></th>
             <th><span class="icon-common"></span></th>
             <th><span class="icon-attack"></span></th>
+          </thead>
+
+          <tr>
+            <td><p>At the end of your Querent phase, target opponent looks at your hand and picks a card. Separate that card. At the start of target opponent's turn, that card is used on owner of the card</p></td>
+            <td><p>At the end of your Querent phase, target opponent picks a random card from your hand. Separate that card. At the start of target opponent's turn, that card is used on owner of the card</p></td>
+            <td><p>Querent gets confused at the start of turn. X% more damage from confusion hits</p></td>
           </tr>
-        </thead>
-        <tr>
-          <td><p>At the end of your Querent phase, look at target opponent hand and pick a card. Separate that card. At the start of target opponent's turn, that card is used on owner of the card</p></td>
-          <td><p>At the end of your Querent phase, pick a random card from target opponent's hand. Separate that card. At the start of target opponent's turn, that card is used on owner of the card</p></td>
-          <td><p>Monsters gets confused at the start of turn. X% more damage from confusion hits</p></td>
-        </tr>
 
-        <tr>
-          <td><p>At the end of your Querent phase, look at target opponent hand and pick a card. Discard that card</p></td>
-          <td><p>At the end of your Querent phase, pick a random card from target opponent's hand. Separate that card. Discard that card</p></td>
-          <td><p>Monsters gets confused at the start of turn. X% chance to stun on confusion hit</p></td>
-        </tr>
+          <tr>
+            <td><p>At the end of your Querent phase, target opponent looks at your hand and picks a card. Discard that card</p></td>
+            <td><p>At the end of your Querent phase, target opponent picks a random card from your hand. Discard that card</p></td>
+            <td><p>Querent gets confused at the start of turn. X% chance to stun on confusion hit</p></td>
+          </tr>
 
-        <tr>
-          <td><p>At the end of your Querent phase, look at target opponent hand and pick a card. Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</p></td>
-          <td><p>At the end of your Querent phase, pick a random card from target opponent's hand. Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</p></td>
-          <td><p>Monsters gets confused at the start of turn. X% chance to heal opponent on confusion hit</p></td>
-        </tr>
-      </table>
-
-      <table class="negative">
-        <thead>
-          <th><span class="icon-rare"></span></th>
-          <th><span class="icon-common"></span></th>
-          <th><span class="icon-attack"></span></th>
-        </thead>
-
-        <tr>
-          <td><p>At the end of your Querent phase, target opponent looks at your hand and picks a card. Separate that card. At the start of target opponent's turn, that card is used on owner of the card</p></td>
-          <td><p>At the end of your Querent phase, target opponent picks a random card from your hand. Separate that card. At the start of target opponent's turn, that card is used on owner of the card</p></td>
-          <td><p>Querent gets confused at the start of turn. X% more damage from confusion hits</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent phase, target opponent looks at your hand and picks a card. Discard that card</p></td>
-          <td><p>At the end of your Querent phase, target opponent picks a random card from your hand. Discard that card</p></td>
-          <td><p>Querent gets confused at the start of turn. X% chance to stun on confusion hit</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent phase, target opponent looks at your hand and picks a card. Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</p></td>
-          <td><p>At the end of your Querent phase, target opponent picks a random card from your hand. Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</p></td>
-          <td><p>Querent gets confused at the start of turn. X% chance to heal opponent on confusion hit</p></td>
-        </tr>
-      </table>
+          <tr>
+            <td><p>At the end of your Querent phase, target opponent looks at your hand and picks a card. Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</p></td>
+            <td><p>At the end of your Querent phase, target opponent picks a random card from your hand. Separate that card. Owner of that card may choose to discard a card and buy the separated card. Discard that card before the start of next turn</p></td>
+            <td><p>Querent gets confused at the start of turn. X% chance to heal opponent on confusion hit</p></td>
+          </tr>
+        </table>
+      </article>
     </li>
 
     <li>
-      <h2>The Magician</h2>
+      <img />
+      <article>
+        <header>
+          <h2>The Magician</h2>
 
-      <p class="description">Deception?</p>
+          <p class="description">Deception?</p>
 
-      <h3>Combat: Polymorph</h3>
+          <h3>Polymorph</h3>
+        </header>
 
-      <table class="positive">
-        <thead>
+        <table class="positive">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
           <tr>
-            <th><span class="icon-rare"></span></th>
-            <th><span class="icon-common"></span></th>
-            <th><span class="icon-attack"></span></th>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
           </tr>
-        </thead>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-      </table>
-
-      <table class="negative">
-        <thead>
           <tr>
-            <th><span class="icon-rare"></span></th>
-            <th><span class="icon-common"></span></th>
-            <th><span class="icon-attack"></span></th>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
           </tr>
-        </thead>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-      </table>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+        </table>
+
+        <table class="negative">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+        </table>
+      </article>
     </li>
 
     <li>
-      <h2>The High Priestess</h2>
+      <img />
+      <article>
+          <header>
+          <h2>The High Priestess</h2>
 
-      <p class="description">The High Priestess is about healing and heal related buffs.</p>
+          <p class="description">The High Priestess is about healing and heal related buffs.</p>
 
-      <h3>Combat: Heal</h3>
+          <h3>Heal</h3>
+        </header>
 
-      <table class="positive">
-        <thead>
+        <table class="positive">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
           <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+        </table>
+
+        <table class="negative">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+          <tr>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+            <td><p>???</p></td>
+          </tr>
+        </table>
+      </article>
+    </li>
+
+    <li class="done">
+      <img />
+      <article>
+        <header>
+          <h2>The Emperess</h2>
+
+          <p class="description">The Emperess is about card aquistion and protective buffs. It deals its effects though giving cards and protection, instead of taking away</p>
+
+          <h3>Protection</h3>
+        </header>
+
+        <table class="positive">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+          <tr>
+            <td><p>At the end of your Querent's Phase, look at the top three cards of the Player's Deck. Buy two and shuffle the other one</p></td>
+            <td><p>At the end of your Querent's Phase, buy one card from the Player's Deck</p></td>
+            <td><p>Querent gains a protective shield with X health</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent's Phase, buy two cards from the discard pile. If it's empty, buy two cards from the Player's Deck</p></td>
+            <td><p>At the end of your Querent's Phase, buy a random card from the discard pile. If it's empty, buy a card from the Player's Deck</p></td>
+            <td><p>Querent gains a immunity shield that absorbs all damage during this battle</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent's Phase, get a RICH MAN'S BLESSING. RICH MAN'S BLESSING: Once per turn, buy one extra card at the beggining of your turn, flip and put a marker on this card. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</p></td>
+            <td><p>At the end of your Querent's Phase, get a RICH MAN'S CHARM and put three markers on it. RICH MAN'S CHARM: Once per turn, buy one extra card at the beggining of your turn and remove a marker from this card. If at the beggining of your turn there are no markers left on this card, discard it</p></td>
+            <td><p>Querent attacks generate a shield with health equal to half the damage caused</p></td>
+          </tr>
+        </table>
+
+        <table class="negative">
+          <thead>
             <th><span class="icon-rare"></span></th>
             <th><span class="icon-common"></span></th>
             <th><span class="icon-attack"></span></th>
-          </tr>
-        </thead>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-      </table>
+          </thead>
 
-      <table class="negative">
-        <thead>
           <tr>
-            <th><span class="icon-rare"></span></th>
-            <th><span class="icon-common"></span></th>
-            <th><span class="icon-attack"></span></th>
+            <td><p>At the end of your Querent's Phase, get a CHARITY CURSE. CHARITY CURSE: All your opponents buy a card at the beggining of your turn. Flip this card and put three markers on it. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</p></td>
+            <td><p>At the end of your Querent's Phase, get a CHARITY CHARM and put a marker on it. CHARITY CHARM: All your opponents buy a card at the beggining of your turn. Remove a marker from this card. If at the beggining of your turn there are no markers left on this card, discard it</p></td>
+            <td><p>Monsters gain a protective shield with X health</p></td>
           </tr>
-        </thead>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-      </table>
+
+          <tr>
+            <td><p>At the end of your Querent's Phase, get an ALTRUIST CURSE card. ALTRUIST CURSE: Instead of discarding cards, you now move them to a different pile. Players may choose to buy from that pile instead of the Player's Deck</p></td>
+            <td><p>At the end of your Querent's Phase, all enemy players buy a random card from the discard pile. If it's empty, they buy a card from the Player's Deck.</p></td>
+            <td><p>Monsters gains an immunity shield that absorbs all damage for two turns</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent's Phase, get a ??? CURSE. ??? CURSE: Instead of buying a card at the beggining of your turn, flip this card and put a marker on it. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</p></td>
+            <td><p>At the end of your Querent's Phase, get a FEAST CHARM card and put a marker on it. FEAST CHARM: Instead of buying a card this turn, you remove a marker from this card. If at the beggining of your turn there are no markers left on this card, discard it</p></td>
+            <td><p>Monsters attacks generate a shield with health equal to half the damage caused</p></td>
+          </tr>
+        </table>
+      </article>
+    </li>
+
+    <li class="done">
+      <img />
+      <article>
+          <header>
+          <h2>The Emperor</h2>
+
+          <p class="description">The Emperor is about card stealing and offensive buffs.</p>
+
+          <h3>Double Attack</h3>
+        </header>
+
+        <table class="positive">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+          <tr>
+            <td><p>At the end of your Querent's turn, target opponent gets a DEBT CURSE and you get an ENCHANTER TOKEN. DEBT CURSE: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If it has no tokens, pass the ENCHANTER TOKEN to a random player and add three more markers to this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and flip this card.</p></td>
+            <td><p>At the end of your Querent's turn, target opponent gets a DEBT CHARM and you get an ENCHANTER TOKEN. DEBT CHARM: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If this has no tokens, discard this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and discard this card.</p></td>
+            <td><p>Querent attacks twice. Second attack deals 50% damage from the first one</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent's turn, look at target opponent's hand and pick two cards. Steal one card and discard the other.</p></td>
+            <td><p>At the end of your Querent's turn, randomly pick a card from target opponent's hand. Steal that card.</p></td>
+            <td><p>Querent attacks twice. Second attack reduces target armor by X%</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent's turn, all opponents discard their hand OR give two cards from their hands to you.</p></td>
+            <td><p>At the end of your Querent's turn, all opponents discard three cards OR give you one card from their hands.</p></td>
+            <td><p>Querent attacks twice. Second attack deals 100% of the damage but damages querent for 30% of the attack</p></td>
+          </tr>
+        </table>
+
+        <table class="negative">
+          <tr>
+            <td><p>At the end of your Querent's turn, get a DEBT CURSE and give target opponent an ENCHANTER TOKEN. DEBT CURSE: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If it has no tokens, pass the ENCHANTER TOKEN to a random player and add three more markers to this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and flip this card.</p></td>
+            <td><p>At the end of your Querent's turn, get a DEBT CURSE and give target opponent an ENCHANTER TOKEN. DEBT CHARM: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If this has no tokens, discard this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and discard this card.</p></td>
+            <td><p>Enemy attacks twice. Second attack deals 50% damage from the first one</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent's turn, target opponent looks at your hand and pick two cards then steals one and discards the other.</p></td>
+            <td><p>At the end of your Querent's turn, target opponent randomly picks a card from your hand and steals that card.</p></td>
+            <td><p>Enemy attacks twice. Second attack reduces target armor by X%</p></td>
+          </tr>
+
+          <tr>
+            <td><p>At the end of your Querent's turn, shuffle your hand back into the Player's Deck.</p></td>
+            <td><p>At the end of your Querent's turn, shuffle two cards back into the Player's Deck.</p></td>
+            <td><p>Enemy attacks twice. Second attack deals 100% of the damage but damages querent for 30% of the attack</p></td>
+          </tr>
+        </table>
+      </article>
+    </li>
+
+    <li class="done">
+      <img />
+      <article>
+        <header>
+          <h2>The Hierophant</h2>
+
+          <p class="description">The Hierophant is about summons that buffs and protects.</p>
+
+          <h3>Protective Summons</h3>
+        </header>
+
+        <table class="positive">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+          <tr>
+            <td><p>Tank: Tanks damage for the Querent. Has XXX Health</p></td>
+            <td><p>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</p></td>
+            <td><p>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</p></td>
+          </tr>
+
+          <tr>
+            <td><p>Healer: Heals Querent for X. Y turns to recharge.</p></td>
+            <td><p>Healer: Heals Querent for X, Y times</p></td>
+            <td><p>Healer: Heals Querent for X for the duration of the battle</p></td>
+          </tr>
+
+          <tr>
+            <td><p>Watcher: Opens up a random 5x5 portion of the map permanently</p></td>
+            <td><p>Watcher: Opens up a random 5x5 portion of the map for X turns</p></td>
+            <td><p>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</p></td>
+          </tr>
+        </table>
+
+        <table class="negative">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+          <tr>
+            <td><p>Tank: Tanks damage for monsters. Has X health. After killed for the first time, Y% of respawning at the start of new battle</p></td>
+            <td><p>Tank: Tanks damage for monsters. Has X health.</p></td>
+            <td><p>Tank: Tanks damage for monsters. Has X health.</p></td>
+          </tr>
+
+          <tr>
+            <td><p>Healer: Heals Monsters for X. After killed for the first time, Y% of respawning at the start of new battle</p></td>
+            <td><p>Healer: Heals Monsters for X</p></td>
+            <td><p>Healer: Heals Monsters for X</p></td>
+          </tr>
+
+          <tr>
+            <td><p>Watcher: Opens up a random 5x5 portion of the map for your opponents permanently</p></td>
+            <td><p>Watcher: Opens up a random 5x5 portion of the map for your opponents for X turns</p></td>
+            <td><p>Tank: Tanks damage for monsters. Has X health.</p></td>
+          </tr>
+        </table>
+      </article>
     </li>
 
     <li>
-      <h2>The Emperess</h2>
-
-      <p class="description">The Emperess is about card aquistion and protective buffs. It deals its effects though giving cards and protection, instead of taking away</p>
-
-      <h3>Combat: Protection</h3>
-
-      <table class="positive">
-        <thead>
-          <tr>
-            <th><span class="icon-rare"></span></th>
-            <th><span class="icon-common"></span></th>
-            <th><span class="icon-attack"></span></th>
-          </tr>
-        </thead>
-        <tr>
-          <td><p>At the end of your Querent's Phase, look at the top three cards of the Player's Deck. Buy two and shuffle the other one</p></td>
-          <td><p>At the end of your Querent's Phase, buy one card from the Player's Deck</p></td>
-          <td><p>Querent gains a protective shield with X health</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent's Phase, buy two cards from the discard pile. If it's empty, buy two cards from the Player's Deck</p></td>
-          <td><p>At the end of your Querent's Phase, buy a random card from the discard pile. If it's empty, buy a card from the Player's Deck</p></td>
-          <td><p>Querent gains a immunity shield that absorbs all damage during this battle</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent's Phase, get a RICH MAN'S BLESSING. RICH MAN'S BLESSING: Once per turn, buy one extra card at the beggining of your turn, flip and put a marker on this card. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</p></td>
-          <td><p>At the end of your Querent's Phase, get a RICH MAN'S CHARM and put three markers on it. RICH MAN'S CHARM: Once per turn, buy one extra card at the beggining of your turn and remove a marker from this card. If at the beggining of your turn there are no markers left on this card, discard it</p></td>
-          <td><p>Querent attacks generate a shield with health equal to half the damage caused</p></td>
-        </tr>
-      </table>
-
-      <table class="negative">
-        <thead>
-          <th><span class="icon-rare"></span></th>
-          <th><span class="icon-common"></span></th>
-          <th><span class="icon-attack"></span></th>
-        </thead>
-
-        <tr>
-          <td><p>At the end of your Querent's Phase, get a CHARITY CURSE. CHARITY CURSE: All your opponents buy a card at the beggining of your turn. Flip this card and put three markers on it. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</p></td>
-          <td><p>At the end of your Querent's Phase, get a CHARITY CHARM and put a marker on it. CHARITY CHARM: All your opponents buy a card at the beggining of your turn. Remove a marker from this card. If at the beggining of your turn there are no markers left on this card, discard it</p></td>
-          <td><p>Monsters gain a protective shield with X health</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent's Phase, get an ALTRUIST CURSE card. ALTRUIST CURSE: Instead of discarding cards, you now move them to a different pile. Players may choose to buy from that pile instead of the Player's Deck</p></td>
-          <td><p>At the end of your Querent's Phase, all enemy players buy a random card from the discard pile. If it's empty, they buy a card from the Player's Deck.</p></td>
-          <td><p>Monsters gains an immunity shield that absorbs all damage for two turns</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent's Phase, get a ??? CURSE. ??? CURSE: Instead of buying a card at the beggining of your turn, flip this card and put a marker on it. FLIP: Remove a marker after your Querent's Phase. If at the start of Querent Phase there are no markers on this card, flip it</p></td>
-          <td><p>At the end of your Querent's Phase, get a FEAST CHARM card and put a marker on it. FEAST CHARM: Instead of buying a card this turn, you remove a marker from this card. If at the beggining of your turn there are no markers left on this card, discard it</p></td>
-          <td><p>Monsters attacks generate a shield with health equal to half the damage caused</p></td>
-        </tr>
-      </table>
-    </li>
-
-    <li>
-      <h2>The Emperor</h2>
-
-      <p class="description">The Emperor is about card stealing and offensive buffs.</p>
-
-      <h3>Combat: Double Attack</h3>
-
-      <table class="positive">
-        <thead>
-          <tr>
-            <th><span class="icon-rare"></span></th>
-            <th><span class="icon-common"></span></th>
-            <th><span class="icon-attack"></span></th>
-          </tr>
-        </thead>
-        <tr>
-          <td><p>At the end of your Querent's turn, target opponent gets a DEBT CURSE and you get an ENCHANTER TOKEN. DEBT CURSE: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If it has no tokens, pass the ENCHANTER TOKEN to a random player and add three more markers to this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and flip this card.</p></td>
-          <td><p>At the end of your Querent's turn, target opponent gets a DEBT CHARM and you get an ENCHANTER TOKEN. DEBT CHARM: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If this has no tokens, discard this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and discard this card.</p></td>
-          <td><p>Querent attacks twice. Second attack deals 50% damage from the first one</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent's turn, look at target opponent's hand and pick two cards. Steal one card and discard the other.</p></td>
-          <td><p>At the end of your Querent's turn, randomly pick a card from target opponent's hand. Steal that card.</p></td>
-          <td><p>Querent attacks twice. Second attack reduces target armor by X%</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent's turn, all opponents discard their hand OR give two cards from their hands to you.</p></td>
-          <td><p>At the end of your Querent's turn, all opponents discard three cards OR give you one card from their hands.</p></td>
-          <td><p>Querent attacks twice. Second attack deals 100% of the damage but damages querent for 30% of the attack</p></td>
-        </tr>
-      </table>
-
-      <table class="negative">
-        <tr>
-          <td><p>At the end of your Querent's turn, get a DEBT CURSE and give target opponent an ENCHANTER TOKEN. DEBT CURSE: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If it has no tokens, pass the ENCHANTER TOKEN to a random player and add three more markers to this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and flip this card.</p></td>
-          <td><p>At the end of your Querent's turn, get a DEBT CURSE and give target opponent an ENCHANTER TOKEN. DEBT CHARM: Place three markers over this card. At the begining of your turn, you may choose to remove a marker from this card instead of buying a card. If you do, players with an ENCHANTER TOKEN buy a card. If you don't, buy a card and add a token to this card. At the beggining of your turn if this has five or more tokens, flip this card. If this has no tokens, discard this card. FLIP: Players with ENCHANTER TOKEN buys five cards. Remove tokens and discard this card.</p></td>
-          <td><p>Enemy attacks twice. Second attack deals 50% damage from the first one</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent's turn, target opponent looks at your hand and pick two cards then steals one and discards the other.</p></td>
-          <td><p>At the end of your Querent's turn, target opponent randomly picks a card from your hand and steals that card.</p></td>
-          <td><p>Enemy attacks twice. Second attack reduces target armor by X%</p></td>
-        </tr>
-
-        <tr>
-          <td><p>At the end of your Querent's turn, shuffle your hand back into the Player's Deck.</p></td>
-          <td><p>At the end of your Querent's turn, shuffle two cards back into the Player's Deck.</p></td>
-          <td><p>Enemy attacks twice. Second attack deals 100% of the damage but damages querent for 30% of the attack</p></td>
-        </tr>
-      </table>
-    </li>
-
-    <li>
-      <h2>The Hierophant</h2>
-
-      <p class="description">The Hierophant is about summons that buffs and protects.</p>
-
-      <h3>Combat: Protective Summons</h3>
-
-      <table class="positive">
-        <thead>
-          <tr>
-            <th><span class="icon-rare"></span></th>
-            <th><span class="icon-common"></span></th>
-            <th><span class="icon-attack"></span></th>
-          </tr>
-        </thead>
-        <tr>
-          <td><p>Tank: Tanks damage for the Querent. Has XXX Health</p></td>
-          <td><p>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</p></td>
-          <td><p>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</p></td>
-        </tr>
-
-        <tr>
-          <td><p>Healer: Heals Querent for X. Y turns to recharge.</p></td>
-          <td><p>Healer: Heals Querent for X, Y times</p></td>
-          <td><p>Healer: Heals Querent for X for the duration of the battle</p></td>
-        </tr>
-
-        <tr>
-          <td><p>Watcher: Opens up a random 5x5 portion of the map permanently</p></td>
-          <td><p>Watcher: Opens up a random 5x5 portion of the map for X turns</p></td>
-          <td><p>Tank: At the start of combat turn, tanks damage for the Querent. Has X health</p></td>
-        </tr>
-      </table>
-
-      <table class="negative">
-        <thead>
-          <tr>
-            <th><span class="icon-rare"></span></th>
-            <th><span class="icon-common"></span></th>
-            <th><span class="icon-attack"></span></th>
-          </tr>
-        </thead>
-        <tr>
-          <td><p>Tank: Tanks damage for monsters. Has X health. After killed for the first time, Y% of respawning at the start of new battle</p></td>
-          <td><p>Tank: Tanks damage for monsters. Has X health.</p></td>
-          <td><p>Tank: Tanks damage for monsters. Has X health.</p></td>
-        </tr>
-
-        <tr>
-          <td><p>Healer: Heals Monsters for X. After killed for the first time, Y% of respawning at the start of new battle</p></td>
-          <td><p>Healer: Heals Monsters for X</p></td>
-          <td><p>Healer: Heals Monsters for X</p></td>
-        </tr>
-
-        <tr>
-          <td><p>Watcher: Opens up a random 5x5 portion of the map for your opponents permanently</p></td>
-          <td><p>Watcher: Opens up a random 5x5 portion of the map for your opponents for X turns</p></td>
-          <td><p>Tank: Tanks damage for monsters. Has X health.</p></td>
-        </tr>
-      </table>
-    </li>
-
-    <li>
+      <img />
+      <article>
+      <header>
       <h2>The Lovers</h2>
 
       <p class="description">The Lovers is about providing and sharing player stats and sight.</p>
 
-      <h3>Combat: Life Steal</h3>
+      <h3>Life Steal</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -438,14 +472,19 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
-    <li>
+    <li class="done">
+      <img />
+      <article>
+      <header>
       <h2>The Chariot</h2>
 
       <p class="description">The Chariot is about mobility.</p>
 
-      <h3>Combat: Stun</h3>
+      <h3>Stun</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -504,14 +543,19 @@
           <td><p>X% chance stunned targets miss their next attack</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>Strength</h2>
 
       <p class="description">Strength is about combat damage and avoidance.</p>
 
-      <h3>Combat: Bonus Damage</h3>
+      <h3>Bonus Damage</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -536,14 +580,19 @@
           <td><p>Super Cowardly Lion's Aura: Querent will attempt to flee trough the entire combat "permanently"</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>The Hermit</h2>
 
       <p class="description">The Hermit is about teleportation.</p>
 
-      <h3>Combat: Dodge</h3>
+      <h3>Dodge</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -594,46 +643,82 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
-    <li>
+    <li class="done">
+      <img />
+      <article>
+      <header>
       <h2>Wheel of Fortune</h2>
 
       <p class="description">Wheel of Fortune is about randomizing events.</p>
 
-      <h3>Combat: Random</h3>
+      <h3>Random</h3>
+</header>
 
       <table class="positive">
         <thead>
           <tr>
-            <td><p>Type</th>
-            <td><p><span class="icon-attack"></span></th>
-            <td><p><span class="icon-common"></span></th>
-            <td><p><span class="icon-attack"></span></th>
-            <td><p><span class="icon-attack"></span></th>
-            <td><p><span class="icon-common"></span></th>
-            <td><p><span class="icon-rare"></span></th>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
           </tr>
         </thead>
         <tr>
-          <td><p>All colors</p></td>
           <td><p>Positive random rare Action</p></td>
           <td><p>Positive random common Action</p></td>
           <td><p>Querent gains a random combat mechanic</p></td>
-
-          <td><p>Monster gains a random combat mechani</p></td>
-          <td><p>Negative random rare Action</p></td>
-          <td><p>Negative random common Action</p></td>
+        </tr>
+        <tr>
+          <td><p>Positive random rare Action</p></td>
+          <td><p>Positive random common Action</p></td>
+          <td><p>Querent gains a random combat mechanic</p></td>
+        </tr>
+        <tr>
+          <td><p>Positive random rare Action</p></td>
+          <td><p>Positive random common Action</p></td>
+          <td><p>Querent gains a random combat mechanic</p></td>
         </tr>
       </table>
+
+      <table class="negative">
+        <thead>
+          <tr>
+            <th><span class="icon-rare"></span></th>
+            <th><span class="icon-common"></span></th>
+            <th><span class="icon-attack"></span></th>
+          </tr>
+        </thead>
+        <tr>
+          <td><p>Negative random rare Action</p></td>
+          <td><p>Negative random common Action</p></td>
+          <td><p>Monster gains a random combat mechani</p></td>
+        </tr>
+        <tr>
+          <td><p>Negative random rare Action</p></td>
+          <td><p>Negative random common Action</p></td>
+          <td><p>Monster gains a random combat mechani</p></td>
+        </tr>
+        <tr>
+          <td><p>Negative random rare Action</p></td>
+          <td><p>Negative random common Action</p></td>
+          <td><p>Monster gains a random combat mechani</p></td>
+        </tr>
+      </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>Justice</h2>
 
       <p class="description">Card advantage?</p>
 
-      <h3>Combat: Thorns</h3>
+      <h3>Thorns</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -684,14 +769,19 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
-    <li>
+    <li class="done">
+      <img />
+      <article>
+      <header>
       <h2>The Hanged Man</h2>
 
       <p class="description">The Hanged Man is about traps.</p>
 
-      <h3>Combat: Trap</h3>
+      <h3>Trap</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -747,14 +837,19 @@
           <td><p>Freezes Querent for one turn</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>Death</h2>
 
       <p class="description">The Hanged Man is about dealing direct damage and weakening.</p>
 
-      <h3>Combat: Cripple</h3>
+      <h3>Cripple</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -805,14 +900,19 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>Temperance</h2>
 
       <p class="description">Distribution???</p>
 
-      <h3>Combat: ???</h3>
+      <h3>???</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -863,14 +963,19 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
-    <li>
+    <li class="done">
+      <img />
+      <article>
+      <header>
       <h2>The Devil</h2>
 
       <p class="description">The Devil is about summons that are mischievious and damage dealers.</p>
 
       <h3>Aggressive Summons</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -929,14 +1034,19 @@
           <td><p>Suicidal: At the start of combat turn, blows up dealing X damage to all Monsters.</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>The Tower</h2>
 
       <p class="description">The Tower is about visibility.</p>
 
-      <h3>Combat: Immunity</h3>
+      <h3>Immunity</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -987,14 +1097,19 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>The Star</h2>
 
       <p class="description">Goal visibility???</p>
 
-      <h3>Combat: Blind</h3>
+      <h3>Blind</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -1045,14 +1160,19 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>The Moon</h2>
 
       <p class="description">Time of day???</p>
 
-      <h3>Combat: Stealth</h3>
+      <h3>Stealth</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -1103,14 +1223,19 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>The Sun</h2>
 
       <p class="description">Time of day???</p>
 
-      <h3>Combat: Damage over Time</h3>
+      <h3>Damage over Time</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -1161,14 +1286,19 @@
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
-    <li>
+    <li class="incomplete">
+      <img />
+      <article>
+      <header>
       <h2>Judgment</h2>
 
       <p class="description">Judgment is about fate manipulation.</p>
 
-      <h3>Combat: ???</h3>
+      <h3>???</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -1179,18 +1309,18 @@
           </tr>
         </thead>
         <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
+          <td><p>At the end of Querent's turn, get a SOUND THE SEVEN TRUMPETS BLESSING: Flip three fates up then flip this card and put seven markers on it. FLIP: At the start of your turn, remove a marker from this card. If this card has no markers at the start of your turn, flip this card.</p></td>
+          <td><p>At the end of Querent's turn, get a SOUND THE TRUMPETS CHARM: Flip three fate upwards. Flip this card. FLIP: Discard this card at the end of the turn</p></td>
           <td><p>???</p></td>
         </tr>
         <tr>
+          <td><p>At the end of Querent's turn, get a REVEAL THE SEVEN SEALS BLESSING: At the end of any Querent's turn, pick a fate from the three and put it in your hand. You can use that fate any face you want at any time during any cartomancer phase. Flip this card. FLIP: Put seven markers on this card. At the start of your turn, remove a marker from this card. If you use a fate from your hand, remove three markers from this card. If at the start of your turn you have zero markers on this card, flip it</p></td>
+          <td><p>At the end of any Querent's turn, pick a fate from the three. You can use that fate any face you want at any time during the cartomancer phase.</p></td>
           <td><p>???</p></td>
-          <td><p>???</p></td>
+        </tr>
+        <tr>
+          <td><p>At the end of Querent's turn, get a PATH OF THE RIGHTEOUS BLESSING: Changes direction of all fates. Flip this card and put four markers on it FLIP: At the start of your tun, remove a marker from this card. If at the start of your turn there are no markers on this card, flip it</p></td>
+          <td><p>At the end of Querent's turn, get a FATE OF THE JUST CHARM: Changes direction of all fates. FLIP: Discard this card at the end of the turn/p></td>
           <td><p>???</p></td>
         </tr>
       </table>
@@ -1204,29 +1334,34 @@
           </tr>
         </thead>
         <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
-        </tr>
-        <tr>
-          <td><p>???</p></td>
-          <td><p>???</p></td>
+          <td><p>At the end of Querent's turn, get MARK OF THE BEAST CURSE: At the start of your turn, flip three fates down then flip this card and put six markers on it. FLIP: At the start of your turn, remove a marker from this card. If this card has no markers at the start of your turn, flip this card.</p></td>
+          <td><p>At the end of Querent's turn, get a PESTILENCE CHARM: Flip three fate downwards. Flip this card. FLIP: Discard this card at the end of the turn</p></td>
           <td><p>???</p></td>
         </tr>
         <tr>
           <td><p>???</p></td>
           <td><p>???</p></td>
+          <td><p>???</p></td>
+        </tr>
+        <tr>
+          <td><p>At the end of Querent's turn, get THE FOUR HORSEMAN CURSE and put four markers on it: Flip one fate down. At the start of your turn, you can choose to flip three fates down. If you do, remove a marker from this card. If at the end of your turn there are no markers on this card, flip it. FLIP: Put a marker on this card for each opponent. At the start of each opponent's turn, remove a marker from this card. Your opponent flips three fates down. If this card has no markers at the start of your turn, flip it.</p></td>
+          <td><p>At the end of Querent's turn, get a WAR CHARM and put four markers on it: At the start of your turn, you may choose to flip one fate down. If you do, remove a marker form this card. If at the end of your turn there are no markers on this card, flip it. FLIP: Put a marker on this card for each opponent. At the start of each opponent's turn, remove a marker from this card. Your opponent flips one fate down. If this card has no markers at the start of your turn, discard this card.</p></td>
           <td><p>???</p></td>
         </tr>
       </table>
+      </article>
     </li>
 
     <li>
+      <img />
+      <article>
+      <header>
       <h2>The World</h2>
 
-      <p class="description">The World is about events spawning.</p>
+      <p class="description">The World is about events spawning. Goal Changing.</p>
 
-      <h3>Combat: Bonus Loot</h3>
+      <h3>Bonus Loot</h3>
+</header>
 
       <table class="positive">
         <thead>
@@ -1251,6 +1386,7 @@
           <td><p>Despawns random common shrine at the map</p></td>
         </tr>
       </table>
+      </article>
     </li>
   </ol>
 
