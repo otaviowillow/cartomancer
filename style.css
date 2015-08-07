@@ -157,6 +157,29 @@ li {
   text-indent: initial;
 }
 
+ul li {
+  background: red;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  text-align: center;
+  width: 25%;
+  height: 70%;
+  z-index: 10;
+  padding: 2%;
+  transform: translate(-50%, -50%);
+}
+ul li .flip {
+  display: none;
+}
+ul li.selected {
+  display: flex;
+}
+
 /* Mobile */
 
 @media all and (min-width:960px) and (max-width: 1024px) {
