@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Cartomancer</title>
+  <link rel="stylesheet" href="cartomancer/style.css">
+  <meta name="description" content="Let's play">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="battle.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body class="battle">
+  <header>
+    <h2>Player Stats</h2>
+
+    <dl class="weapon">
+      <dt>Attack: <strong>6</strong>-<strong>9</strong></dt>
+      <dd data-min="2" data-max="8" class="selected">No Bonus</dd>
+      <dd data-min="2" data-max="8">Tier 1</dd>
+      <dd data-min="2" data-max="8">Tier 2</dd>
+      <dd data-min="2" data-max="8">Tier 3</dd>
+    </dl>
+    <dl class="health">
+      <dt>Health: <strong>100</strong>/<strong>100</strong></dt>
+      <dd data-health="0">No Bonus</dd>
+      <dd data-health="20">Tier 1</dd>
+      <dd data-health="40">Tier 2</dd>
+      <dd data-health="60">Tier 3</dd>
+    </dl>
+    <dl class="armor">
+      <dt>Armor: <strong>15%</strong></dt>
+      <dd data-armor="0.20">No Bonus</dd>
+      <dd data-armor="0.30">Tier 1</dd>
+      <dd data-armor="0.40">Tier 2</dd>
+      <dd data-armor="0.50">Tier 3</dd>
+    </dl>
+  </header>
+
+  <button class="fight">asd</button>
+
+  <div class="monsters">
+    <nav>
+      <h4>I</h4>
+      <h4>II</h4>
+      <h4>III</h4>
+      <h4>IV</h4>
+    </nav>
+
+    <article class="II">
+      <h3 class="main">Main: <strong class="health">30</strong> health <span>1</span> - <span>4</span> attack (<span>4</span>), <span>0.20</span> Armor</h3>
+      <h3 class="add">Add: <strong class="health">12</strong> health <span>1</span> - <span>2</span> attack (<span>1</span>), <span>0.20</span> Armor</h3>
+      <h3 class="add">Add: <strong class="health">12</strong> health <span>1</span> - <span>2</span> attack (<span>1</span>), <span>0.20</span> Armor</h3>
+    </article>
+
+    <ol class="turns"></ol>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/battle.js"></script>
+</body>
+</html>

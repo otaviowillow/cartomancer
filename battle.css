@@ -1,0 +1,17 @@
+.selected {
+  font-weight: 700;
+}
+.battle dl {
+  display: inline-block;
+  float: none;
+  border: 1px solid red;
+}
+.battle dd {
+  display: inline-block;
+  float: none;
+}
+
+.monsters nav h4 {
+  display: inline-block;
+  float: none;
+}
