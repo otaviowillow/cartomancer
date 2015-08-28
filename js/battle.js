@@ -20,7 +20,7 @@ var demo = new Vue({
     {
       name: "The Fool",
       number: "0",
-      battleEffect: "Confusion",
+      battleEffect: "confusion",
       legendary: true,
       battleProc: true,
       rare: {

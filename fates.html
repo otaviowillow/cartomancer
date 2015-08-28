@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Cartomancer</title>
+  <link rel="stylesheet" href="cartomancer/style.css">
+  <meta name="description" content="Let's play">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="style.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  
+  <script id="effects-template" type="x-template">
+    <td v-on="click: openFate">
+        <p v-class="selected: fateSelected">{{ description }}</p>
+    </td>
+  </script>
+
+  <script id="trump-template" type="x-template">
+    <li v-class="show: cardIsOpen" v-on="click: toggleCard">
+      <img src="img/{{ number }}.jpg" />
+      <article>
+        <header>
+          <h2 v-on="click: toggleCard">{{ name }}</h2>
+          <h3>{{ keyword }}</h3>
+        </header>
+
+        <table class="positive" v-class="selected: fateSelected">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-attack"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-repeat="goodFate">
+              <td v-repeat="fate" v-on="click: open = !open">
+                  <p v-class="selected: fateSelected">{{ description }}</p>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <table class="negative">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+
+          <tr v-repeat="badFate">
+            <effect v-repeat="fate"></effect>
+          </tr>
+        </table>
+      </article>
+    </li>
+  </script>
+
+  <ol id="trumps" class="tarot-cards">
+    <trump 
+        v-repeat="trumps" 
+        v-transition
+        stagger="100">
+    </trump>
+  </ol>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/fates.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
