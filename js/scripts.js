@@ -1,28 +1,28 @@
 $('.tarot-cards li').each(function(index){
-	// $(this).children('img').attr('src', 'img/'+index+'.jpg');
+	$(this).children('img').attr('src', 'img/'+index+'.jpg');
 
   /* open tarot card */
-  // $(this).on('click', function() {
-    //   $('body').css('overflow', 'hidden');
-    //   $('li').removeClass('show');
-    //   $(this).addClass('show');
-  // })
+  $(this).on('click', function() {
+      $('body').css('overflow', 'hidden');
+      $('li').removeClass('show');
+      $(this).addClass('show');
+  })
 
   /* close tarot card */
-  // $('h2').on('click', function(e) {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  //   $('body').css('overflow', 'auto');
-  //   $('li').removeClass('show');
-  // })
+  $('h2').on('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('body').css('overflow', 'auto');
+    $('li').removeClass('show');
+  })
 
   /* handle tables td */
-  // $('td').on('click', function() {
-  //   $('table').removeClass('selected');
-  //   $('td p').removeClass('selected');
-  //   $(this).children('p').toggleClass('selected');
-  //   $(this).parents('table').addClass('selected');
-  // })
+  $('td').on('click', function() {
+    $('table').removeClass('selected');
+    $('td p').removeClass('selected');
+    $(this).children('p').toggleClass('selected');
+    $(this).parents('table').addClass('selected');
+  })
 
   /* LInk Handler */
   $('a').on('click', function(e) {

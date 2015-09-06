@@ -5,7 +5,6 @@
   <meta charset="utf-8">
 
   <title>Cartomancer</title>
-  <link rel="stylesheet" href="cartomancer/style.css">
   <meta name="description" content="Let's play">
   <meta name="author" content="SitePoint">
 
@@ -17,19 +16,38 @@
 
   <body class="battle">
     <div id="battle">
-      <section class="player">
-        <h1>{{player.name}}</h1>
-        <h2>{{player.health}}</h2> 
-        <h3>{{player.attack.base}} ({{player.attack.min}} - {{player.attack.max}})</h3>
-      </section>
+      <div class="cards-view">
+        <ul class="trumps">
+          <li v-repeat="trump in trumps">
+            <h2>{{trump.name}}</h2>
 
-      <ul>
-        <li v-repeat="monster in monsters | filterBy '2' in 'level'" v-on="click: battle(monster, 2)">
-          <h3>{{monster.name}}</h3>
-          <h4>{{monster.health}}</h4>
-          <p>Attack: {{monster.attack.base}} ({{monster.attack.min}} - {{monster.attack.max}})</p>
-        </li>
-      </ul>
+            <ul>
+              <li v-repeat="trump.fates.yellow | filterBy 'battle' in 'type' ">
+                <p>{{description}}</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+
+      </div>
+
+      <div class="combat-view">
+        <section class="player">
+          <h1>{{player.name}}</h1>
+          <h2>{{player.health}}</h2> 
+          <h3>{{player.attack.base}} ({{player.attack.min}} - {{player.attack.max}})</h3>
+        </section>
+
+        <ul>
+          <!-- <li v-repeat="monster in monsters | filterBy '1' in 'level'" v-on="click: battle(monster, 1)"> -->
+        <li v-repeat="monster in monsters | filterBy '1' in 'level'" v-on="click: battle(monster, 1)">
+            <h3>{{monster.name}}</h3>
+            <h4>{{monster.health}}</h4>
+            <p>Attack: {{monster.attack.base}} ({{monster.attack.min}} - {{monster.attack.max}})</p>
+          </li>
+        </ul>  
+      </div>      
     </div>
   </div>
 

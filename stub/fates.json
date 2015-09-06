@@ -1,0 +1,1032 @@
+[
+  {
+    "name": "The Fool",
+    "number": 0,
+    "keyword": "confusion",
+    "legendary": true,
+    "rare": {
+      "yellow": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": [
+              null
+            ]
+          }
+        },
+        "battle": {
+          "name": "The Mongrel",
+          "description": null,
+          "effects": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": [
+                null
+              ]
+            }
+          ]
+        }
+      },
+      "blue": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effect": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            },
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            }
+          ]
+        }
+      },
+      "other": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effect": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            },
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            }
+          ]
+        }
+      }
+    },
+    "common": {
+      "yellow": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": [
+              null
+            ]
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effects": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": [
+                null
+              ]
+            }
+          ]
+        }
+      },
+      "blue": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effect": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            },
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            }
+          ]
+        }
+      },
+      "other": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effect": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            },
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "The Magician",
+    "number": 1,
+    "keyword": "polymorph",
+    "legendary": false,
+    "rare": {
+      "yellow": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": [
+              null
+            ]
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effects": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": [
+                null
+              ]
+            }
+          ]
+        }
+      },
+      "blue": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effect": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            },
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            }
+          ]
+        }
+      },
+      "other": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effect": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            },
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            }
+          ]
+        }
+      }
+    },
+    "common": {
+      "yellow": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": [
+              null
+            ]
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effects": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": [
+                null
+              ]
+            }
+          ]
+        }
+      },
+      "blue": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effect": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            },
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            }
+          ]
+        }
+      },
+      "other": {
+        "good": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": null,
+            "description": null,
+            "type": null
+          },
+          "effect": {
+            "name": null,
+            "description": null,
+            "type": null,
+            "target": null,
+            "trigger": null,
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": null,
+          "description": null,
+          "effect": [
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            },
+            {
+              "type": null,
+              "target": null,
+              "trigger": null,
+              "duration": null,
+              "modifier": []
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "The High Priestess",
+    "number": 2,
+    "keyword": "healing",
+    "legendary": false,
+    "rare": {
+      "yellow": {
+        "good": {
+          "fate": {
+            "name": "Lazarus Secrets",
+            "description": "Querent receives Lazarus Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Lazarus Aura",
+            "description": "If you were to die this turn, regenerate to full health instead",
+            "type": "ressurrect",
+            "target": "self",
+            "trigger": "onEnemyHit",
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": "Healing Scroll",
+            "description": "Your opponents Querents restores full health and receives a Blessed Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Blessed Aura",
+            "description": "At the start of your turn heal for 10% of your total health. 5 turns to recharge",
+            "type": "immune",
+            "target": "allOpponents",
+            "trigger": "turnStart",
+            "duration": null,
+            "recharge": 5,
+            "modifier": [
+              0.1
+            ]
+          }
+        },
+        "battle": {
+          "name": "The Moon",
+          "description": "Target attacks heals Target for 30% of damage caused",
+          "effects": [
+            {
+              "type": "heal",
+              "target": "self",
+              "trigger": "onHit",
+              "duration": null,
+              "modifier": [
+                0.3
+              ]
+            }
+          ]
+        }
+      },
+      "blue": {
+        "good": {
+          "fate": {
+            "name": "The Priestess Right Hand",
+            "description": "Removes all negative effects, curses or charms. Querent receives an Immaculate Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Immaculate Aura",
+            "description": "Immune to one negative effect, curse or charm. 5 Turns to recharge",
+            "type": "immune",
+            "target": "self",
+            "trigger": "querentPhase",
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": "The Priestess Left Hand",
+            "description": "Querent receives a Forsaken Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Forsaken Aura",
+            "description": "Immune to one negative effect, curse or charm. 5 Turns to recharge",
+            "type": "immune",
+            "target": "self",
+            "trigger": "querentPhase",
+            "duration": null,
+            "recharge": 5,
+            "modifier": []
+          }
+        },
+        "battle": {
+          "name": "the Pomegranate",
+          "description": "At the start of your turn, target heals for 20% of their health. If full health, generates a shield for 20% of targets health",
+          "effect": [
+            {
+              "type": "heal",
+              "target": "self",
+              "trigger": "turnStart",
+              "duration": null,
+              "modifier": [
+                0.2
+              ]
+            },
+            {
+              "type": "shield",
+              "target": "self",
+              "trigger": "fullHealth",
+              "duration": null,
+              "modifier": [
+                0.2
+              ]
+            }
+          ]
+        }
+      },
+      "other": {
+        "good": {
+          "fate": {
+            "name": "Eternal Fountain of Youth",
+            "description": "At the start of turn, generates an Eternal Fountain of Youth where you stand.",
+            "type": "summon"
+          },
+          "effect": {
+            "name": "Eternal Healing Fountain",
+            "description": "Heals for 20 each action and removes all negative effects, curses or charms. One charge. Regenerates one charge every 2 turns",
+            "type": "immune",
+            "target": "mapSelf",
+            "trigger": "action",
+            "duration": null,
+            "recharge": 2,
+            "modifier": [
+              1
+            ]
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": "Amnesia",
+            "description": "Querent receives an Amnesia Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Amnesia Aura",
+            "description": "30% fail chance when using any items or abilities",
+            "type": "fail",
+            "target": "self",
+            "trigger": "turnStart",
+            "duration": null,
+            "recharge": null,
+            "modifier": [
+              0.3
+            ]
+          }
+        },
+        "battle": {
+          "name": "the Manuscript",
+          "description": "At the start of your turn, summons a Persephones General",
+          "effect": [
+            {
+              "type": "summon",
+              "target": "self",
+              "trigger": "turnStart",
+              "duration": null,
+              "modifier": [
+                "Persephones General"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "common": {
+      "yellow": {
+        "good": {
+          "fate": {
+            "name": "The Phoenix Flower",
+            "description": "Querent receives Downed Phoenix Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Downed Phoenix Aura",
+            "description": "You don't lose any items upon death. You get back to life with 75% health",
+            "type": "ressurrect",
+            "target": "self",
+            "trigger": "onDeath",
+            "duration": null,
+            "recharge": null,
+            "modifier": [
+              0.75
+            ]
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": "Words of Calm",
+            "description": "Your opponents Querents restores 10% health and receives a Joy Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Joy Aura",
+            "description": "At the start of your turn heal for 5% of your total health. Lasts 3 turns",
+            "type": "heal",
+            "target": "allOpponents",
+            "trigger": "turnStart",
+            "duration": 3,
+            "recharge": null,
+            "modifier": [
+              0.05
+            ]
+          }
+        },
+        "battle": {
+          "name": "The Moon",
+          "description": "Target attacks heals Target for 30% of damage caused",
+          "effects": [
+            {
+              "type": "heal",
+              "target": "self",
+              "trigger": "onHit",
+              "duration": null,
+              "modifier": [
+                0.3
+              ]
+            }
+          ]
+        }
+      },
+      "blue": {
+        "good": {
+          "fate": {
+            "name": "Words of Kindness",
+            "description": "Removes all negative effects, curses or charms. Querent receives a Cleansed Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Cleansed Aura",
+            "description": "Immune to one negative effect, curse or charm.",
+            "type": "immune",
+            "target": "self",
+            "trigger": "querentPhase",
+            "duration": null,
+            "recharge": null,
+            "modifier": []
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": "Words of Anguish",
+            "description": "Querent receives Hatred Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Hatred Aura",
+            "description": "At the start of your Querent's Phase, lose 2 Health for every effect, curse, blessing or charm on you.",
+            "type": "immune",
+            "target": "self",
+            "trigger": "querentPhase",
+            "duration": null,
+            "recharge": null,
+            "modifier": [
+              0.2
+            ]
+          }
+        },
+        "battle": {
+          "name": "the Pomegranate",
+          "description": "At the start of your turn, target heals for 20% of their health. If full health, generates a shield for 20% of targets health",
+          "effect": [
+            {
+              "type": "heal",
+              "target": "self",
+              "trigger": "turnStart",
+              "duration": null,
+              "modifier": [
+                0.2
+              ]
+            },
+            {
+              "type": "shield",
+              "target": "self",
+              "trigger": "fullHealth",
+              "duration": null,
+              "modifier": [
+                0.2
+              ]
+            }
+          ]
+        }
+      },
+      "other": {
+        "good": {
+          "fate": {
+            "name": "Eternal Fountain of Youth",
+            "description": "At the start of turn, generates an Eternal Fountain of Youth where you stand.",
+            "type": "summon"
+          },
+          "effect": {
+            "name": "Healing Fountain",
+            "description": "Heals for 20% each action and removes all negative effects, curses or charms. Last 10 turns. Only one use per player.",
+            "type": "summon",
+            "target": "mapSelf",
+            "trigger": "action",
+            "duration": 10,
+            "recharge": 2,
+            "modifier": [
+              0.2
+            ]
+          }
+        },
+        "bad": {
+          "fate": {
+            "name": "Amnesia",
+            "description": "Querent receives an Amnesia Aura",
+            "type": "aura"
+          },
+          "effect": {
+            "name": "Amnesia Aura",
+            "description": "10% fail chance when using any items or abilities",
+            "type": "fail",
+            "target": "self",
+            "trigger": "turnStart",
+            "duration": null,
+            "recharge": null,
+            "modifier": [
+              0.1
+            ]
+          }
+        },
+        "battle": {
+          "name": "the Manuscript",
+          "description": "At the start of your turn, summons a Persephones Child",
+          "effect": [
+            {
+              "type": "summon",
+              "target": "self",
+              "trigger": "turnStart",
+              "duration": null,
+              "modifier": [
+                "Persephones Child"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

@@ -16,12 +16,6 @@
 </head>
 
 <body>
-  
-  <script id="effects-template" type="x-template">
-    <td v-on="click: openFate">
-        <p v-class="selected: fateSelected">{{ description }}</p>
-    </td>
-  </script>
 
   <script id="trump-template" type="x-template">
     <li v-class="show: cardIsOpen" v-on="click: toggleCard">
@@ -32,21 +26,21 @@
           <h3>{{ keyword }}</h3>
         </header>
 
-        <table class="positive" v-class="selected: fateSelected">
+        <table class="positive">
           <thead>
             <tr>
               <th><span class="icon-rare"></span></th>
-              <th><span class="icon-attack"></span></th>
               <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
               <th><span class="icon-attack"></span></th>
             </tr>
           </thead>
 
           <tbody>
             <tr v-repeat="goodFate">
-              <td v-repeat="fate" v-on="click: open = !open">
-                  <p v-class="selected: fateSelected">{{ description }}</p>
-              </td>
+                <td v-repeat="fate" v-on="click: selectFate">
+                    <p>{{ description }}</p>
+                </td>
             </tr>
           </tbody>
 
@@ -62,21 +56,40 @@
             </tr>
           </thead>
 
-          <tr v-repeat="badFate">
-            <effect v-repeat="fate"></effect>
-          </tr>
+          <tbody>
+            <tr v-repeat="badFate">
+              <td v-repeat="fate" v-on="click: selectFate">
+                  <p>{{ description }}</p>
+              </td>
+            </tr>
+          </tbody>
+
         </table>
       </article>
     </li>
   </script>
 
-  <ol id="trumps" class="tarot-cards">
-    <trump 
-        v-repeat="trumps" 
-        v-transition
-        stagger="100">
-    </trump>
-  </ol>
+  <script id="effect-template" type="x-template">
+    <li>
+      <p>{{name}}</p>
+      <p>{{description}}</p>
+    </li>
+  </script>
+
+  <div id="trumps">
+    <ul class="concatenated-effects">
+      <effect v-repeat="effects | filterBy selectedEffect" selected="{{selectedEffect}}" v-show="selectedEffect"></effect>
+    </ul>
+
+    <ol class="tarot-cards">
+      <trump 
+          v-repeat="trumps" 
+          active-effect="{{@ selectedEffect}}" 
+          v-transition
+          stagger="100">
+      </trump>
+    </ol>    
+  </div>
 
   <script src="js/jquery.js"></script>
   <script src="js/vue.js"></script>
