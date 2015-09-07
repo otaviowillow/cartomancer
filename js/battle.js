@@ -6,6 +6,8 @@ var battle = new Vue({
   el: '#battle',
   data: {
     trumps: [],
+    bTarget: {},
+    firstHit: true,
     battleStart: false,
     battleEnd: false,
   },
@@ -21,8 +23,8 @@ var battle = new Vue({
    fetchData: function() {
       var self = this;
       var jsonCards = 'https://api.myjson.com/bins/17xiu';
-      var jsonMonster = 'https://api.myjson.com/bins/2mx66';
-      var jsonPlayer = 'https://api.myjson.com/bins/4zggi';
+      var jsonMonster = 'https://api.myjson.com/bins/11sx6';
+      var jsonPlayer = 'https://api.myjson.com/bins/47efe';
 
       $.getJSON(jsonCards, function(response){
           for (var trump of response.trumps) {
@@ -34,7 +36,6 @@ var battle = new Vue({
       });
       $.getJSON(jsonPlayer, function(response){
           self.$set('player', response.player);
-          response.player.onHit = false;
       });
     },
 
@@ -44,20 +45,25 @@ var battle = new Vue({
 
     battle: function(monster, level) {
       // Player
+      if(this.firstHit) {
+        this.bTarget = this.player;
+        this.firstHit = !this.firstHit;
+      }
       
-      this.player.onHit = true;
+      if(this.bTarget == this.player) {
+        this.bTarget.state.onHit = true;
+      }
 
-      console.log(this.player.onHit)
-      
+      //console.log(this.player)
+      if(this.bTarget == this.monsters) {
+        console.log('mon')
+      }      
       // Monsters
-      $(this.monsters).each(function(i, monster) {
-        if(monster.level == level) {
-          monster.onHit = true;
+      // $(this.monsters).each(function(i, monster) {
+      //   if(monster.level == level) {
           
-          //this.target.name = monster.name; 
-          
-        }
-      });
+      //   }
+      // });
     },
 
     hit: function() {
@@ -100,8 +106,8 @@ var battle = new Vue({
     'battleStart': function (val, oldVal) {
       console.log('battle started!')
     },
-    'player.onHit': function (val, oldVal) {
-      console.log(val + ' hits!', oldVal + ' isnt hitting')
+    'bTarget.state.onHit': function (val, oldVal) {
+      console.log(this.bTarget.name + ' hits!')
     },
   }
 })
