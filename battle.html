@@ -18,13 +18,20 @@
     <div id="battle">
       <div class="cards-view">
         <ul class="trumps">
-          <li v-repeat="trump in trumps">
+          <li v-repeat="trump in trumps | filterBy 'The High Priestess' in 'name'">
             <h2>{{trump.name}}</h2>
 
             <ul>
               <li v-repeat="trump.fates.yellow | filterBy 'battle' in 'type' ">
+
                 <p>{{description}}</p>
               </li>
+<!--               <li v-repeat="trump.fates.blue | filterBy 'battle' in 'type' ">
+                <p>{{description}}</p>
+              </li>
+              <li v-repeat="trump.fates.other | filterBy 'battle' in 'type' ">
+                <p>{{description}}</p>
+              </li> -->
             </ul>
           </li>
         </ul>
@@ -39,7 +46,7 @@
           <h3>{{player.attack.base}} ({{player.attack.min}} - {{player.attack.max}})</h3>
         </section>
 
-        <section class="monster" v-on="click: battle">
+        <section class="monster" v-on="click: battle" v-if="monster.health > 0">
           <h1>{{monster.name}}</h1>
           <h2>{{monster.health}}</h2> 
           <h3>{{monster.attack.base}} ({{monster.attack.min}} - {{monster.attack.max}})</h3>

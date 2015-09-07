@@ -10,10 +10,8 @@ var battle = new Vue({
     firstHit: true,
     battleStart: false,
     battleEnd: false,
-    state: {
-      isHit: false,
-      isDead: false,
-    }
+    turnStart: false,
+    turnEnd: false
   },
 
   ready: function() {
@@ -33,6 +31,7 @@ var battle = new Vue({
       $.getJSON(jsonCards, function(response){
         for (var trump of response.trumps) {
           self.trumps.push(trump);
+          self.$set('effects', trump.effects);
         }
       });
       $.getJSON(jsonMonster, function(response){
@@ -53,25 +52,31 @@ var battle = new Vue({
       var self = this;
 
       self.battleStart = false;
+      self.turnStart = true;
 
       if(self.firstHit) {
         self.bTarget = self.player;
         self.firstHit = !self.firstHit;
       }
 
-      //Player      
-      if(!self.bTarget.state.isDead) {
-        // self.player.state.onHit = true;
-        setTimeout(function(){
-          self.player.state.onHit = true;
-          self.player.hit(self.monster);
-        }, 100)
+      //Player
+      setTimeout(function(){
+        self.bTarget = self.player;
 
-        setTimeout(function(){
+        if(!self.bTarget.state.isDead) {
+          self.player.state.onHit = true;
+        }
+      })
+
+      //Monster
+      setTimeout(function(){
+        self.bTarget = self.monster;
+
+        if(!self.bTarget.state.isDead) {
           self.monster.state.onHit = true;
-          self.monster.hit(self.player);
-        }, 500)
-      }
+        }
+      }, 500)
+      
     },
 
     dealDamage: function(damage, victim) {
@@ -95,30 +100,55 @@ var battle = new Vue({
 
       console.log(this.bTarget.name +' hits '+ victim.name +' for '+ damage);
     }
-
   },
   watch: {
-    'battleStart': function (val, oldVal) {
+    'battleStart': function (val) {
       if(val == true) {
-        console.log('battle started!', val)
+        console.log('battle started!')
+      }
+    },
+    'battleEnd': function (val) {
+      if(val == true) {
+        console.log('battle end!')
+      }
+    },
+    'turnStart': function(val) {
+      if(val == true) {
+        console.log('Turn Start!')
+        this.turnStart = false;
+      }
+    },
+    'turnEnd': function(val) {
+      if(val == true) {
+        console.log('Turn End!')
+        this.turnEnd = false;
       }
     },
     'player.state.onHit': function (val, oldVal) {
       if(val == true) {
-        console.log('Player hits')
+        console.log('Player hits');
+
+        this.player.hit(this.monster);
+
         this.player.state.onHit = false;
-        //console.log(this.bTarget.name, 'fate modifier happens if true', this.bTarget.state.onHit)
       }
     },
     'monster.state.onHit': function (val, oldVal) {
       if(val == true) {
         console.log('Monster hits');
+
+        this.monster.hit(this.player);
+
         this.monster.state.onHit = false;
-        //console.log(this.bTarget.name, 'fate modifier happens if true', this.bTarget.state.onHit)
+
+        this.turnEnd = true;
       }
     },
     'bTarget.state.isDead': function (val, oldVal) {
-      //console.log(this.bTarget.name, 'Im dead', this.bTarget.state.isDead)
+      if(val == true) {
+        console.log(this.bTarget.name, 'is dead');
+        this.battleEnd = true;
+      }
     },
   }
 })
