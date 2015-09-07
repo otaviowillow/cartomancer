@@ -6,7 +6,6 @@ var battle = new Vue({
   el: '#battle',
   data: {
     trumps: [],
-    monsters: [],
     bTarget: {},
     firstHit: true,
     battleStart: false,
@@ -28,7 +27,7 @@ var battle = new Vue({
    fetchData: function() {
       var self = this;
       var jsonCards = 'https://api.myjson.com/bins/17xiu';
-      var jsonMonster = 'https://api.myjson.com/bins/3mmqq';
+      var jsonMonster = 'https://api.myjson.com/bins/m10q';
       var jsonPlayer = 'https://api.myjson.com/bins/47efe';
 
       $.getJSON(jsonCards, function(response){
@@ -37,10 +36,8 @@ var battle = new Vue({
         }
       });
       $.getJSON(jsonMonster, function(response){
-        for (var monster of response.monsters) {
-          self.monsters.push(monster);
-          monster.$set('hit', self.hit);
-        }
+        self.$set('monster', response.monster);
+        self.monster.$set('hit', self.hit);
       });
       $.getJSON(jsonPlayer, function(response){
         self.$set('player', response.player);
@@ -63,24 +60,23 @@ var battle = new Vue({
       }
 
       //Player      
-      if(self.bTarget == this.player) {
-        self.player.hit(monster);
-        self.bTarget = self.monsters;
-      }
+      if(!self.bTarget.state.isDead) {
+        // self.player.state.onHit = true;
+        setTimeout(function(){
+          self.player.state.onHit = true;
+          self.player.hit(self.monster);
+        }, 100)
 
-      //Monsters
-      if(self.bTarget == self.monsters) {
-        $(self.monsters).each(function(i, monster) {
-          if(monster.level == level && !monster.state.isDead) {
-            self.bTarget = monster;
-            monster.hit(self.player);
-            self.bTarget = self.player;
-          } 
-        })
-      }      
+        setTimeout(function(){
+          self.monster.state.onHit = true;
+          self.monster.hit(self.player);
+        }, 500)
+      }
     },
 
     dealDamage: function(damage, victim) {
+      var self = this;
+
       if(victim.health > 0) {
         victim.health -= damage;
       } 
@@ -97,7 +93,7 @@ var battle = new Vue({
 
       this.dealDamage(damage, victim)
 
-      //console.log(this.bTarget.name +' hits '+ victim.name +' for '+ damage);
+      console.log(this.bTarget.name +' hits '+ victim.name +' for '+ damage);
     }
 
   },
@@ -107,14 +103,22 @@ var battle = new Vue({
         console.log('battle started!', val)
       }
     },
-    'bTarget.state.onHit': function (val, oldVal) {
-      console.log(val)
+    'player.state.onHit': function (val, oldVal) {
       if(val == true) {
-        console.log(this.bTarget.name, 'fate modifier happens if true', this.bTarget.state.onHit)
+        console.log('Player hits')
+        this.player.state.onHit = false;
+        //console.log(this.bTarget.name, 'fate modifier happens if true', this.bTarget.state.onHit)
+      }
+    },
+    'monster.state.onHit': function (val, oldVal) {
+      if(val == true) {
+        console.log('Monster hits');
+        this.monster.state.onHit = false;
+        //console.log(this.bTarget.name, 'fate modifier happens if true', this.bTarget.state.onHit)
       }
     },
     'bTarget.state.isDead': function (val, oldVal) {
-      console.log(this.bTarget.name, 'Im dead', this.bTarget.state.isDead)
+      //console.log(this.bTarget.name, 'Im dead', this.bTarget.state.isDead)
     },
   }
 })
