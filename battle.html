@@ -40,11 +40,12 @@
         </section>
 
         <ul>
-          <!-- <li v-repeat="monster in monsters | filterBy '1' in 'level'" v-on="click: battle(monster, 1)"> -->
-        <li v-repeat="monster in monsters | filterBy '1' in 'level'" v-on="click: battle(monster, 1)">
-            <h3>{{monster.name}}</h3>
-            <h4>{{monster.health}}</h4>
-            <p>Attack: {{monster.attack.base}} ({{monster.attack.min}} - {{monster.attack.max}})</p>
+          <li v-repeat="monster in monsters | filterBy '1' in 'level'" v-on="click: battle(monster, 1)">
+            <div v-show="!monster.state.isDead">
+              <h3>{{monster.name}}</h3>
+              <h4>{{monster.health}}</h4>
+              <p>Attack: {{monster.attack.base}} ({{monster.attack.min}} - {{monster.attack.max}})</p>
+            </div>
           </li>
         </ul>  
       </div>      
