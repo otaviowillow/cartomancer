@@ -6,19 +6,24 @@ var battle = new Vue({
   el: '#battle',
   data: {
     trumps: [],
-    bTarget: {},
+    battleTarget: {},
+    latestHitDamage: '',
     firstHit: true,
     battleStart: false,
     battleEnd: false,
     turnStart: false,
-    turnEnd: false
+    turnEnd: false,
+
+    effectTarget: {},
+    cardEffects: [],
+    mainEffect: {}
   },
 
   ready: function() {
     var self = this;
 
-    self.battleStart = true;
     self.fetchData();
+    self.startBattle();
   },
 
   methods: {
@@ -31,48 +36,86 @@ var battle = new Vue({
       $.getJSON(jsonCards, function(response){
         for (var trump of response.trumps) {
           self.trumps.push(trump);
-          self.$set('effects', trump.effects);
         }
       });
       $.getJSON(jsonMonster, function(response){
         self.$set('monster', response.monster);
+        self.monster.$set('currentHealth', response.monster.health);
         self.monster.$set('hit', self.hit);
+        self.monster.$set('handleEffect', self.handleEffect);
       });
       $.getJSON(jsonPlayer, function(response){
         self.$set('player', response.player);
+        self.player.$set('currentHealth', response.player.health);
         self.player.$set('hit', self.hit);
+        self.player.$set('handleEffect', self.handleEffect);
       });
     },
 
     rollDice: function(max, min) {
-      return Math.round(Math.random() * (max - min) + min);
+      var roll = Math.random() * (max - min) + min;
+
+      return Math.round(roll * 10) / 10;
     },
 
-    battle: function(monster, level) {
+    startBattle: function() {
+      this.battleStart = true;
+    },
+
+    assembleEffects: function(e) {
+      this.cardEffects = e.targetVM.effects;
+      this.mainEffect = this.cardEffects[0];
+      this.effectTarget = this.player; //TODO: Set who receives buffs
+    },
+
+    handleEffect: function(target, effect) {
+      procRoll = this.rollDice(0,1);
+
+      console.log(procRoll, effect.proc)
+
+      if(procRoll <= effect.proc) {
+        switch(effect.type) {
+          case 'heal':
+            var targetHeal = target.currentHealth += Math.round((1 * this.latestHitDamage));
+
+            targetHeal <= target.health ? targetHeal : target.currentHealth = target.health;
+            console.log(this.effectTarget.name, 'heals to', targetHeal)
+            break
+          case 'stun':
+            console.log('stun!')
+            break
+          default:
+            console.log('no effects')
+            console.log(this.mainEffect)
+        }
+      }
+    },
+
+    battle: function() {
       var self = this;
 
       self.battleStart = false;
       self.turnStart = true;
 
       if(self.firstHit) {
-        self.bTarget = self.player;
+        self.battleTarget = self.player;
         self.firstHit = !self.firstHit;
       }
 
       //Player
       setTimeout(function(){
-        self.bTarget = self.player;
+        self.battleTarget = self.player;
 
-        if(!self.bTarget.state.isDead) {
+        if(!self.battleTarget.state.isDead) {
           self.player.state.onHit = true;
         }
       })
 
       //Monster
       setTimeout(function(){
-        self.bTarget = self.monster;
+        self.battleTarget = self.monster;
 
-        if(!self.bTarget.state.isDead) {
+        if(!self.battleTarget.state.isDead) {
           self.monster.state.onHit = true;
         }
       }, 500)
@@ -82,34 +125,34 @@ var battle = new Vue({
     dealDamage: function(damage, victim) {
       var self = this;
 
-      if(victim.health > 0) {
-        victim.health -= damage;
+      if(victim.currentHealth > 0) {
+        victim.currentHealth -= damage;
       } 
 
-      if(victim.health <= 0) {
-        victim.health = 0;
+      if(victim.currentHealth <= 0) {
+        victim.currentHealth = 0;
         victim.state.isDead = true;
       }
     },
 
     hit: function(victim) {
-      FullDamage = this.bTarget.attack.base + this.rollDice(this.bTarget.attack.max, this.bTarget.attack.min);
-      damage = Math.round(FullDamage - (FullDamage  * victim.armor));
+      FullDamage = this.battleTarget.attack.base + this.rollDice(this.battleTarget.attack.max, this.battleTarget.attack.min);
+      this.latestHitDamage = Math.round(FullDamage - (FullDamage  * victim.armor));
 
-      this.dealDamage(damage, victim)
+      this.dealDamage(this.latestHitDamage, victim)
 
-      console.log(this.bTarget.name +' hits '+ victim.name +' for '+ damage);
+      console.log(this.battleTarget.name +' hits '+ victim.name +' for '+ this.latestHitDamage);
     }
   },
   watch: {
     'battleStart': function (val) {
       if(val == true) {
-        console.log('battle started!')
+        console.log('battle started!');
       }
     },
     'battleEnd': function (val) {
       if(val == true) {
-        console.log('battle end!')
+        console.log('battle ended!')
       }
     },
     'turnStart': function(val) {
@@ -130,6 +173,10 @@ var battle = new Vue({
 
         this.player.hit(this.monster);
 
+        if(this.effectTarget == this.player && this.mainEffect.trigger == 'onHit') {
+          this.player.handleEffect(this.effectTarget, this.mainEffect);
+        }
+
         this.player.state.onHit = false;
       }
     },
@@ -139,14 +186,18 @@ var battle = new Vue({
 
         this.monster.hit(this.player);
 
+        if(this.effectTarget == this.monster && this.mainEffect.trigger == 'onHit') {
+          this.monster.handleEffect(this.effectTarget, this.mainEffect);
+        }
+
         this.monster.state.onHit = false;
 
         this.turnEnd = true;
       }
     },
-    'bTarget.state.isDead': function (val, oldVal) {
+    'battleTarget.state.isDead': function (val, oldVal) {
       if(val == true) {
-        console.log(this.bTarget.name, 'is dead');
+        console.log(this.battleTarget.name, 'is dead');
         this.battleEnd = true;
       }
     },
