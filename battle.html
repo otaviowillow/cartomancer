@@ -19,11 +19,11 @@
       <div class="cards-view">
         <button v-on="click: startBattle">Start!</button>
         <ul class="trumps">
-          <li v-repeat="trump in trumps | filterBy 'The High Priestess' in 'name'">
+          <li v-repeat="trump in trumps | filterBy 'The Fool' in 'name'">
             <h2>{{trump.name}}</h2>
 
             <ul>
-              <li v-repeat="trump.fates.yellow | filterBy 'battle' in 'type'" style="display: none">
+              <li v-repeat="trump.fates.yellow | filterBy 'battle' in 'type'">
                 <p>{{name}}</p>
                 <p>{{description}}</p>
                 <p v-repeat="effects" v-on="click: assembleEffects">
