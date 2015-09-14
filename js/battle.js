@@ -87,6 +87,12 @@ var battle = new Vue({
         this.effectTarget.mainProc = true;
 
         switch(effect.type) {
+          case 'confusion':
+            target.hit(this.monster);
+            target.state.onHit = false;
+
+            console.info('me not stupid')
+            break;
           case 'heal':
             var targetHeal = target.currentHealth += Math.round(effect.modifier[0] * target.health);
 
@@ -110,6 +116,14 @@ var battle = new Vue({
             break;
           default:
             console.log('no effects')
+        }
+      }
+      else {
+        switch(effect.type) {
+          case 'confusion':
+            target.hit(this.monster);
+            target.state.onHit = false;
+            break;
         }
       }
       
@@ -139,7 +153,7 @@ var battle = new Vue({
       setTimeout(function(){
         self.battleTarget = self.monster;
 
-        if(!self.battleTarget.state.isDead) {
+        if(!self.battleTarget.state.isDead && !self.player.state.onHit) {
           self.monster.state.onHit = true;
         }
       }, 500)
@@ -239,18 +253,22 @@ var battle = new Vue({
     'player.state.onHit': function (val, oldVal) {
       if(val == true) {
         console.log('Player hits');
+        this.player.state.onHit = true;
 
-        this.player.hit(this.monster);
+        if(this.mainEffect.type !== 'confusion') {
+          this.player.hit(this.monster);
+          this.player.state.onHit = false;
+        }
 
         if(this.mainEffect.trigger == 'onHit') {
           this.effectTarget.handleEffect(this.effectTarget, this.mainEffect);
         }
-        this.player.state.onHit = false;
       }
     },
     'monster.state.onHit': function (val, oldVal) {
       if(val == true) {
         console.log('Monster hits');
+        this.monster.state.onHit = true;
 
         this.monster.hit(this.player);
 
