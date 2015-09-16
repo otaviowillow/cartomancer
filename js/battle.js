@@ -8,7 +8,8 @@ var battle = new Vue({
     trumps: [],
 
     battleTarget: {},
-    latestHitDamage: '',
+    latestHitDamage: 0,
+    damageModifierPercentage: 0,
     shield: 0,
     mainProc: false,
 
@@ -81,6 +82,9 @@ var battle = new Vue({
     handleEffect: function(target, effect) {
       var self = this;
 
+      //Define damage percentage for secondary effects
+      self.damageModifierPercentage = Math.round(self.latestHitDamage * self.secondaryEffect.modifier[0])
+
       procRoll = self.rollDice(0,1);
 
       if(procRoll <= effect.proc) {
@@ -104,7 +108,7 @@ var battle = new Vue({
 
             console.info('shields up!', target.shield);
             break;
-          case 'doubleDamage':
+          case 'doubleAttack':
             target.hit(self.effectOpponent, effect.modifier[0])
 
             console.info('spinning up', this.latestHitDamage)
@@ -115,7 +119,8 @@ var battle = new Vue({
             console.info('reduce armor', self.effectOpponent.armor)
             break;
           case 'extraDamage':
-            console.info(self.mainEffect.type, 'triggers extra damage')
+            console.info(self.mainEffect.type, 'triggers extra damage', self.damageModifierPercentage )
+            self.dealDamage(2, target)
             break;
           default:
             console.log('no effects')
@@ -162,10 +167,12 @@ var battle = new Vue({
 
       if(victim.currentHealth > 0 && victim.shield <= 0) {
         victim.currentHealth -= damage;
+        console.log(this.battleTarget.name +' hits '+ victim.name +' for '+ damage);
       }
 
       if(victim.shield > 0) {
         victim.shield -= fDamage;
+        console.log(this.battleTarget.name +' hits '+ victim.name +'shield for '+ fDamage);
       }
 
       if(victim.currentHealth <= 0) {
@@ -177,14 +184,9 @@ var battle = new Vue({
     hit: function(victim, attackModifier, defenseModifier) {
       fullDamage = Math.round(this.battleTarget.attack.base + this.rollDice(this.battleTarget.attack.max, this.battleTarget.attack.min));
       this.latestHitDamage = Math.round(fullDamage - (fullDamage  * victim.armor));
-
-      if(attackModifier > 0) {
-        this.latestHitDamage = Math.round((fullDamage - (fullDamage  * victim.armor)) * attackModifier);
-      }
+      this.damageModifierPercentage = Math.round((fullDamage - (fullDamage  * victim.armor)) * attackModifier);
 
       this.dealDamage(this.latestHitDamage, victim, fullDamage)
-
-      console.log(this.battleTarget.name +' hits '+ victim.name +' for '+ this.latestHitDamage);
     }
   },
   watch: {
@@ -254,8 +256,10 @@ var battle = new Vue({
         }
       }
       if(val==false) {
-        if(this.battleTarget.name == 'monster')
-        this.turnEnd = true;
+        //Turn ends after monsters last hit
+        if(this.battleTarget.name == 'monster') {
+          this.turnEnd = true;
+        }
       }
     },
     'battleTarget.state.isDead': function (val) {

@@ -1595,7 +1595,7 @@
             "description": "50% chance Target attacks twice. Second attack deals 75% damage from the first one",
             "effects": [
               {
-                "type": "doubleDamage",
+                "type": "doubleAttack",
                 "target": "player",
                 "trigger": "onHit",
                 "duration": 1,
@@ -1613,7 +1613,7 @@
             "description": "25% chance Target attacks twice. Second attack deals 40% damage from the first one",
             "effects": [
               {
-                "type": "doubleDamage",
+                "type": "doubleAttack",
                 "target": "player",
                 "trigger": "onHit",
                 "duration": 1,
@@ -1665,7 +1665,7 @@
             "description": "50% chance Target attacks twice. Second attack deals 30% damage from the first one and reduces target armor by 15%",
             "effects": [
               {
-                "type": "doubleDamage",
+                "type": "doubleAttack",
                 "target": "player",
                 "trigger": "onHit",
                 "duration": 1,
@@ -1693,7 +1693,7 @@
             "description": "25% chance Target attacks twice. Second attack deals 30% damage from the first one and reduces target armor by 7%",
             "effects": [
               {
-                "type": "doubleDamage",
+                "type": "doubleAttack",
                 "target": "player",
                 "trigger": "turnStart",
                 "duration": 1,
@@ -1755,7 +1755,7 @@
             "description": "50% chance Target attacks twice. Second attack deals 100% damage from the first one but damages querent for 30% of the attack",
             "effects": [
               {
-                "type": "doubleDamage",
+                "type": "doubleAttack",
                 "target": "player",
                 "trigger": "onHit",
                 "duration": 1,
@@ -1783,7 +1783,7 @@
             "description": "25% chance Target attacks twice. Second attack deals 100% damage from the first one but damages querent for 50% of the attack",
             "effects": [
               {
-                "type": "doubleDamage",
+                "type": "doubleAttack",
                 "target": "player",
                 "trigger": "turnStart",
                 "duration": 1,
