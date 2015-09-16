@@ -628,7 +628,7 @@
             "type": "battle",
             "name": "The Hound",
             "rarity": "rare",
-            "description": "50% target gets confused on hit this turn. Confused targets hits self. 50% chance to deal 30% extra damage on confusion hit",
+            "description": "30% target gets confused on hit this turn. Confused targets hits self. 50% chance to deal 30% extra damage on confusion hit",
             "effects": [
               {
                 "type": "confusion",
@@ -643,7 +643,7 @@
                 "target": "player",
                 "trigger": "mainProc",
                 "duration": 1,
-                "proc": 0.3,
+                "proc": 1,
                 "modifier": [
                   0.3
                 ]

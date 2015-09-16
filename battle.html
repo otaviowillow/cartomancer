@@ -27,11 +27,11 @@
                 <p>{{name}}</p>
                 <p>{{description}}</p>
                 <p v-repeat="effects" v-on="click: assembleEffects">
-                  {{type}}
-                  {{target}}
-                  {{trigger}}
-                  {{duration}}
-                  {{proc}}
+                  <strong>type: </strong>{{type}}
+                  <strong>target: </strong>{{target}}
+                  <strong>trigger: </strong>{{trigger}}
+                  <strong>duration: </strong>{{duration}}
+                  <strong>proc: </strong>{{proc}}
                   <p v-repeat="modifier"></p>
                 </p>
               </li>
@@ -39,11 +39,11 @@
               <li v-repeat="trump.fates.blue | filterBy 'battle' in 'type'">
                 <p>{{description}}</p>
                 <p v-repeat="effects" v-on="click: assembleEffects">
-                  {{type}}
-                  {{target}}
-                  {{trigger}}
-                  {{duration}}
-                  {{proc}}
+                  <strong>type: </strong>{{type}}
+                  <strong>target: </strong>{{target}}
+                  <strong>trigger: </strong>{{trigger}}
+                  <strong>duration: </strong>{{duration}}
+                  <strong>proc: </strong>{{proc}}
                   <p v-repeat="modifier"></p>
                 </p>
               </li>
@@ -51,11 +51,11 @@
               <li v-repeat="trump.fates.other | filterBy 'battle' in 'type'">
                 <p>{{description}}</p>
                 <p v-repeat="effects" v-on="click: assembleEffects">
-                  {{type}}
-                  {{target}}
-                  {{trigger}}
-                  {{duration}}
-                  {{proc}}
+                  <strong>type: </strong>{{type}}
+                  <strong>target: </strong>{{target}}
+                  <strong>trigger: </strong>{{trigger}}
+                  <strong>duration: </strong>{{duration}}
+                  <strong>proc: </strong>{{proc}}
                   <p v-repeat="modifier"></p>
                 </p>
               </li>

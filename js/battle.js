@@ -73,7 +73,7 @@ var battle = new Vue({
       this.mainEffect = this.cardEffects[0];
       this.secondaryEffect = this.cardEffects[1];
 
-      this.effectTarget = this.player; //TODO: Set who receives buffs
+      this.effectTarget = this.monster; //TODO: Set who receives buffs
       this.effectOpponent = this.monster; //TODO: Set who is opponent
       this.effectTarget.$set('mainProc', this.mainProc)
     },
@@ -89,8 +89,8 @@ var battle = new Vue({
         switch(effect.type) {
           case 'confusion':
             target.state.isConfused = true;
-            console.info(target.name, 'is confused', target.state.isConfused)
-            target.hit(target)
+            console.info(target.name, 'is confused')
+            target.hit(target);
             this.battleTarget.state.onHit = false;
             break;
           case 'heal':
@@ -129,7 +129,6 @@ var battle = new Vue({
 
       self.battleStart = false;
       self.turnStart = true;
-      self.effectTarget.mainProc = false;
 
       if(self.firstHit) {
         self.battleTarget = self.player;
@@ -153,10 +152,9 @@ var battle = new Vue({
 
         if(!self.battleTarget.state.isDead && !self.player.state.onHit) {
           self.monster.state.onHit = true;
-          self.turnEnd = true;
         }
       }, 500)
-      
+
     },
 
     dealDamage: function(damage, victim, fDamage) {
@@ -237,13 +235,12 @@ var battle = new Vue({
     },
     'effectTarget.mainProc': function (val) {
       if(val == true && this.secondaryEffect.trigger == 'mainProc') {
-        console.info('main procced');
-
-        console.log(this.effectTarget.mainProc)
         this.effectTarget.handleEffect(this.effectTarget, this.secondaryEffect);
+
+        this.effectTarget.mainProc = false;
       }
     },
-    'battleTarget.state.onHit': function (val, oldVal) {
+    'battleTarget.state.onHit': function (val) {
       if(val == true) {
         console.log(this.battleTarget.name ,'hits');
 
@@ -256,8 +253,12 @@ var battle = new Vue({
           this.battleTarget.state.onHit = false;
         }
       }
+      if(val==false) {
+        if(this.battleTarget.name == 'monster')
+        this.turnEnd = true;
+      }
     },
-    'battleTarget.state.isDead': function (val, oldVal) {
+    'battleTarget.state.isDead': function (val) {
       if(val == true) {
         console.log(this.battleTarget.name, 'is dead');
         this.battleEnd = true;
