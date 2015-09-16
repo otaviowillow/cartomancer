@@ -33,9 +33,9 @@ var battle = new Vue({
   methods: {
    fetchData: function() {
       var self = this;
-      var jsonCards = 'https://api.myjson.com/bins/2tgwk';
-      var jsonMonster = 'https://api.myjson.com/bins/m10q';
-      var jsonPlayer = 'https://api.myjson.com/bins/47efe';
+      var jsonCards = 'stubs/trumps.json';
+      var jsonMonster = 'stubs/monster.json';
+      var jsonPlayer = 'stubs/player.json';
 
       $.getJSON(jsonCards, function(response){
         for (var trump of response.trumps) {
@@ -88,10 +88,10 @@ var battle = new Vue({
 
         switch(effect.type) {
           case 'confusion':
-            target.hit(this.monster);
-            target.state.onHit = false;
-
-            console.info('me not stupid')
+            target.state.isConfused = true;
+            console.info(target.name, 'is confused', target.state.isConfused)
+            target.hit(target)
+            this.battleTarget.state.onHit = false;
             break;
           case 'heal':
             var targetHeal = target.currentHealth += Math.round(effect.modifier[0] * target.health);
@@ -114,16 +114,11 @@ var battle = new Vue({
 
             console.info('reduce armor', self.effectOpponent.armor)
             break;
+          case 'extraDamage':
+            console.info(self.mainEffect.type, 'triggers extra damage')
+            break;
           default:
             console.log('no effects')
-        }
-      }
-      else {
-        switch(effect.type) {
-          case 'confusion':
-            target.hit(this.monster);
-            target.state.onHit = false;
-            break;
         }
       }
       
@@ -134,6 +129,7 @@ var battle = new Vue({
 
       self.battleStart = false;
       self.turnStart = true;
+      self.effectTarget.mainProc = false;
 
       if(self.firstHit) {
         self.battleTarget = self.player;
@@ -143,6 +139,7 @@ var battle = new Vue({
       //Player
       setTimeout(function(){
         self.battleTarget = self.player;
+        self.battleOpponent = self.monster;
 
         if(!self.battleTarget.state.isDead) {
           self.player.state.onHit = true;
@@ -152,9 +149,11 @@ var battle = new Vue({
       //Monster
       setTimeout(function(){
         self.battleTarget = self.monster;
+        self.battleOpponent = self.player;
 
         if(!self.battleTarget.state.isDead && !self.player.state.onHit) {
           self.monster.state.onHit = true;
+          self.turnEnd = true;
         }
       }, 500)
       
@@ -238,47 +237,30 @@ var battle = new Vue({
     },
     'effectTarget.mainProc': function (val) {
       if(val == true && this.secondaryEffect.trigger == 'mainProc') {
-        this.effectTarget.handleEffect(this.effectTarget, this.secondaryEffect);
+        console.info('main procced');
 
-        console.info('main procced')
-        this.effectTarget.mainProc = false;
+        console.log(this.effectTarget.mainProc)
+        this.effectTarget.handleEffect(this.effectTarget, this.secondaryEffect);
+      }
+    },
+    'battleTarget.state.onHit': function (val, oldVal) {
+      if(val == true) {
+        console.log(this.battleTarget.name ,'hits');
+
+        if(this.mainEffect.trigger == 'onHit' && this.effectTarget.name == this.battleTarget.name) {
+          this.effectTarget.handleEffect(this.effectTarget, this.mainEffect);
+        }
+
+        if(!this.battleTarget.state.isConfused) {
+          this.battleTarget.hit(this.battleOpponent);
+          this.battleTarget.state.onHit = false;
+        }
       }
     },
     'battleTarget.state.isDead': function (val, oldVal) {
       if(val == true) {
         console.log(this.battleTarget.name, 'is dead');
         this.battleEnd = true;
-      }
-    },
-    'player.state.onHit': function (val, oldVal) {
-      if(val == true) {
-        console.log('Player hits');
-        this.player.state.onHit = true;
-
-        if(this.mainEffect.type !== 'confusion') {
-          this.player.hit(this.monster);
-          this.player.state.onHit = false;
-        }
-
-        if(this.mainEffect.trigger == 'onHit') {
-          this.effectTarget.handleEffect(this.effectTarget, this.mainEffect);
-        }
-      }
-    },
-    'monster.state.onHit': function (val, oldVal) {
-      if(val == true) {
-        console.log('Monster hits');
-        this.monster.state.onHit = true;
-
-        this.monster.hit(this.player);
-
-        if(this.effectTarget == this.monster && this.mainEffect.trigger == 'onHit') {
-          this.monster.handleEffect(this.effectTarget, this.mainEffect, this.secondaryEffect);
-        }
-
-        this.monster.state.onHit = false;
-
-        this.turnEnd = true;
       }
     },
   }

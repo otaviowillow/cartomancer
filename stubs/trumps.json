@@ -1,0 +1,4230 @@
+{
+  "effects": {
+    "querent": [
+      {
+        "type": "ressurrect",
+        "name": "Lazarus Aura",
+        "description": "If you were to die this turn, regenerate to full health instead",
+        "target": "player",
+        "rarity": "rare",
+        "trigger": "onDeath",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "shield",
+        "name": "Blessed Aura",
+        "description": "At the start of your turn heal for 10% of your total health. 5 turns to recharge",
+        "target": "allOpponents",
+        "trigger": "turnStart",
+        "duration": null,
+        "recharge": 5,
+        "modifier": [
+          0.1
+        ]
+      },
+      {
+        "type": "immune",
+        "name": "Immaculate Aura",
+        "description": "Immune to one negative effect, curse or charm. 5 Turns to recharge",
+        "target": "player",
+        "trigger": "querentPhase",
+        "duration": null,
+        "recharge": 5,
+        "modifier": []
+      },
+      {
+        "type": "immune",
+        "name": "Forsaken Aura",
+        "description": "Immune to one negative effect, curse or charm. 5 Turns to recharge",
+        "target": "player",
+        "trigger": "querentPhase",
+        "duration": null,
+        "recharge": 5,
+        "modifier": []
+      },
+      {
+        "type": "fail",
+        "name": "Amnesia Aura",
+        "description": "20% fail chance when using any items or abilities",
+        "target": "player",
+        "trigger": "turnStart",
+        "duration": null,
+        "recharge": null,
+        "modifier": [
+          0.2
+        ]
+      },
+      {
+        "type": "ressurrect",
+        "name": "Downed Phoenix Aura",
+        "description": "You don't lose any items upon death. You get back to life with 75% health",
+        "target": "player",
+        "trigger": "onDeath",
+        "duration": null,
+        "recharge": null,
+        "modifier": [
+          0.75
+        ]
+      },
+      {
+        "type": "heal",
+        "name": "Joy Aura",
+        "description": "At the start of your turn heal for 5% of your total health. Lasts 3 turns",
+        "target": "allOpponents",
+        "trigger": "turnStart",
+        "duration": 3,
+        "recharge": null,
+        "modifier": [
+          0.05
+        ]
+      },
+      {
+        "type": "immune",
+        "name": "Cleansed Aura",
+        "description": "Immune to one negative effect, curse or charm.",
+        "target": "player",
+        "trigger": "querentPhase",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "immune",
+        "name": "Hatred Aura",
+        "description": "At the start of your Querent's Phase, lose 2 Health for every effect, curse, blessing or charm on you.",
+        "target": "player",
+        "trigger": "querentPhase",
+        "duration": null,
+        "recharge": null,
+        "modifier": [
+          0.2
+        ]
+      },
+      {
+        "type": "fail",
+        "name": "Silence Aura",
+        "description": "50% fail chance when using any items or abilities",
+        "target": "player",
+        "trigger": "turnStart",
+        "duration": 3,
+        "recharge": null,
+        "modifier": [
+          0.1
+        ]
+      },
+      {
+        "type": "lifeLink",
+        "name": "Connection Aura",
+        "description": "20% of health lost this turn is shared with every player equally for 10 turns",
+        "target": "allOpponents",
+        "trigger": "turnStart",
+        "duration": 10,
+        "recharge": null,
+        "modifier": [
+          0.2
+        ]
+      },
+      {
+        "type": "lifeLink",
+        "name": "Saved Aura",
+        "description": "5% of health lost this turn is shared with player who doesn't have a Saved Aura.",
+        "target": "allOpponents",
+        "trigger": "turnStart",
+        "duration": 10,
+        "recharge": null,
+        "modifier": [
+          0.2
+        ]
+      },
+      {
+        "type": "lifeLink",
+        "name": "Cain Aura",
+        "description": "10% of health lost this turn is shared with player who gave you this aura",
+        "target": "allOpponents",
+        "trigger": "turnStart",
+        "duration": 10,
+        "recharge": null,
+        "modifier": [
+          0.2
+        ]
+      },
+      {
+        "type": "lifeLink",
+        "name": "Duality Aura",
+        "description": "20% of every health lost is shared with one other random player for 10 turns",
+        "target": "randomOpponent",
+        "trigger": "turnStart",
+        "duration": 10,
+        "recharge": null,
+        "modifier": [
+          0.2
+        ]
+      },
+      {
+        "type": "mapReveal",
+        "name": "Good and Evil",
+        "description": "You can see all opponents position on the map and see what they are seeing. 5 turns to recharge",
+        "target": "map",
+        "trigger": "action",
+        "duration": 1,
+        "recharge": 5,
+        "modifier": []
+      },
+      {
+        "type": "mapReveal",
+        "name": "Snake Eyes Aura",
+        "description": "See what the player without Snake Eyes Aura sees for 3 turns",
+        "target": "player",
+        "trigger": "turnStart",
+        "duration": 3,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "mapReveal",
+        "name": "Snake Tongue Aura",
+        "description": "See what the player who gave you this aura sees for 3 turns",
+        "target": "player",
+        "trigger": "turnStart",
+        "duration": 3,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "movement",
+        "name": "Kings Chariot",
+        "description": "Your first movement action is free",
+        "target": "player",
+        "trigger": "action",
+        "duration": null,
+        "recharge": 5,
+        "modifier": []
+      },
+      {
+        "type": "movement",
+        "name": "Hermes Stampede",
+        "description": "As a first action, move 4 tiles in one direction. You can't perform any additional actions.",
+        "target": "player",
+        "trigger": "action",
+        "duration": null,
+        "recharge": 2,
+        "modifier": []
+      },
+      {
+        "type": "movement",
+        "name": "Hermes Charge",
+        "description": "As a first action, move 4 tiles in one direction. You can't perform any additional actions.",
+        "target": "player",
+        "trigger": "action",
+        "duration": null,
+        "recharge": 5,
+        "modifier": []
+      },
+      {
+        "type": "movement",
+        "name": "Lucky Ball and Chains",
+        "description": "Movement action costs 2 action. Lasts for 2 turns then replace this action with Move action",
+        "target": "player",
+        "trigger": "action",
+        "duration": 2,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "movement",
+        "name": "Forever Lost",
+        "description": "20% chance you move to an incorrect tile",
+        "target": "player",
+        "trigger": "action",
+        "duration": 5,
+        "recharge": null,
+        "modifier": []
+      }
+    ],
+    "item": [
+      {
+        "type": "mapReveal",
+        "name": "Good and Evil",
+        "description": "You can see what all opponents on the map can see",
+        "target": "map",
+        "trigger": "item",
+        "duration": 1,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "movement",
+        "name": "Flying Carpet",
+        "description": "Move normally through blocked tiles this turn",
+        "target": "player",
+        "trigger": "item",
+        "duration": 5,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "movement",
+        "name": "Magic Bottle",
+        "description": "Move normally through blocked tiles this turn",
+        "target": "player",
+        "trigger": "item",
+        "duration": 1,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "trap",
+        "name": "Honey Trap",
+        "description": "Summons a Bear to fight against who stepped on this trap",
+        "target": "map",
+        "trigger": "item",
+        "duration": 1,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "trap",
+        "name": "Meat Trap",
+        "description": "Summons a Wolf to fight against who stepped on this trap",
+        "target": "map",
+        "trigger": "item",
+        "duration": 1,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "type": "trap",
+        "name": "Explosion Trap",
+        "description": "Explodes dealing 10% - 30% of your health as damage. Damages over time for 3% of your health for 3 turns",
+        "target": "map",
+        "trigger": "item",
+        "duration": 3,
+        "recharge": null,
+        "modifier": [
+          0.1,
+          0.3,
+          0.03
+        ]
+      },
+      {
+        "type": "trap",
+        "name": "Explosion Trap",
+        "description": "Damages over time for 7% of your health for 3 turns",
+        "target": "map",
+        "trigger": "item",
+        "duration": 3,
+        "recharge": null,
+        "modifier": [
+          0.07
+        ]
+      },
+      {
+        "type": "trap",
+        "name": "Eagle Trap",
+        "description": "Summons an Eagle that follows target, whoever sets the trap sees what target sees for 3 turns",
+        "target": "map",
+        "trigger": "item",
+        "duration": 3,
+        "recharge": null,
+        "modifier": [
+          "Eagle"
+        ]
+      },
+      {
+        "type": "trap",
+        "name": "Eagle Trap",
+        "description": "Reveals target location to who set the trap for 3 turns",
+        "target": "map",
+        "trigger": "item",
+        "duration": 3,
+        "recharge": null,
+        "modifier": []
+      }
+    ],
+    "summon": [
+      {
+        "type": "summon",
+        "name": "Healing Fountain",
+        "description": "Heals for 20% each action and removes all negative effects, curses or charms. Last 10 turns. Only one use per player.",
+        "target": "mapSelf",
+        "rarity": "common",
+        "trigger": "action",
+        "duration": 10,
+        "recharge": 2,
+        "modifier": [
+          0.2
+        ]
+      },
+      {
+        "type": "summon",
+        "name": "Eternal Fountain of Youth",
+        "description": "Heals for 20 each action and removes all negative effects, curses or charms. One charge. Regenerates one charge every 2 turns",
+        "target": "mapSelf",
+        "rarity": "common",
+        "trigger": "action",
+        "duration": 1,
+        "recharge": 2,
+        "modifier": [
+          20
+        ]
+      }
+    ],
+    "card": [
+      {
+        "name": "The High Price",
+        "description": "Separate target opponent's card. At any moment of the game, target opponent may choose to discard two cards to buy that card. You may buy that card by discarding one card.",
+        "rarity": "rare",
+        "type": "luck",
+        "target": "targetOpponent",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "The Con Artist",
+        "description": "Choose a new target for target opponent's spell then steal it from target opponent. Draw a card.",
+        "type": "luck",
+        "rarity": "rare",
+        "target": "targetOpponent",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "A Fool and His Money",
+        "description": "When target opponent uses any Flip card, look at target opponent hand. Equally trade any number of cards from your hand with Target Opponent's.",
+        "type": "luck",
+        "rarity": "rare",
+        "target": "targetOpponent",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "The Precipice's Edge",
+        "description": "Separate target opponent's card. At any moment of the game, target opponent may choose to discard two cards to buy that card.",
+        "type": "luck",
+        "rarity": "common",
+        "target": "targetOpponent",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "The Con Man",
+        "description": "Choose a new target for target opponent's spell. Draw a card.",
+        "type": "luck",
+        "rarity": "common",
+        "target": "targetOpponent",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "Fool's Gold",
+        "description": "Equally trade any number of cards from your hand with Target Opponent's. Target Opponent decides which cards to trade.",
+        "type": "luck",
+        "rarity": "common",
+        "target": "targetOpponent",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "Mother's Requiem",
+        "description": "If you were targeted by silence this turn, look at the top three cards of the Player's Deck. Buy two and shuffle the other one",
+        "rarity": "rare",
+        "target": "player",
+        "type": "luck",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "Gentle Whisper",
+        "description": "If you were targeted by silence this turn, look at the top three cards of the Player's Deck. Buy one and shuffle the other two",
+        "rarity": "common",
+        "target": "player",
+        "type": "luck",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "The Philantropist",
+        "description": "Use this card immediately. Instead of discarding cards, you now move them to a different pile. Players may choose to buy from that pile instead of the Player's Deck",
+        "rarity": "rare",
+        "target": "player",
+        "type": "curse",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "Wasteless Empire",
+        "description": "You can't play any other spells this turn. Buy up to two cards from the discard pile.",
+        "rarity": "rare",
+        "target": "player",
+        "type": "luck",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "Frugal Living",
+        "description": "You can't play any other spells this turn. Buy one card from the discard pile. If there are no cards at the discard pile, buy it from the Player's Deck instead",
+        "rarity": "common",
+        "target": "player",
+        "type": "luck",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "The Gemini",
+        "description": "You can't play any other spells during this turn. Buy two cards.",
+        "rarity": "common",
+        "target": "player",
+        "type": "luck",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "The Mother Nature",
+        "description": "You can't play any other spells during this turn. Buy one card. Place two markers on this card. Remove one marker from this card at the start of your turn. If there are no markers on this card, return it to your hand (Blessing: Instead of discarding this card, separate it)",
+        "rarity": "rare",
+        "target": "player",
+        "type": "blessing",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "Empirical Endowment",
+        "description": "Redirect target opponent \"buy a card\" effect to you, then look at target opponent hand and steal a card from it.",
+        "rarity": "rare",
+        "target": "player",
+        "type": "luck",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "To the Emperor",
+        "description": "Redirect target opponent \"buy a card\" effect to you.",
+        "rarity": "common",
+        "target": "player",
+        "type": "luck",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "Firstborn's Demise",
+        "description": "ENCHANTER TOKEN: Look at each opponent's hand. Steal one card from one of them - NO ENCHANTER TOKEN: Show your hand to all your opponents. Enchanter steals a card from you - AFTER: Enchanter discards enchanter token. Remove The Emperor's Ear from the fate deck. Draw a new fate.",
+        "rarity": "rare",
+        "target": "player",
+        "type": "fate",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "The Emperor Ears",
+        "description": "ENCHANTER TOKEN: Look at each opponent's hand - NO ENCHANTER TOKEN: Show your hand to all your opponents - AFTER: Enchanter discards enchanter token. Remove The Emperor's Ear from the fate deck. Draw a new fate.",
+        "rarity": "rare",
+        "target": "player",
+        "type": "fate",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "Tax Returns",
+        "description": "ENCHANTER TOKEN: Each opponent may choose to discard two cards. Buy a card for each opponent who doesn't discard two cards - NO ENCHANTER TOKEN: Discard a card. Enchanter buys a card - AFTER: Enchanter discards enchanter token. Remove Tax Returns from the fate deck. Draw a new fate.",
+        "rarity": "rare",
+        "target": "player",
+        "type": "fate",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      },
+      {
+        "name": "A Minor Tribute",
+        "description": "ENCHANTER TOKEN: Each opponent discards a card - NO ENCHANTER TOKEN: Discard a card - AFTER: Enchanter discards enchanter token. Remove A Minor Tribute from the fate deck. Draw a new fate.",
+        "rarity": "common",
+        "target": "player",
+        "type": "fate",
+        "trigger": "playerCard",
+        "duration": null,
+        "recharge": null,
+        "modifier": []
+      }
+    ]
+  },
+  "trumps": [
+    {
+      "name": "The Fool",
+      "number": 0,
+      "group": "yellow",
+      "keyword": "confusion",
+      "legendary": true,
+      "fates": {
+        "yellow": [
+          {
+            "type": "card",
+            "name": "On the Edge",
+            "description": "Draw a The High Price Luck",
+            "rarity": "rare",
+            "effect": "The High Price",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "The Precipice's Edge",
+            "description": "Draw a The Precipice's Edge Luck",
+            "rarity": "common",
+            "effect": "The Precipice's Edge",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "The Precipice's Edge",
+            "description": "Random opponent draws a The High Price Luck",
+            "rarity": "rare",
+            "effect": "The High Price",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "card",
+            "name": "The Precipice's Edge",
+            "description": "Random opponent draws a The Precipice's Edge Luck",
+            "rarity": "common",
+            "effect": "The Precipice's Edge",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Hound",
+            "rarity": "rare",
+            "description": "50% target gets confused on hit this turn. Confused targets hits self. 50% chance to deal 30% extra damage on confusion hit",
+            "effects": [
+              {
+                "type": "confusion",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 1,
+                "modifier": []
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": 1,
+                "proc": 0.3,
+                "modifier": [
+                  0.3
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Dog",
+            "rarity": "common",
+            "description": "25% target gets confused on hit this turn. Confused targets hits self. 30% chance to deal 15% extra damage on confusion hit",
+            "effects": [
+              {
+                "type": "confusion",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.25,
+                "modifier": []
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": 1,
+                "proc": 0.3,
+                "modifier": [
+                  0.15
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "name": "Eye trick",
+            "description": "Draw a Con Artist Luck",
+            "type": "card",
+            "rarity": "rare",
+            "target": "player",
+            "effect": "The Con Artist"
+          },
+          {
+            "name": "Eye trick",
+            "description": "Draw a The Con Man Luck",
+            "type": "card",
+            "rarity": "common",
+            "target": "player",
+            "effect": "The Con Man"
+          },
+          {
+            "type": "card",
+            "name": "A Minor Mischief",
+            "description": "Random opponent draws The Con Artist Luck",
+            "target": "randomOpponent",
+            "rarity": "rare",
+            "effect": "The Con Artist"
+          },
+          {
+            "type": "card",
+            "name": "A Minor Mischief",
+            "description": "Random opponent draws The Con Man Luck",
+            "rarity": "rare",
+            "target": "randomOpponent",
+            "effect": "The Con Man"
+          },
+          {
+            "type": "battle",
+            "name": "The Monkey King Bar",
+            "rarity": "rare",
+            "description": "50% target gets confused on hit this turn. Confused targets hits self. 40% chance to stun on confusion hit",
+            "effects": [
+              {
+                "type": "confusion",
+                "target": "player",
+                "trigger": "onHit",
+                "proc": 0.5,
+                "duration": 1,
+                "modifier": []
+              },
+              {
+                "type": "stun",
+                "target": "player",
+                "trigger": "mainProc",
+                "proc": 0.4,
+                "duration": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Staff",
+            "rarity": "common",
+            "description": "25% target gets confused on hit this turn. Confused targets hits self. 20% chance to stun on confusion hit",
+            "effects": [
+              {
+                "type": "confusion",
+                "target": "player",
+                "trigger": "onHit",
+                "proc": 0.25,
+                "duration": 1,
+                "modifier": []
+              },
+              {
+                "type": "stun",
+                "target": "player",
+                "trigger": "mainProc",
+                "proc": 0.2,
+                "duration": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "card",
+            "name": "Dealing with a Fool",
+            "description": "Draw a A Fool and His Money Luck",
+            "rarity": "rare",
+            "target": "player",
+            "effect": "A Fool and His Money"
+          },
+          {
+            "type": "card",
+            "name": "Dealing with a Fool",
+            "description": "Draw a Fool's Gold Luck",
+            "target": "player",
+            "rarity": "common",
+            "effect": "Fool's Gold"
+          },
+          {
+            "type": "card",
+            "name": "Air Headed",
+            "description": "Random opponent draws a A Fool and His Money Luck",
+            "rarity": "rare",
+            "target": "randomOpponent",
+            "effect": "A Fool and His Money"
+          },
+          {
+            "type": "card",
+            "name": "Air Headed",
+            "description": "Random opponent draws a Fool's Gold Luck",
+            "rarity": "common",
+            "target": "randomOpponent",
+            "effect": "Fool's Gold"
+          },
+          {
+            "type": "battle",
+            "name": "The Lotus Flower",
+            "rarity": "rare",
+            "description": "50% target gets confused on hit this turn. Confused targets hits self. 20% chance to heal opponent on confusion hit",
+            "effects": [
+              {
+                "type": "confusion",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.5,
+                "modifier": []
+              },
+              {
+                "type": "heal",
+                "target": "effectOpponent",
+                "trigger": "mainProc",
+                "duration": 1,
+                "proc": 0.2,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Flower",
+            "rarity": "common",
+            "description": "25% target gets confused on hit this turn. Confused targets hits self. 10% chance to heal opponent on confusion hit",
+            "effects": [
+              {
+                "type": "confusion",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.25,
+                "modifier": []
+              },
+              {
+                "type": "heal",
+                "target": "effectOpponent",
+                "trigger": "mainProc",
+                "duration": 1,
+                "proc": 0.1,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Magician",
+      "number": 1,
+      "group": "yellow",
+      "keyword": "polymorph",
+      "legendary": false,
+      "fates": {
+        "yellow": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The High Priestess",
+      "number": 2,
+      "group": "blue",
+      "keyword": "healing",
+      "legendary": false,
+      "fates": {
+        "yellow": [
+          {
+            "type": "querent",
+            "name": "Lazarus Secrets",
+            "description": "Querent receives Lazarus Aura",
+            "rarity": "rare",
+            "target": "player",
+            "effect": "Lazarus Aura"
+          },
+          {
+            "type": "querent",
+            "name": "The Phoenix Flower",
+            "description": "Querent receives Downed Phoenix Aura",
+            "rarity": "common",
+            "target": "player",
+            "effect": "Downed Phoenix Aura"
+          },
+          {
+            "type": "querent",
+            "name": "Temple of Knowledge",
+            "description": "Your opponents Querents restores to full health and receives a Blessed Aura",
+            "rarity": "rare",
+            "effect": "Blessed Aura",
+            "target": "allOpponents"
+          },
+          {
+            "type": "querent",
+            "name": "Words of Calm",
+            "description": "Your opponents Querents restores 10% health and receives a Joy Aura",
+            "rarity": "common",
+            "effect": "Joy Aura",
+            "target": "allOpponents"
+          },
+          {
+            "type": "battle",
+            "name": "The Full Moon",
+            "rarity": "rare",
+            "description": "30% chance Target attacks heals Target for 10% of target's health",
+            "effects": [
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": null,
+                "proc": 0.3,
+                "modifier": [
+                  0.1
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Moon",
+            "rarity": "common",
+            "description": "30% chance Target attacks heals Target for 5% of target's health",
+            "effects": [
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": null,
+                "proc": 0.3,
+                "modifier": [
+                  0.05
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "querent",
+            "name": "The Priestess Right Pillar",
+            "description": "Removes all negative effects, curses or charms. Querent receives an Immaculate Aura",
+            "rarity": "rare",
+            "effect": "Immaculate Aura",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Words of Calm",
+            "description": "Removes all negative effects, curses or charms. Querent receives a Cleansed Aura",
+            "rarity": "common",
+            "effect": "Cleansed Aura",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The Priestess Left Pillar",
+            "description": "Querent receives a Forsaken Aura",
+            "rarity": "rare",
+            "effect": "Forsaken Aura",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Words of Anguish",
+            "description": "Querent receives Hatred Aura",
+            "rarity": "common",
+            "effect": "Hatred Aura",
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "the Holy Pomegranate",
+            "rarity": "rare",
+            "description": "At the start of your turn, target heals for 4% of their health. If full health, generates a shield for 20% of targets health",
+            "effects": [
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.2
+                ]
+              },
+              {
+                "type": "shield",
+                "target": "player",
+                "trigger": "fullHealth",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "the Pomegranate",
+            "rarity": "common",
+            "description": "At the start of your turn, target heals for 2% of their health. If full health, generates a shield for 10% of targets health",
+            "effects": [
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              },
+              {
+                "type": "shield",
+                "target": "player",
+                "trigger": "fullHealth",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "summon",
+            "name": "Eternal Fountain of Youth",
+            "description": "At the start of turn, generates an Eternal Fountain of Youth where you stand.",
+            "rarity": "rare",
+            "effect": "Eternal Fountain of Youth",
+            "target": "map"
+          },
+          {
+            "type": "summon",
+            "name": "Healing Fountain",
+            "description": "At the start of turn, generates a Healing Fountain where you stand.",
+            "rarity": "common",
+            "effect": "Healing Fountain",
+            "target": "map"
+          },
+          {
+            "type": "querent",
+            "name": "River Euphrates",
+            "description": "Querent receives an Amnesia Aura",
+            "rarity": "rare",
+            "effect": "Amnesia Aura",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Silence is Golden",
+            "description": "Querent receives a Silence Aura",
+            "rarity": "common",
+            "effect": "Silence Aura",
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "the Apocrypha Manuscript",
+            "rarity": "rare",
+            "description": "At the start of your turn, summons a Persephones General",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Persephones General"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "the Manuscript",
+            "rarity": "common",
+            "description": "At the start of your turn, summons a Persephones Spawn",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Persephones Spawn"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Emperess",
+      "number": 3,
+      "group": "yellow",
+      "keyword": "protection",
+      "legendary": true,
+      "fates": {
+        "yellow": [
+          {
+            "type": "querent",
+            "name": "Mother's Love",
+            "description": "Draw a Mother's Requiem luck",
+            "rarity": "rare",
+            "effect": "Mother's Requiem",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Mother's Care",
+            "description": "Draw a Gentle Whispers luck",
+            "rarity": "common",
+            "effect": "Mother's Care",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Mother's Love",
+            "description": "Random Opponent draws a Mother's Requiem luck",
+            "rarity": "rare",
+            "effect": "Mother's Requiem",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "querent",
+            "name": "Mother's Care",
+            "description": "Random Opponent draws a Gentle Whispers luck",
+            "rarity": "common",
+            "effect": "Mother's Care",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Golden Scepter",
+            "rarity": "rare",
+            "description": "At the start of the battle, target gains a protective shield for 50% of their health. While shied is up, attacks do 20% more damage.",
+            "effects": [
+              {
+                "type": "shield",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.5
+                ]
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "shieldUp",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Scepter",
+            "rarity": "common",
+            "description": "At the start of the battle, target gains a protective shield for 25% of their health. While shied is up, attacks do 10% more damage.",
+            "effects": [
+              {
+                "type": "shield",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.25
+                ]
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "shieldUp",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "card",
+            "name": "No Waste",
+            "description": "Draw a Wasteless Empire luck",
+            "rarity": "rare",
+            "effect": "Wasteless Empire",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "A Noble Heart",
+            "description": "Draw a Frugal Living luck",
+            "rarity": "common",
+            "effect": "Frugal Living",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "A Life of Service",
+            "description": "Draw a The Philantropist curse",
+            "rarity": "rare",
+            "effect": "The Philantropist",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "Mother's Tears",
+            "description": "Random opponent draws Gentle Whispers luck",
+            "rarity": "common",
+            "effect": "Gentle Whispers",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Venus Bulwark",
+            "rarity": "rare",
+            "description": "At the start of the battle, target gains a protective shield for 50% of their health. While shield is up, attacks heals for 10% of total health.",
+            "effects": [
+              {
+                "type": "shield",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.5
+                ]
+              },
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": "shieldUp",
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Venus Aegis",
+            "rarity": "common",
+            "description": "At the start of the battle, target gains a protective shield for 25% of their health. While shield is up, attacks heals for 5% of total health.",
+            "effects": [
+              {
+                "type": "shield",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.25
+                ]
+              },
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": "shieldUp",
+                "proc": 1,
+                "modifier": [
+                  0.05
+                ]
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "card",
+            "name": "The Mother Nature",
+            "description": "Draw a The Mother Nature blessing",
+            "rarity": "rare",
+            "effect": "The Mother Nature",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "The Great Twins",
+            "description": "Draw a The Gemini blessing",
+            "rarity": "common",
+            "effect": "Blessed Womb",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "Gaia's Revolt",
+            "description": "Random enemy draws a The Mother Nature blessing",
+            "rarity": "rare",
+            "effect": "The Mother Nature",
+            "target": "randomEnemy"
+          },
+          {
+            "type": "card",
+            "name": "The Dark Twin",
+            "description": "Random Opponent draws a Blessed Womb blessing",
+            "rarity": "common",
+            "effect": "Blessed Womb",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Stars Crown",
+            "rarity": "rare",
+            "description": "At the start of the battle, target gains a protective shield for 100% of their health.",
+            "effects": [
+              {
+                "type": "shield",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  1
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Crown",
+            "rarity": "common",
+            "description": "At the start of the battle, target gains a protective shield for 50% of their health.",
+            "effects": [
+              {
+                "type": "shield",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.5
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Emperor",
+      "number": 4,
+      "group": "other",
+      "keyword": "double attack",
+      "legendary": true,
+      "fates": {
+        "yellow": [
+          {
+            "type": "fate",
+            "name": "Tax Collection",
+            "description": "Draw an Enchanter Token and shuffle a Tax Returns into the fate Deck.",
+            "rarity": "rare",
+            "effect": "Tax Returns",
+            "target": "self"
+          },
+          {
+            "type": "fate",
+            "name": "Lamb to the Ram",
+            "description": "Draw an Enchanter Token and shuffle a A Minor Tribute into the fate Deck.",
+            "rarity": "common",
+            "effect": "A Minor Tribute",
+            "target": "self"
+          },
+          {
+            "type": "fate",
+            "name": "Tax Payments",
+            "description": "Random Opponent draws an Enchanter Token and shuffle a Tax Returns into the fate Deck.",
+            "rarity": "rare",
+            "effect": "Tax Returns",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "fate",
+            "name": "The Gods Share",
+            "description": "Random Opponent draws an Enchanter Token and shuffle a A Minor Tribute into the fate Deck.",
+            "rarity": "common",
+            "effect": "A Minor Tribute",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Globus Cruciger",
+            "rarity": "rare",
+            "description": "50% chance Target attacks twice. Second attack deals 75% damage from the first one",
+            "effects": [
+              {
+                "type": "doubleDamage",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.5,
+                "modifier": [
+                  0.75
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Globe",
+            "rarity": "common",
+            "description": "25% chance Target attacks twice. Second attack deals 40% damage from the first one",
+            "effects": [
+              {
+                "type": "doubleDamage",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.25,
+                "modifier": [
+                  0.4
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "card",
+            "name": "The State's Share",
+            "description": "Draw a Empirical Endowment luck",
+            "rarity": "rare",
+            "effect": "Empirical Endowment",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "What Belongs to the Emperor",
+            "description": "Draw a To The Emperor luck",
+            "rarity": "common",
+            "effect": "To The Emperor",
+            "target": "self"
+          },
+          {
+            "type": "card",
+            "name": "Enemy State",
+            "description": "Random enemy draws an Empirical Endowment luck",
+            "rarity": "rare",
+            "effect": "Empirical Endowment",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "card",
+            "name": "A traitor in the Council",
+            "description": "Random enemy draws a To The Emperor luck",
+            "rarity": "common",
+            "effect": "To The Emperor",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "Jupiters Scepter",
+            "rarity": "rare",
+            "description": "50% chance Target attacks twice. Second attack deals 30% damage from the first one and reduces target armor by 15%",
+            "effects": [
+              {
+                "type": "doubleDamage",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.5,
+                "modifier": [
+                  0.3
+                ]
+              },
+              {
+                "type": "reduceArmor",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": 1,
+                "proc": 1,
+                "modifier": [
+                  0.15
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Scepter",
+            "rarity": "common",
+            "description": "25% chance Target attacks twice. Second attack deals 30% damage from the first one and reduces target armor by 7%",
+            "effects": [
+              {
+                "type": "doubleDamage",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": 1,
+                "proc": 0.25,
+                "modifier": [
+                  0.3
+                ]
+              },
+              {
+                "type": "reduceArmor",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": 1,
+                "proc": 1,
+                "modifier": [
+                  0.07
+                ]
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "fate",
+            "name": "Massacre of the Innocents",
+            "description": "Draw an Enchanter Token and shuffle a Firstborn's Demise into the fate Deck.",
+            "rarity": "rare",
+            "effect": "Firstborn's Demise",
+            "target": "self"
+          },
+          {
+            "type": "fate",
+            "name": "The Emperor Knows",
+            "description": "Draw an Enchanter Token and shuffle a The Emperor Ears into the fate Deck.",
+            "rarity": "common",
+            "effect": "The Emperor Ears",
+            "target": "self"
+          },
+          {
+            "type": "fate",
+            "name": "Return of the Messiah",
+            "description": "Random Opponent draws an Enchanter Token and shuffle a Firstborn's Demise into the fate Deck.",
+            "rarity": "rare",
+            "effect": "Firstborn's Demise",
+            "target": "self"
+          },
+          {
+            "type": "fate",
+            "name": "State Treason",
+            "description": "Random Opponent draws an Enchanter Token and shuffle a The Emperor Ears into the fate Deck.",
+            "rarity": "common",
+            "effect": "The Emperor Ears",
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Metal Greaves",
+            "rarity": "rare",
+            "description": "50% chance Target attacks twice. Second attack deals 100% damage from the first one but damages querent for 30% of the attack",
+            "effects": [
+              {
+                "type": "doubleDamage",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.5,
+                "modifier": [
+                  1
+                ]
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": 1,
+                "proc": 1,
+                "modifier": [
+                  0.25
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Red Robes",
+            "rarity": "rare",
+            "description": "25% chance Target attacks twice. Second attack deals 100% damage from the first one but damages querent for 50% of the attack",
+            "effects": [
+              {
+                "type": "doubleDamage",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": 1,
+                "proc": 0.25,
+                "modifier": [
+                  1
+                ]
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": 1,
+                "proc": 1,
+                "modifier": [
+                  0.5
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Hierophant",
+      "number": 5,
+      "group": "other",
+      "keyword": "Protective Summons",
+      "legendary": true,
+      "fates": {
+        "yellow": [
+          {
+            "type": "summon",
+            "name": "The Hearth of God",
+            "description": "Summons Archangel Ariel",
+            "rarity": "rare",
+            "effect": "Archangel Ariel",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Divine Defenders",
+            "description": "Summons Er'el Angel",
+            "rarity": "common",
+            "effect": "Er'el Angel",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "The Hearth of God",
+            "description": "At the start of your next battle, Summons Archangel Ariel to your enemy.",
+            "rarity": "rare",
+            "effect": "Archangel Ariel",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Divine Defenders",
+            "description": "At the start of your next battle, summons Er'el Angel to your enemy.",
+            "rarity": "common",
+            "effect": "Er'el Angel",
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Keys of Heaven",
+            "rarity": "rare",
+            "description": "Summons Archangel Ariel",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Archangel Ariel"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Crossed Keys",
+            "rarity": "rare",
+            "description": "Summons Er'el Angel",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Archangel Er'el Angel"
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "summon",
+            "name": "Celestial Healer",
+            "description": "Summons Archangel Raphael",
+            "rarity": "rare",
+            "effect": "Archangel Raphael",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "God Heals",
+            "description": "Summons Cherubim Angel",
+            "rarity": "common",
+            "effect": "Cherubim Angel",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Celestial Healer",
+            "description": "At the start of your next battle, summons Archangel Raphael to your enemy.",
+            "rarity": "rare",
+            "effect": "Archangel Raphael",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "God Heals",
+            "description": "At the start of your next battle, summons Cherubim Angel to your enemy.",
+            "rarity": "common",
+            "effect": "Cherubim Angel",
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Triple Tiara",
+            "rarity": "rare",
+            "description": "Summons Archangel Raphael",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Archangel Raphael"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Papal Hat",
+            "rarity": "rare",
+            "description": "Summons Cherubim Angel",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Archangel Cherubim Angel"
+                ]
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "summon",
+            "name": "Heaven's Light",
+            "description": "Summons Archangel Uriel",
+            "rarity": "rare",
+            "effect": "Archangel Uriel",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Celestial Light",
+            "description": "Summons Seraphim Angel",
+            "rarity": "common",
+            "effect": "Seraphim Angel",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Heaven's Light",
+            "description": "At the start of your next battle, summons Archangel Uriel to your enemy.",
+            "rarity": "rare",
+            "effect": "Archangel Uriel",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Celestial Light",
+            "description": "At the start of your next battle, summons Seraphim Angel to your enemy.",
+            "rarity": "common",
+            "effect": "Seraphim Angel",
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Papal Staff",
+            "rarity": "rare",
+            "description": "Summons Archangel Uriel",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Archangel Uriel"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Pastoral Staff",
+            "rarity": "rare",
+            "description": "Summons Seraphim Angel",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Archangel Seraphim Angel"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Lovers",
+      "number": 6,
+      "group": "blue",
+      "keyword": "lifelink",
+      "legendary": true,
+      "fates": {
+        "yellow": [
+          {
+            "type": "querent",
+            "name": "Astral Connection",
+            "description": "Querent receives a Connection Aura",
+            "rarity": "rare",
+            "effect": "Connection Aura",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The First Two",
+            "description": "Querent receives a Duality Aura",
+            "rarity": "common",
+            "effect": "Duality Aura",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Eden's Demise",
+            "description": "All Players lose Saved Aura. All Opponentes receives a Saved Aura",
+            "rarity": "rare",
+            "effect": "Saved Aura",
+            "target": "allOpponents"
+          },
+          {
+            "type": "querent",
+            "name": "The Evil Brother",
+            "description": "Random opponent receives a Cain Aura",
+            "rarity": "common",
+            "effect": "Cain Aura",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Eaten Fruit",
+            "rarity": "rare",
+            "description": "20% of health lost is shared with all other players and heals you for the same amount",
+            "effects": [
+              {
+                "type": "lifeSteal",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.2
+                ]
+              },
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Fruit",
+            "rarity": "common",
+            "description": "10% of health lost is shared with all other players and heals you for the same amount",
+            "effects": [
+              {
+                "type": "lifeSteal",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              },
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "querent",
+            "name": "The Tree of Knowledge",
+            "description": "Gain a new action: Good and Evil",
+            "rarity": "rare",
+            "effect": "Good and Evil",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Disobedience",
+            "description": "Gain a new item: The Forbidden Fruit",
+            "rarity": "common",
+            "effect": "The Forbidden Fruit",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The Snake Eyes",
+            "description": "All Players lose Snake Eyes Aura. All opponents receives a Snake Eyes Aura",
+            "rarity": "rare",
+            "effect": "Snake Eyes Aura",
+            "target": "allOpponents"
+          },
+          {
+            "type": "querent",
+            "name": "The Snake Tongue",
+            "description": "Random Enemy gain a Snake Tongue Aura",
+            "rarity": "common",
+            "effect": "Snake Tongue Aura",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "Archangel Raphael",
+            "rarity": "rare",
+            "description": "20% of health lost is shared with all other players. Damages random battle enemy for the same value.",
+            "effects": [
+              {
+                "type": "lifeSteal",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.2
+                ]
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.2
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The angel",
+            "rarity": "common",
+            "description": "10% of health lost is shared with all other players and heals you for the same amount",
+            "effects": [
+              {
+                "type": "lifeSteal",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              },
+              {
+                "type": "heal",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "steal",
+            "name": "Eve's Argument",
+            "description": "You steal the a random item from a random opponent. If they have no items, you get a random low level item instead",
+            "rarity": "rare",
+            "effect": null,
+            "target": "randomOpponent"
+          },
+          {
+            "type": "steal",
+            "name": "Original Sin",
+            "description": "You steal the lowest level item from a random opponent. If they have no items, you get a random low level item instead",
+            "rarity": "common",
+            "effect": null,
+            "target": "randomOpponent"
+          },
+          {
+            "type": "steal",
+            "name": "Adam's Fall",
+            "description": "A random enemy steals a random item from you. If you have no items, random opponent gets a low level random item instead",
+            "rarity": "rare",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "steal",
+            "name": "Share the Sin",
+            "description": "A random enemy steals your lowest level item. If you have no items, random opponent gets a low level random item instead",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Tree of Knowledge",
+            "rarity": "rare",
+            "description": "40% of health lost is shared with all other players.",
+            "effects": [
+              {
+                "type": "lifeSteal",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.4
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Tree of Fire",
+            "rarity": "rare",
+            "description": "20% of health lost is shared with all other players.",
+            "effects": [
+              {
+                "type": "lifeSteal",
+                "target": "player",
+                "trigger": "onHit",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.2
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Chariot",
+      "number": 7,
+      "group": "yellow",
+      "keyword": "stun",
+      "legendary": false,
+      "fates": {
+        "yellow": [
+          {
+            "type": "querent",
+            "name": "The Kings Chariot",
+            "description": "Gain a new action: Kings Chariot",
+            "rarity": "rare",
+            "effect": "Kings Chariot",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Strong Winds",
+            "description": "Your first movement action is free",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The City Slaves",
+            "description": "Lose Move action. Gain new Action: Lucky Ball and Chains",
+            "rarity": "rare",
+            "effect": "Lucky Ball and Chains",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The Long Journey Ahead",
+            "description": "Your first movement action costs two actions",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Wand",
+            "rarity": "rare",
+            "description": "Stuns Target Opponent. Stunned targets take 30% more damage",
+            "effects": [
+              {
+                "type": "stun",
+                "target": "effectOpponent",
+                "trigger": "firstHit",
+                "duration": 1,
+                "proc": 1,
+                "modifier": []
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.3
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Crown",
+            "rarity": "common",
+            "description": "Stuns Target Opponent. Stunned targets take 15% more damage",
+            "effects": [
+              {
+                "type": "stun",
+                "target": "effectOpponent",
+                "trigger": "firstHit",
+                "duration": 1,
+                "proc": 1,
+                "modifier": []
+              },
+              {
+                "type": "extraDamage",
+                "target": "player",
+                "trigger": "mainProc",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.15
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "querent",
+            "name": "Hermes Blessing",
+            "description": "Gain a new action: Hermes Stampede",
+            "rarity": "rare",
+            "effect": "Hermes Stampede",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Hermes Boots",
+            "description": "Gain a new action: Hermes Charge",
+            "rarity": "rare",
+            "effect": "Hermes Charge",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The Broken Chariot",
+            "description": "You can't use Move Action this turn.",
+            "rarity": "rare",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The Oasis",
+            "description": "You can't use Move Action this turn. Gain one adittional action.",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "Lingam and Yoni",
+            "rarity": "rare",
+            "description": "40% chance to stun target on hit",
+            "effects": [
+              {
+                "type": "stun",
+                "target": "effectOpponent",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.4,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Winged Sun",
+            "rarity": "common",
+            "description": "20% chance to stun target on hit",
+            "effects": [
+              {
+                "type": "stun",
+                "target": "effectOpponent",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.2,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "querent",
+            "name": "The Good Jinn",
+            "description": "Gain a new item: Flying Carpet",
+            "rarity": "rare",
+            "effect": "Flying Carpet",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The Magic Bottle",
+            "description": "Gain a new item: Magic Bottle",
+            "rarity": "common",
+            "effect": "Magic Bottle",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The Sphinx Riddle",
+            "description": "Receive a Forever Lost aura",
+            "rarity": "rare",
+            "effect": "Forever Lost",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Mind Games",
+            "description": "Move two random tiles before perfoming any actions",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Lunar Shoulderpads",
+            "rarity": "rare",
+            "description": "Stuns Target Opponent. Target opponent has 30% chance to miss attack",
+            "effects": [
+              {
+                "type": "stun",
+                "target": "effectOpponent",
+                "trigger": "firstHit",
+                "duration": 1,
+                "proc": 1,
+                "modifier": []
+              },
+              {
+                "type": "miss",
+                "target": "effectOpponent",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.3,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Wand",
+            "rarity": "common",
+            "description": "Stuns Target Opponent. Target opponent has 15% chance to miss attack",
+            "effects": [
+              {
+                "type": "stun",
+                "target": "effectOpponent",
+                "trigger": "firstHit",
+                "duration": 1,
+                "proc": 1,
+                "modifier": []
+              },
+              {
+                "type": "miss",
+                "target": "effectOpponent",
+                "trigger": "onHit",
+                "duration": 1,
+                "proc": 0.15,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Strength",
+      "number": 8,
+      "group": "yellow",
+      "keyword": "bonus damage",
+      "legendary": true,
+      "fates": {
+        "yellow": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Hermit",
+      "number": 9,
+      "group": "other",
+      "keyword": "dodge",
+      "legendary": false,
+      "fates": {
+        "yellow": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wheel of Fortune",
+      "number": 10,
+      "group": "other",
+      "keyword": "dodge",
+      "legendary": false,
+      "fates": {
+        "yellow": [
+          {
+            "type": "random",
+            "name": "The Outter Circle",
+            "description": "Any Positive Rare event from the game",
+            "rarity": "rare",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "The Inner Cirlce",
+            "description": "Any Positive Common event from the game",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "Seth, God of Chaos",
+            "description": "Any Negative Rare event from the game",
+            "rarity": "rare",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "Seth's Poison",
+            "description": "Any Negative Common event from the game",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Angel",
+            "rarity": "rare",
+            "description": "Any Positive rare battle effect",
+            "effects": [
+              {
+                "type": "random",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Eagle",
+            "rarity": "common",
+            "description": "Any Positive common battle effect",
+            "effects": [
+              {
+                "type": "random",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "random",
+            "name": "The Tetragrammaton",
+            "description": "Any Positive Rare event from the game",
+            "rarity": "rare",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "The Taro, The Tora",
+            "description": "Any Positive Common event from the game",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "Anubis, God of Dead ",
+            "description": "Any Positive Rare event from the game",
+            "rarity": "rare",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "The Anubis Journey",
+            "description": "Any Positive Common event from the game",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Bull",
+            "rarity": "rare",
+            "description": "Any Positive rare battle effect",
+            "effects": [
+              {
+                "type": "random",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Lion",
+            "rarity": "common",
+            "description": "Any Positive common battle effect",
+            "effects": [
+              {
+                "type": "random",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "random",
+            "name": "The Four Elements",
+            "description": "Any Positive Rare event from the game",
+            "rarity": "rare",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "The Material World",
+            "description": "Any Positive Common event from the game",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "Horus, The Sky God",
+            "description": "Any Positive Rare event from the game",
+            "rarity": "rare",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "random",
+            "name": "Horus's Sword",
+            "description": "Any Positive Common event from the game",
+            "rarity": "common",
+            "effect": null,
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "Mercury and Sulphur",
+            "rarity": "rare",
+            "description": "Any Positive rare battle effect",
+            "effects": [
+              {
+                "type": "random",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "Water and Salt",
+            "rarity": "common",
+            "description": "Any Positive common battle effect",
+            "effects": [
+              {
+                "type": "random",
+                "target": "player",
+                "trigger": "battleStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Justice",
+      "number": 11,
+      "group": "other",
+      "keyword": "thorns",
+      "legendary": false,
+      "fates": {
+        "yellow": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Hanged Man",
+      "number": 12,
+      "group": "other",
+      "keyword": "trap",
+      "legendary": false,
+      "fates": {
+        "yellow": [
+          {
+            "type": "querent",
+            "name": "A Moment of Clarity",
+            "description": "Get an item: Honey Trap",
+            "rarity": "rare",
+            "effect": "Honey Trap",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Life in Suspension",
+            "description": "Get an item: Meat Trap",
+            "rarity": "common",
+            "effect": "Meat Trap",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "A Moment of Clarity",
+            "description": "Random opponent receives an item: Honey Trap",
+            "rarity": "rare",
+            "effect": "Honey Trap",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "querent",
+            "name": "Life in Suspension",
+            "description": "Random opponent receives an item: Meat trap",
+            "rarity": "common",
+            "effect": "Meat Trap",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "Jack Ketch Knot",
+            "rarity": "rare",
+            "description": "Attracts a Bear that assists the Target",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Bear"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Knot",
+            "rarity": "rare",
+            "description": "Attracts a Wolf that assists the Target",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Wolf"
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "querent",
+            "name": "Torches and Gunpowder",
+            "description": "Get an item: Explosion Trap",
+            "rarity": "rare",
+            "effect": "Explosion Trap",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Living Wood in Flames",
+            "description": "Get an item: Fire Trap",
+            "rarity": "rare",
+            "effect": "Fire Trap",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Torches and Gunpowder",
+            "description": "Random opponent receives an item: Explosion Trap",
+            "rarity": "rare",
+            "effect": "Explosion Trap",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "querent",
+            "name": "Living Wood in Flames",
+            "description": "Random opponent receives an item: Fire Trap",
+            "rarity": "rare",
+            "effect": "Fire Trap",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "Tau Cross",
+            "rarity": "rare",
+            "description": "Damages all opponents for 80 - 100% of your attack and leaves a damage over time of 10% of your attack for 3 turns",
+            "effects": [
+              {
+                "type": "areaDamage",
+                "target": "allOpponents",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.8,
+                  1
+                ]
+              },
+              {
+                "type": "dot",
+                "target": "allOpponents",
+                "trigger": "turnStart",
+                "duration": 3,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "Fylfot Cross",
+            "rarity": "common",
+            "description": "Damages all opponents for 40 - 60% of your attack and leaves a damage over time of 10% of your attack for 3 turns",
+            "effects": [
+              {
+                "type": "areaDamage",
+                "target": "allOpponents",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  0.4,
+                  0.6
+                ]
+              },
+              {
+                "type": "dot",
+                "target": "allOpponents",
+                "trigger": "turnStart",
+                "duration": 3,
+                "proc": 1,
+                "modifier": [
+                  0.1
+                ]
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "querent",
+            "name": "Life in Suspension",
+            "description": "Get an item: Eagle Trap",
+            "rarity": "rare",
+            "effect": "Eagle Trap",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "The Martyr",
+            "description": "Get an item: Scent Trap",
+            "rarity": "common",
+            "effect": "Scent Trap",
+            "target": "self"
+          },
+          {
+            "type": "querent",
+            "name": "Life in Suspension",
+            "description": "Random opponent receives an item: Eagle Trap",
+            "rarity": "rare",
+            "effect": "Eagle Trap",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "querent",
+            "name": "The Martyr",
+            "description": "Random opponent receives an item: Scent Trap",
+            "rarity": "common",
+            "effect": "Scent Trap",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Schackles",
+            "rarity": "rare",
+            "description": "Opponent has 50% of missing attack",
+            "effects": [
+              {
+                "type": "dodge",
+                "target": "player",
+                "trigger": "onEnemyHit",
+                "duration": null,
+                "proc": 0.5,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Ropes",
+            "rarity": "common",
+            "description": "Opponent has 25% of missing attack",
+            "effects": [
+              {
+                "type": "dodge",
+                "target": "player",
+                "trigger": "onEnemyHit",
+                "duration": null,
+                "proc": 0.25,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Death",
+      "number": 13,
+      "group": "other",
+      "keyword": "cripple",
+      "legendary": true,
+      "fates": {
+        "yellow": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Temperance",
+      "number": 14,
+      "group": "other",
+      "keyword": "???",
+      "legendary": false,
+      "fates": {
+        "yellow": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "rare",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": null,
+            "name": null,
+            "description": null,
+            "rarity": "common",
+            "effect": null,
+            "target": null
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "rare",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": null,
+            "rarity": "common",
+            "description": null,
+            "effects": [
+              {
+                "type": "???",
+                "target": "???",
+                "trigger": "???",
+                "duration": null,
+                "proc": 1,
+                "modifier": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "The Devil",
+      "number": 15,
+      "group": "other",
+      "keyword": "Aggressive Summons",
+      "legendary": true,
+      "fates": {
+        "yellow": [
+          {
+            "type": "summon",
+            "name": "The Sabbatic Goat",
+            "description": "Summons Baphomet",
+            "rarity": "rare",
+            "effect": "Baphomet",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "The Fallen Order",
+            "description": "Summons a Knight Templar",
+            "rarity": "common",
+            "effect": "Knight Templar",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "A Dark Presence",
+            "description": "Summons Baphomet to chase target",
+            "rarity": "rare",
+            "effect": "Baphomet",
+            "target": "map"
+          },
+          {
+            "type": "summon",
+            "name": "The Templar Chases",
+            "description": "Summons a Knight Templar to chase player",
+            "rarity": "common",
+            "effect": "Knight Templar",
+            "target": "self"
+          },
+          {
+            "type": "battle",
+            "name": "The Flaming Torch",
+            "rarity": "common",
+            "description": "Summons Baphomet",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Baphomet"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Ecclesiastical Sign",
+            "rarity": "common",
+            "description": "Summons Knight Templar",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Knight Templar"
+                ]
+              }
+            ]
+          }
+        ],
+        "blue": [
+          {
+            "type": "summon",
+            "name": "The Lord of the Gap",
+            "description": "Summons Belphegor",
+            "rarity": "rare",
+            "effect": "Belphegor",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Belphegor's Will",
+            "description": "Summons Belphegor Imp",
+            "rarity": "common",
+            "effect": "Belphegor Imp",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Belphegor's Prime",
+            "description": "Summons Belphegor",
+            "rarity": "rare",
+            "effect": "Belphegor",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "summon",
+            "name": "The Shadow Lurker",
+            "description": "Summons Belphegor",
+            "rarity": "common",
+            "effect": "Belphegor",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Twisted Altar",
+            "rarity": "common",
+            "description": "Summons Belphegor",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Belphegor Imp"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Shadows",
+            "rarity": "rare",
+            "description": "Summons Belphegor",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Belphegor Imp"
+                ]
+              }
+            ]
+          }
+        ],
+        "other": [
+          {
+            "type": "summon",
+            "name": "The Legion",
+            "description": "Summons Legion",
+            "rarity": "rare",
+            "effect": "Legion",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "Forces of Evil",
+            "description": "Summons Minor Legion",
+            "rarity": "common",
+            "effect": "Minor Legion",
+            "target": "self"
+          },
+          {
+            "type": "summon",
+            "name": "The Mark of the Devil",
+            "description": "Summons Legion",
+            "rarity": "rare",
+            "effect": "Legion",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "summon",
+            "name": "Tormented",
+            "description": "Summons Minor Legion",
+            "rarity": "common",
+            "effect": "Legion",
+            "target": "randomOpponent"
+          },
+          {
+            "type": "battle",
+            "name": "The Chained Man",
+            "rarity": "rare",
+            "description": "Summons Azazel",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Azazel"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "battle",
+            "name": "The Chained Woman",
+            "rarity": "common",
+            "description": "Summons Duke Vepar",
+            "effects": [
+              {
+                "type": "summon",
+                "target": "player",
+                "trigger": "turnStart",
+                "duration": null,
+                "proc": 1,
+                "modifier": [
+                  "Duke Vepar"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

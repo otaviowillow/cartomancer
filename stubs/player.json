@@ -1,0 +1,1 @@
+{"player":{"name":"player","health":100,"armor":0.2,"attack":{"base":4,"min":1,"max":4},"state":{"onHit":false,"isConfused":false,"isDead":false,"isOpponent":false}}}
