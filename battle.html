@@ -23,7 +23,7 @@
             <h2>{{trump.name}}</h2>
 
             <ul>
-              <li v-repeat="trump.fates.yellow | filterBy 'battle' in 'type'">
+              <li v-repeat="trump.fates.yellow | filterBy 'battle' in 'type'" style="display: none">
                 <p>{{name}}</p>
                 <p>{{description}}</p>
                 <p v-repeat="effects" v-on="click: assembleEffects">

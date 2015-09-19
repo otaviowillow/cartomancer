@@ -5,7 +5,7 @@
         "type": "ressurrect",
         "name": "Lazarus Aura",
         "description": "If you were to die this turn, regenerate to full health instead",
-        "target": "player",
+        "target": "self",
         "rarity": "rare",
         "trigger": "onDeath",
         "duration": null,
@@ -28,7 +28,7 @@
         "type": "immune",
         "name": "Immaculate Aura",
         "description": "Immune to one negative effect, curse or charm. 5 Turns to recharge",
-        "target": "player",
+        "target": "self",
         "trigger": "querentPhase",
         "duration": null,
         "recharge": 5,
@@ -38,7 +38,7 @@
         "type": "immune",
         "name": "Forsaken Aura",
         "description": "Immune to one negative effect, curse or charm. 5 Turns to recharge",
-        "target": "player",
+        "target": "self",
         "trigger": "querentPhase",
         "duration": null,
         "recharge": 5,
@@ -48,7 +48,7 @@
         "type": "fail",
         "name": "Amnesia Aura",
         "description": "20% fail chance when using any items or abilities",
-        "target": "player",
+        "target": "self",
         "trigger": "turnStart",
         "duration": null,
         "recharge": null,
@@ -60,7 +60,7 @@
         "type": "ressurrect",
         "name": "Downed Phoenix Aura",
         "description": "You don't lose any items upon death. You get back to life with 75% health",
-        "target": "player",
+        "target": "self",
         "trigger": "onDeath",
         "duration": null,
         "recharge": null,
@@ -84,7 +84,7 @@
         "type": "immune",
         "name": "Cleansed Aura",
         "description": "Immune to one negative effect, curse or charm.",
-        "target": "player",
+        "target": "self",
         "trigger": "querentPhase",
         "duration": null,
         "recharge": null,
@@ -94,7 +94,7 @@
         "type": "immune",
         "name": "Hatred Aura",
         "description": "At the start of your Querent's Phase, lose 2 Health for every effect, curse, blessing or charm on you.",
-        "target": "player",
+        "target": "self",
         "trigger": "querentPhase",
         "duration": null,
         "recharge": null,
@@ -106,7 +106,7 @@
         "type": "fail",
         "name": "Silence Aura",
         "description": "50% fail chance when using any items or abilities",
-        "target": "player",
+        "target": "self",
         "trigger": "turnStart",
         "duration": 3,
         "recharge": null,
@@ -176,7 +176,7 @@
         "type": "mapReveal",
         "name": "Snake Eyes Aura",
         "description": "See what the player without Snake Eyes Aura sees for 3 turns",
-        "target": "player",
+        "target": "self",
         "trigger": "turnStart",
         "duration": 3,
         "recharge": null,
@@ -186,7 +186,7 @@
         "type": "mapReveal",
         "name": "Snake Tongue Aura",
         "description": "See what the player who gave you this aura sees for 3 turns",
-        "target": "player",
+        "target": "self",
         "trigger": "turnStart",
         "duration": 3,
         "recharge": null,
@@ -196,7 +196,7 @@
         "type": "movement",
         "name": "Kings Chariot",
         "description": "Your first movement action is free",
-        "target": "player",
+        "target": "self",
         "trigger": "action",
         "duration": null,
         "recharge": 5,
@@ -206,7 +206,7 @@
         "type": "movement",
         "name": "Hermes Stampede",
         "description": "As a first action, move 4 tiles in one direction. You can't perform any additional actions.",
-        "target": "player",
+        "target": "self",
         "trigger": "action",
         "duration": null,
         "recharge": 2,
@@ -216,7 +216,7 @@
         "type": "movement",
         "name": "Hermes Charge",
         "description": "As a first action, move 4 tiles in one direction. You can't perform any additional actions.",
-        "target": "player",
+        "target": "self",
         "trigger": "action",
         "duration": null,
         "recharge": 5,
@@ -226,7 +226,7 @@
         "type": "movement",
         "name": "Lucky Ball and Chains",
         "description": "Movement action costs 2 action. Lasts for 2 turns then replace this action with Move action",
-        "target": "player",
+        "target": "self",
         "trigger": "action",
         "duration": 2,
         "recharge": null,
@@ -236,7 +236,7 @@
         "type": "movement",
         "name": "Forever Lost",
         "description": "20% chance you move to an incorrect tile",
-        "target": "player",
+        "target": "self",
         "trigger": "action",
         "duration": 5,
         "recharge": null,
@@ -258,7 +258,7 @@
         "type": "movement",
         "name": "Flying Carpet",
         "description": "Move normally through blocked tiles this turn",
-        "target": "player",
+        "target": "self",
         "trigger": "item",
         "duration": 5,
         "recharge": null,
@@ -268,7 +268,7 @@
         "type": "movement",
         "name": "Magic Bottle",
         "description": "Move normally through blocked tiles this turn",
-        "target": "player",
+        "target": "self",
         "trigger": "item",
         "duration": 1,
         "recharge": null,
@@ -442,7 +442,7 @@
         "name": "Mother's Requiem",
         "description": "If you were targeted by silence this turn, look at the top three cards of the Player's Deck. Buy two and shuffle the other one",
         "rarity": "rare",
-        "target": "player",
+        "target": "self",
         "type": "luck",
         "trigger": "playerCard",
         "duration": null,
@@ -453,7 +453,7 @@
         "name": "Gentle Whisper",
         "description": "If you were targeted by silence this turn, look at the top three cards of the Player's Deck. Buy one and shuffle the other two",
         "rarity": "common",
-        "target": "player",
+        "target": "self",
         "type": "luck",
         "trigger": "playerCard",
         "duration": null,
@@ -464,7 +464,7 @@
         "name": "The Philantropist",
         "description": "Use this card immediately. Instead of discarding cards, you now move them to a different pile. Players may choose to buy from that pile instead of the Player's Deck",
         "rarity": "rare",
-        "target": "player",
+        "target": "self",
         "type": "curse",
         "trigger": "playerCard",
         "duration": null,
@@ -475,7 +475,7 @@
         "name": "Wasteless Empire",
         "description": "You can't play any other spells this turn. Buy up to two cards from the discard pile.",
         "rarity": "rare",
-        "target": "player",
+        "target": "self",
         "type": "luck",
         "trigger": "playerCard",
         "duration": null,
@@ -486,7 +486,7 @@
         "name": "Frugal Living",
         "description": "You can't play any other spells this turn. Buy one card from the discard pile. If there are no cards at the discard pile, buy it from the Player's Deck instead",
         "rarity": "common",
-        "target": "player",
+        "target": "self",
         "type": "luck",
         "trigger": "playerCard",
         "duration": null,
@@ -497,7 +497,7 @@
         "name": "The Gemini",
         "description": "You can't play any other spells during this turn. Buy two cards.",
         "rarity": "common",
-        "target": "player",
+        "target": "self",
         "type": "luck",
         "trigger": "playerCard",
         "duration": null,
@@ -508,7 +508,7 @@
         "name": "The Mother Nature",
         "description": "You can't play any other spells during this turn. Buy one card. Place two markers on this card. Remove one marker from this card at the start of your turn. If there are no markers on this card, return it to your hand (Blessing: Instead of discarding this card, separate it)",
         "rarity": "rare",
-        "target": "player",
+        "target": "self",
         "type": "blessing",
         "trigger": "playerCard",
         "duration": null,
@@ -519,7 +519,7 @@
         "name": "Empirical Endowment",
         "description": "Redirect target opponent \"buy a card\" effect to you, then look at target opponent hand and steal a card from it.",
         "rarity": "rare",
-        "target": "player",
+        "target": "self",
         "type": "luck",
         "trigger": "playerCard",
         "duration": null,
@@ -530,7 +530,7 @@
         "name": "To the Emperor",
         "description": "Redirect target opponent \"buy a card\" effect to you.",
         "rarity": "common",
-        "target": "player",
+        "target": "self",
         "type": "luck",
         "trigger": "playerCard",
         "duration": null,
@@ -541,7 +541,7 @@
         "name": "Firstborn's Demise",
         "description": "ENCHANTER TOKEN: Look at each opponent's hand. Steal one card from one of them - NO ENCHANTER TOKEN: Show your hand to all your opponents. Enchanter steals a card from you - AFTER: Enchanter discards enchanter token. Remove The Emperor's Ear from the fate deck. Draw a new fate.",
         "rarity": "rare",
-        "target": "player",
+        "target": "self",
         "type": "fate",
         "trigger": "playerCard",
         "duration": null,
@@ -552,7 +552,7 @@
         "name": "The Emperor Ears",
         "description": "ENCHANTER TOKEN: Look at each opponent's hand - NO ENCHANTER TOKEN: Show your hand to all your opponents - AFTER: Enchanter discards enchanter token. Remove The Emperor's Ear from the fate deck. Draw a new fate.",
         "rarity": "rare",
-        "target": "player",
+        "target": "self",
         "type": "fate",
         "trigger": "playerCard",
         "duration": null,
@@ -563,7 +563,7 @@
         "name": "Tax Returns",
         "description": "ENCHANTER TOKEN: Each opponent may choose to discard two cards. Buy a card for each opponent who doesn't discard two cards - NO ENCHANTER TOKEN: Discard a card. Enchanter buys a card - AFTER: Enchanter discards enchanter token. Remove Tax Returns from the fate deck. Draw a new fate.",
         "rarity": "rare",
-        "target": "player",
+        "target": "self",
         "type": "fate",
         "trigger": "playerCard",
         "duration": null,
@@ -574,7 +574,7 @@
         "name": "A Minor Tribute",
         "description": "ENCHANTER TOKEN: Each opponent discards a card - NO ENCHANTER TOKEN: Discard a card - AFTER: Enchanter discards enchanter token. Remove A Minor Tribute from the fate deck. Draw a new fate.",
         "rarity": "common",
-        "target": "player",
+        "target": "self",
         "type": "fate",
         "trigger": "playerCard",
         "duration": null,
@@ -628,19 +628,21 @@
             "type": "battle",
             "name": "The Hound",
             "rarity": "rare",
-            "description": "30% target gets confused on hit this turn. Confused targets hits self. 50% chance to deal 30% extra damage on confusion hit",
+            "description": "30% target gets confused on hit this turn. Confused targets hits self. Deals 30% extra damage on confusion hit",
             "effects": [
               {
                 "type": "confusion",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": 1,
-                "proc": 1,
-                "modifier": []
+                "proc": 0.3,
+                "modifier": [
+                  0.5
+                ]
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": 1,
                 "proc": 1,
@@ -654,24 +656,24 @@
             "type": "battle",
             "name": "The Dog",
             "rarity": "common",
-            "description": "25% target gets confused on hit this turn. Confused targets hits self. 30% chance to deal 15% extra damage on confusion hit",
+            "description": "15% target gets confused on hit this turn. Confused targets hits self. Deals 30% extra damage on confusion hit",
             "effects": [
               {
                 "type": "confusion",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": 1,
-                "proc": 0.25,
+                "proc": 0.15,
                 "modifier": []
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": 1,
-                "proc": 0.3,
+                "proc": 1,
                 "modifier": [
-                  0.15
+                  0.3
                 ]
               }
             ]
@@ -683,7 +685,7 @@
             "description": "Draw a Con Artist Luck",
             "type": "card",
             "rarity": "rare",
-            "target": "player",
+            "target": "self",
             "effect": "The Con Artist"
           },
           {
@@ -691,7 +693,7 @@
             "description": "Draw a The Con Man Luck",
             "type": "card",
             "rarity": "common",
-            "target": "player",
+            "target": "self",
             "effect": "The Con Man"
           },
           {
@@ -714,21 +716,21 @@
             "type": "battle",
             "name": "The Monkey King Bar",
             "rarity": "rare",
-            "description": "50% target gets confused on hit this turn. Confused targets hits self. 40% chance to stun on confusion hit",
+            "description": "30% target gets confused on hit this turn. Confused targets hits self. 50% chance target stuns self on confusion hit",
             "effects": [
               {
                 "type": "confusion",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
-                "proc": 0.5,
+                "proc": 1,
                 "duration": 1,
                 "modifier": []
               },
               {
                 "type": "stun",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
-                "proc": 0.4,
+                "proc": 1,
                 "duration": 1,
                 "modifier": []
               }
@@ -738,19 +740,19 @@
             "type": "battle",
             "name": "The Staff",
             "rarity": "common",
-            "description": "25% target gets confused on hit this turn. Confused targets hits self. 20% chance to stun on confusion hit",
+            "description": "15% target gets confused on hit this turn. Confused targets hits self. 25% chance target stuns self on confusion hit",
             "effects": [
               {
                 "type": "confusion",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
-                "proc": 0.25,
+                "proc": 0.15,
                 "duration": 1,
                 "modifier": []
               },
               {
                 "type": "stun",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "proc": 0.2,
                 "duration": 1,
@@ -765,14 +767,14 @@
             "name": "Dealing with a Fool",
             "description": "Draw a A Fool and His Money Luck",
             "rarity": "rare",
-            "target": "player",
+            "target": "self",
             "effect": "A Fool and His Money"
           },
           {
             "type": "card",
             "name": "Dealing with a Fool",
             "description": "Draw a Fool's Gold Luck",
-            "target": "player",
+            "target": "self",
             "rarity": "common",
             "effect": "Fool's Gold"
           },
@@ -796,23 +798,25 @@
             "type": "battle",
             "name": "The Lotus Flower",
             "rarity": "rare",
-            "description": "50% target gets confused on hit this turn. Confused targets hits self. 20% chance to heal opponent on confusion hit",
+            "description": "30% target gets confused on hit this turn. Confused targets hits self. 20% chance to heal opponent for 10% of health on confusion hit",
             "effects": [
               {
                 "type": "confusion",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": 1,
-                "proc": 0.5,
+                "proc": 0.3,
                 "modifier": []
               },
               {
                 "type": "heal",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "mainProc",
                 "duration": 1,
                 "proc": 0.2,
-                "modifier": []
+                "modifier": [
+                  0.1
+                ]
               }
             ]
           },
@@ -820,14 +824,14 @@
             "type": "battle",
             "name": "The Flower",
             "rarity": "common",
-            "description": "25% target gets confused on hit this turn. Confused targets hits self. 10% chance to heal opponent on confusion hit",
+            "description": "15% target gets confused on hit this turn. Confused targets hits self. 10% chance to heal opponent on confusion hit",
             "effects": [
               {
                 "type": "confusion",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": 1,
-                "proc": 0.25,
+                "proc": 0.15,
                 "modifier": []
               },
               {
@@ -1063,7 +1067,7 @@
             "name": "Lazarus Secrets",
             "description": "Querent receives Lazarus Aura",
             "rarity": "rare",
-            "target": "player",
+            "target": "self",
             "effect": "Lazarus Aura"
           },
           {
@@ -1071,7 +1075,7 @@
             "name": "The Phoenix Flower",
             "description": "Querent receives Downed Phoenix Aura",
             "rarity": "common",
-            "target": "player",
+            "target": "self",
             "effect": "Downed Phoenix Aura"
           },
           {
@@ -1098,7 +1102,7 @@
             "effects": [
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 0.3,
@@ -1116,7 +1120,7 @@
             "effects": [
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 0.3,
@@ -1168,7 +1172,7 @@
             "effects": [
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -1178,7 +1182,7 @@
               },
               {
                 "type": "shield",
-                "target": "player",
+                "target": "self",
                 "trigger": "fullHealth",
                 "duration": null,
                 "proc": 1,
@@ -1196,7 +1200,7 @@
             "effects": [
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -1206,7 +1210,7 @@
               },
               {
                 "type": "shield",
-                "target": "player",
+                "target": "self",
                 "trigger": "fullHealth",
                 "duration": null,
                 "proc": 1,
@@ -1258,7 +1262,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -1276,7 +1280,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -1337,7 +1341,7 @@
             "effects": [
               {
                 "type": "shield",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -1347,7 +1351,7 @@
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "shieldUp",
                 "duration": null,
                 "proc": 1,
@@ -1365,7 +1369,7 @@
             "effects": [
               {
                 "type": "shield",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -1375,7 +1379,7 @@
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "shieldUp",
                 "duration": null,
                 "proc": 1,
@@ -1427,7 +1431,7 @@
             "effects": [
               {
                 "type": "shield",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -1437,7 +1441,7 @@
               },
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": "shieldUp",
                 "proc": 1,
@@ -1455,7 +1459,7 @@
             "effects": [
               {
                 "type": "shield",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -1465,7 +1469,7 @@
               },
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": "shieldUp",
                 "proc": 1,
@@ -1517,7 +1521,7 @@
             "effects": [
               {
                 "type": "shield",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -1535,7 +1539,7 @@
             "effects": [
               {
                 "type": "shield",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -1596,7 +1600,7 @@
             "effects": [
               {
                 "type": "doubleAttack",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": 1,
                 "proc": 0.5,
@@ -1614,7 +1618,7 @@
             "effects": [
               {
                 "type": "doubleAttack",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": 1,
                 "proc": 0.25,
@@ -1666,7 +1670,7 @@
             "effects": [
               {
                 "type": "doubleAttack",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": 1,
                 "proc": 0.5,
@@ -1676,7 +1680,7 @@
               },
               {
                 "type": "reduceArmor",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": 1,
                 "proc": 1,
@@ -1694,7 +1698,7 @@
             "effects": [
               {
                 "type": "doubleAttack",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": 1,
                 "proc": 0.25,
@@ -1704,7 +1708,7 @@
               },
               {
                 "type": "reduceArmor",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": 1,
                 "proc": 1,
@@ -1756,7 +1760,7 @@
             "effects": [
               {
                 "type": "doubleAttack",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": 1,
                 "proc": 0.5,
@@ -1766,7 +1770,7 @@
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": 1,
                 "proc": 1,
@@ -1784,7 +1788,7 @@
             "effects": [
               {
                 "type": "doubleAttack",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": 1,
                 "proc": 0.25,
@@ -1794,7 +1798,7 @@
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": 1,
                 "proc": 1,
@@ -1855,7 +1859,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -1873,7 +1877,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -1925,7 +1929,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -1943,7 +1947,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -1995,7 +1999,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -2013,7 +2017,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -2074,7 +2078,7 @@
             "effects": [
               {
                 "type": "lifeSteal",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 1,
@@ -2084,7 +2088,7 @@
               },
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": null,
                 "proc": 1,
@@ -2102,7 +2106,7 @@
             "effects": [
               {
                 "type": "lifeSteal",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 1,
@@ -2112,7 +2116,7 @@
               },
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": null,
                 "proc": 1,
@@ -2164,7 +2168,7 @@
             "effects": [
               {
                 "type": "lifeSteal",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 1,
@@ -2174,7 +2178,7 @@
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": null,
                 "proc": 1,
@@ -2192,7 +2196,7 @@
             "effects": [
               {
                 "type": "lifeSteal",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 1,
@@ -2202,7 +2206,7 @@
               },
               {
                 "type": "heal",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": null,
                 "proc": 1,
@@ -2254,7 +2258,7 @@
             "effects": [
               {
                 "type": "lifeSteal",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 1,
@@ -2272,7 +2276,7 @@
             "effects": [
               {
                 "type": "lifeSteal",
-                "target": "player",
+                "target": "self",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 1,
@@ -2341,7 +2345,7 @@
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": null,
                 "proc": 1,
@@ -2367,7 +2371,7 @@
               },
               {
                 "type": "extraDamage",
-                "target": "player",
+                "target": "self",
                 "trigger": "mainProc",
                 "duration": null,
                 "proc": 1,
@@ -2990,7 +2994,7 @@
             "effects": [
               {
                 "type": "random",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -3006,7 +3010,7 @@
             "effects": [
               {
                 "type": "random",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -3056,7 +3060,7 @@
             "effects": [
               {
                 "type": "random",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -3072,7 +3076,7 @@
             "effects": [
               {
                 "type": "random",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -3122,7 +3126,7 @@
             "effects": [
               {
                 "type": "random",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -3138,7 +3142,7 @@
             "effects": [
               {
                 "type": "random",
-                "target": "player",
+                "target": "self",
                 "trigger": "battleStart",
                 "duration": null,
                 "proc": 1,
@@ -3404,7 +3408,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -3422,7 +3426,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -3566,7 +3570,7 @@
             "effects": [
               {
                 "type": "dodge",
-                "target": "player",
+                "target": "self",
                 "trigger": "onEnemyHit",
                 "duration": null,
                 "proc": 0.5,
@@ -3582,7 +3586,7 @@
             "effects": [
               {
                 "type": "dodge",
-                "target": "player",
+                "target": "self",
                 "trigger": "onEnemyHit",
                 "duration": null,
                 "proc": 0.25,
@@ -4055,7 +4059,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -4073,7 +4077,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -4125,7 +4129,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -4143,7 +4147,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -4195,7 +4199,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,
@@ -4213,7 +4217,7 @@
             "effects": [
               {
                 "type": "summon",
-                "target": "player",
+                "target": "self",
                 "trigger": "turnStart",
                 "duration": null,
                 "proc": 1,

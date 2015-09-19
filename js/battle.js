@@ -74,34 +74,48 @@ var battle = new Vue({
       this.mainEffect = this.cardEffects[0];
       this.secondaryEffect = this.cardEffects[1];
 
-      this.effectTarget = this.monster; //TODO: Set who receives buffs
-      this.effectOpponent = this.monster; //TODO: Set who is opponent
+      this.effectTarget = this.player; //TODO: Set who receives buffs
+      
+      //Set effect opponent
+      this.effectTarget == this.player ? this.effectOpponent = this.monster : this.effectOpponent = this.player
+
       this.effectTarget.$set('mainProc', this.mainProc)
     },
 
-    handleEffect: function(target, effect) {
+    handleEffect: function(effect) {
       var self = this;
+      var target;
+
+      if(effect.target == 'self') {
+        target = this.effectTarget;
+      }
+
+      if(effect.target == 'opponent') {
+        target = this.effectOpponent;
+      }
 
       //Define damage percentage for secondary effects
       self.damageModifierPercentage = Math.round(self.latestHitDamage * self.secondaryEffect.modifier[0])
 
       procRoll = self.rollDice(0,1);
 
-      if(procRoll <= effect.proc) {
-        this.effectTarget.mainProc = true;
+      if(procRoll <= effect.proc && !target.state.isStunned) {
+        target.mainProc = true;
 
         switch(effect.type) {
           case 'confusion':
             target.state.isConfused = true;
-            console.info(target.name, 'is confused')
+            console.info(target.name, 'is confused');
+
             target.hit(target);
+
             this.battleTarget.state.onHit = false;
             break;
           case 'heal':
-            var targetHeal = target.currentHealth += Math.round(effect.modifier[0] * target.health);
-
-            targetHeal;
-            console.info('holy novaaaa oh holy novaaaa', targetHeal)
+            if(target.currentHealth < target.health) {
+              targetHeal = target.currentHealth += Math.round(effect.modifier[0] * target.health);
+              console.info(target.name, 'heals for', targetHeal);
+            }
             break;
           case 'shield':
             target.shield = Math.round(effect.modifier[0] * target.health);
@@ -111,16 +125,27 @@ var battle = new Vue({
           case 'doubleAttack':
             target.hit(self.effectOpponent, effect.modifier[0])
 
-            console.info('spinning up', this.latestHitDamage)
+            console.info(target, 'spinning up', this.latestHitDamage)
             break;
           case 'reduceArmor':
-            self.effectOpponent.armor -= effect.modifier[0];
-
             console.info('reduce armor', self.effectOpponent.armor)
+
+            self.effectOpponent.armor -= effect.modifier[0];
             break;
           case 'extraDamage':
-            console.info(self.mainEffect.type, 'triggers extra damage', self.damageModifierPercentage )
-            self.dealDamage(2, target)
+            console.info(self.mainEffect.type, 'triggers extra damage', self.damageModifierPercentage)
+
+            self.dealDamage(self.damageModifierPercentage, target)
+            break;
+          case 'stun':
+            //Change target if confused
+            // if(target.state.isConfused) {
+            //   self.effectOpponent = target;
+            // }
+
+            target.state.isStunned = true;
+
+            console.info(target.name, 'is stunned next turn')
             break;
           default:
             console.log('no effects')
@@ -195,7 +220,7 @@ var battle = new Vue({
         console.log('battle started!');
 
         if(this.mainEffect.trigger == 'battleStart') {
-          this.effectTarget.handleEffect(this.effectTarget, this.mainEffect, this.secondaryEffect);
+          this.effectTarget.handleEffect(this.mainEffect, this.secondaryEffect);
         }
       }
     },
@@ -209,11 +234,11 @@ var battle = new Vue({
         console.log('Turn Start!');
 
         if(this.mainEffect.trigger == 'turnStart') {
-          this.effectTarget.handleEffect(this.effectTarget, this.mainEffect);
+          this.effectTarget.handleEffect(this.mainEffect);
         }
 
         if(this.secondaryEffect.trigger == 'turnStart') {
-          this.effectTarget.handleEffect(this.effectTarget, this.secondaryEffect);
+          this.effectTarget.handleEffect(this.secondaryEffect);
         }
 
         this.turnStart = false;
@@ -231,13 +256,13 @@ var battle = new Vue({
         this.effectTarget.currentHealth = this.effectTarget.health;
 
         if(this.secondaryEffect.trigger == 'fullHealth') {
-          this.effectTarget.handleEffect(this.effectTarget, this.secondaryEffect);
+          this.effectTarget.handleEffect(this.secondaryEffect);
         }
       }
     },
     'effectTarget.mainProc': function (val) {
       if(val == true && this.secondaryEffect.trigger == 'mainProc') {
-        this.effectTarget.handleEffect(this.effectTarget, this.secondaryEffect);
+        this.effectTarget.handleEffect(this.secondaryEffect);
 
         this.effectTarget.mainProc = false;
       }
@@ -247,19 +272,29 @@ var battle = new Vue({
         console.log(this.battleTarget.name ,'hits');
 
         if(this.mainEffect.trigger == 'onHit' && this.effectTarget.name == this.battleTarget.name) {
-          this.effectTarget.handleEffect(this.effectTarget, this.mainEffect);
+          this.effectTarget.handleEffect(this.mainEffect);
         }
 
-        if(!this.battleTarget.state.isConfused) {
+        if(!this.battleTarget.state.isConfused && !this.battleTarget.state.isStunned) {
           this.battleTarget.hit(this.battleOpponent);
           this.battleTarget.state.onHit = false;
         }
+
+        if(this.battleTarget.state.isStunned) {
+          console.info(this.effectTarget.name, 'is stunned this turn!');
+          this.battleTarget.state.onHit = false;
+          this.battleTarget.state.isStunned = false;
+        }
+
       }
       if(val==false) {
-        //Turn ends after monsters last hit
+        //Turn ends after monster's last hit
         if(this.battleTarget.name == 'monster') {
           this.turnEnd = true;
         }
+
+        // reset any states
+        this.battleTarget.state.isConfused = false;
       }
     },
     'battleTarget.state.isDead': function (val) {
