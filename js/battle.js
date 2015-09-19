@@ -125,7 +125,7 @@ var battle = new Vue({
           case 'doubleAttack':
             target.hit(self.effectOpponent, effect.modifier[0])
 
-            console.info(target, 'spinning up', this.latestHitDamage)
+            console.info(target.name, 'spinning up', this.damageModifierPercentage)
             break;
           case 'reduceArmor':
             console.info('reduce armor', self.effectOpponent.armor)
@@ -269,7 +269,7 @@ var battle = new Vue({
           if(val == true && effect.trigger == 'mainProc') {
             self.effectTarget.handleEffect(effect);
 
-            this.effectTarget.mainProc = false;
+            self.effectTarget.mainProc = false;
           }
         })  
     },
