@@ -722,7 +722,7 @@
                 "type": "confusion",
                 "target": "self",
                 "trigger": "onHit",
-                "proc": 1,
+                "proc": 0.3,
                 "duration": 1,
                 "modifier": []
               },
@@ -730,7 +730,7 @@
                 "type": "stun",
                 "target": "self",
                 "trigger": "mainProc",
-                "proc": 1,
+                "proc": 0.5,
                 "duration": 1,
                 "modifier": []
               }
@@ -754,7 +754,7 @@
                 "type": "stun",
                 "target": "self",
                 "trigger": "mainProc",
-                "proc": 0.2,
+                "proc": 0.5,
                 "duration": 1,
                 "modifier": []
               }
@@ -839,7 +839,7 @@
                 "target": "effectOpponent",
                 "trigger": "mainProc",
                 "duration": 1,
-                "proc": 0.1,
+                "proc": 0.2,
                 "modifier": []
               }
             ]

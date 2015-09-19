@@ -95,7 +95,7 @@ var battle = new Vue({
       }
 
       //Define damage percentage for secondary effects
-      self.damageModifierPercentage = Math.round(self.latestHitDamage * self.secondaryEffect.modifier[0])
+      self.damageModifierPercentage = Math.round(self.latestHitDamage * effect.modifier[0])
 
       procRoll = self.rollDice(0,1);
 
@@ -138,11 +138,6 @@ var battle = new Vue({
             self.dealDamage(self.damageModifierPercentage, target)
             break;
           case 'stun':
-            //Change target if confused
-            // if(target.state.isConfused) {
-            //   self.effectOpponent = target;
-            // }
-
             target.state.isStunned = true;
 
             console.info(target.name, 'is stunned next turn')
@@ -231,15 +226,18 @@ var battle = new Vue({
     },
     'turnStart': function(val) {
       if(val == true) {
+        var self = this;
         console.log('Turn Start!');
 
-        if(this.mainEffect.trigger == 'turnStart') {
-          this.effectTarget.handleEffect(this.mainEffect);
-        }
+        $(this.cardEffects).each(function(i,effect) {
+          if(effect.trigger == 'turnStart') {
+            self.effectTarget.handleEffect(effect);
+          }
+        })
 
-        if(this.secondaryEffect.trigger == 'turnStart') {
-          this.effectTarget.handleEffect(this.secondaryEffect);
-        }
+        // if(this.secondaryEffect.trigger == 'turnStart') {
+        //   this.effectTarget.handleEffect(this.secondaryEffect);
+        // }
 
         this.turnStart = false;
       }
@@ -252,28 +250,39 @@ var battle = new Vue({
       }
     },
     'effectTarget.currentHealth': function(val) {
+      var self = this;
+
       if(val > this.effectTarget.health) {
         this.effectTarget.currentHealth = this.effectTarget.health;
 
-        if(this.secondaryEffect.trigger == 'fullHealth') {
-          this.effectTarget.handleEffect(this.secondaryEffect);
-        }
+        $(this.cardEffects).each(function(i,effect) {
+          if(effect.trigger == 'fullHealth') {
+            self.effectTarget.handleEffect(effect);
+          }
+        })
       }
     },
     'effectTarget.mainProc': function (val) {
-      if(val == true && this.secondaryEffect.trigger == 'mainProc') {
-        this.effectTarget.handleEffect(this.secondaryEffect);
+        var self = this;
 
-        this.effectTarget.mainProc = false;
-      }
+        $(this.cardEffects).each(function(i,effect) {
+          if(val == true && effect.trigger == 'mainProc') {
+            self.effectTarget.handleEffect(effect);
+
+            this.effectTarget.mainProc = false;
+          }
+        })  
     },
     'battleTarget.state.onHit': function (val) {
       if(val == true) {
+        var self = this;
         console.log(this.battleTarget.name ,'hits');
 
-        if(this.mainEffect.trigger == 'onHit' && this.effectTarget.name == this.battleTarget.name) {
-          this.effectTarget.handleEffect(this.mainEffect);
-        }
+        $(this.cardEffects).each(function(i,effect) {
+          if(effect.trigger == 'onHit' && self.effectTarget.name == self.battleTarget.name) {
+            self.effectTarget.handleEffect(effect);
+          }
+        })
 
         if(!this.battleTarget.state.isConfused && !this.battleTarget.state.isStunned) {
           this.battleTarget.hit(this.battleOpponent);
