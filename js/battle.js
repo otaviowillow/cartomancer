@@ -6,6 +6,13 @@ var battle = new Vue({
   el: '#battle',
   data: {
     trumps: [],
+    effects: [],
+
+    players: [],
+    player: {},
+
+    summons: [],
+    summon: {},
 
     battleTarget: {},
     latestHitDamage: 0,
@@ -36,12 +43,16 @@ var battle = new Vue({
       var self = this;
       var jsonCards = 'stubs/trumps.json';
       var jsonMonster = 'stubs/monster.json';
-      var jsonPlayer = 'stubs/player.json';
+      var jsonPlayers = 'stubs/players.json';
+      var jsonSummons = 'stubs/summons.json';
 
       $.getJSON(jsonCards, function(response){
         for (var trump of response.trumps) {
           self.trumps.push(trump);
         }
+      });
+      $.getJSON(jsonCards, function(response){
+        self.effects = response.effects;
       });
       $.getJSON(jsonMonster, function(response){
         self.$set('monster', response.monster);
@@ -50,12 +61,25 @@ var battle = new Vue({
         self.monster.$set('hit', self.hit);
         self.monster.$set('handleEffect', self.handleEffect);
       });
-      $.getJSON(jsonPlayer, function(response){
-        self.$set('player', response.player);
-        self.player.$set('currentHealth', response.player.health);
-        self.player.$set('shield', self.shield);
-        self.player.$set('hit', self.hit);
-        self.player.$set('handleEffect', self.handleEffect);
+      $.getJSON(jsonPlayers, function(response){
+        for (var player of response) {
+          player.$set('currentHealth', player.health);
+          player.$set('shield', self.shield);
+          player.$set('hit', self.hit);
+          player.$set('handleEffect', self.handleEffect);
+
+          self.players.push(player);
+        }
+      });
+      $.getJSON(jsonSummons, function(response) {
+        for (var summon of response) {
+          summon.$set('currentHealth', summon.health);
+          summon.$set('shield', self.shield);
+          summon.$set('hit', self.hit);
+          summon.$set('handleEffect', self.handleEffect);
+
+          self.summons.push(summon);
+        }
       });
     },
 
@@ -74,8 +98,9 @@ var battle = new Vue({
       this.mainEffect = this.cardEffects[0];
       this.secondaryEffect = this.cardEffects[1];
 
+      this.player = this.players.splice(0,1)[0]; //TODO: Set who player is
       this.effectTarget = this.player; //TODO: Set who receives buffs
-      
+
       //Set effect opponent
       this.effectTarget == this.player ? this.effectOpponent = this.monster : this.effectOpponent = this.player
 
@@ -87,11 +112,15 @@ var battle = new Vue({
       var target;
 
       if(effect.target == 'self') {
-        target = this.effectTarget;
+        target = self.effectTarget;
       }
 
       if(effect.target == 'opponent') {
-        target = this.effectOpponent;
+        target = self.effectOpponent;
+      }
+
+      if(effect.target == 'otherPlayers') {
+        target = self.effectTarget;
       }
 
       //Define damage percentage for secondary effects
@@ -105,15 +134,17 @@ var battle = new Vue({
         switch(effect.type) {
           case 'confusion':
             target.state.isConfused = true;
-            console.info(target.name, 'is confused');
 
             target.hit(target);
 
             this.battleTarget.state.onHit = false;
+
+            console.info(target.name, 'is confused');
             break;
           case 'heal':
             if(target.currentHealth < target.health) {
               targetHeal = target.currentHealth += Math.round(effect.modifier[0] * target.health);
+
               console.info(target.name, 'heals for', targetHeal);
             }
             break;
@@ -127,10 +158,10 @@ var battle = new Vue({
 
             console.info(target.name, 'spinning up', this.damageModifierPercentage)
             break;
-          case 'reduceArmor':
-            console.info('reduce armor', self.effectOpponent.armor)
-
+          case 'reduceArmor':            
             self.effectOpponent.armor -= effect.modifier[0];
+
+            console.info('reduce armor', self.effectOpponent.armor)
             break;
           case 'extraDamage':
             console.info(self.mainEffect.type, 'triggers extra damage', self.damageModifierPercentage)
@@ -142,11 +173,48 @@ var battle = new Vue({
 
             console.info(target.name, 'is stunned next turn')
             break;
+          case 'miss':
+            target.state.hasMissChance = true;
+
+            console.info(target.name, 'misses next hit!')
+            break;
+          case 'summon':
+            var self = this;
+            var summonName = effect.modifier[0];
+
+            $(self.summons).each(function(i, s) {
+              if(s.name === summonName && !s.isSummoned) {
+                s.isSummoned = true;
+                target.summons.push(s);
+
+                console.info(s.name, 'is summoned!')
+              }
+            })
+
+            break;
+          case 'lifeLink':
+            $(self.players).each(function(i, p) {
+              console.log(p.name, 'is hit for', self.latestHitDamage)
+            })
+            break;
           default:
             console.log('no effects')
         }
       }
       
+    },
+
+    handleSummon: function(target, opponent) {
+      var self = this;
+
+      if(opponent.summons.length > 0) {
+        $(self.battleOpponent.summons).each(function(i, summon) {
+          if(summon.isTank && !summon.state.isDead) {
+            self.battleOpponent = summon;
+            console.info(summon.name, 'tanks the damage')
+          }
+        })
+      }
     },
 
     battle: function() {
@@ -161,19 +229,40 @@ var battle = new Vue({
       }
 
       //Player
-      setTimeout(function(){
+      setTimeout(function() {
         self.battleTarget = self.player;
         self.battleOpponent = self.monster;
+
+        self.handleSummon(self.battleTarget, self.battleOpponent);
 
         if(!self.battleTarget.state.isDead) {
           self.player.state.onHit = true;
         }
       })
 
+      //Summon
+      setTimeout(function() {
+        self.battleTarget = self.effectTarget;
+        self.battleOpponent = self.effectOpponent;
+
+        if(self.battleTarget.summons.length > 0) {
+          $(self.battleTarget.summons).each(function(i, summon) {
+            if(summon.isDPS && !summon.state.isDead) {
+              self.battleTarget = summon;
+
+              summon.state.onHit = true;
+              console.info(summon.name, 'deals damage!')
+            }
+          })
+        }
+      }, 250)
+
       //Monster
-      setTimeout(function(){
+      setTimeout(function() {
         self.battleTarget = self.monster;
         self.battleOpponent = self.player;
+
+        self.handleSummon(self.battleTarget, self.battleOpponent);
 
         if(!self.battleTarget.state.isDead && !self.player.state.onHit) {
           self.monster.state.onHit = true;
@@ -235,10 +324,6 @@ var battle = new Vue({
           }
         })
 
-        // if(this.secondaryEffect.trigger == 'turnStart') {
-        //   this.effectTarget.handleEffect(this.secondaryEffect);
-        // }
-
         this.turnStart = false;
       }
     },
@@ -247,6 +332,17 @@ var battle = new Vue({
         console.log('Turn End!');
 
         this.turnEnd = false;
+      }
+    },
+    'firstHit': function(val, oldVal) {
+      var self = this;
+
+      if(val == false) {
+        $(this.cardEffects).each(function(i,effect) {
+          if(effect.trigger == 'firstHit') {
+            self.effectTarget.handleEffect(effect);
+          }
+        })
       }
     },
     'effectTarget.currentHealth': function(val) {
@@ -266,6 +362,7 @@ var battle = new Vue({
         var self = this;
 
         $(this.cardEffects).each(function(i,effect) {
+          console.log('proc')
           if(val == true && effect.trigger == 'mainProc') {
             self.effectTarget.handleEffect(effect);
 
@@ -274,8 +371,8 @@ var battle = new Vue({
         })  
     },
     'battleTarget.state.onHit': function (val) {
+      var self = this;
       if(val == true) {
-        var self = this;
         console.log(this.battleTarget.name ,'hits');
 
         $(this.cardEffects).each(function(i,effect) {
@@ -284,17 +381,22 @@ var battle = new Vue({
           }
         })
 
-        if(!this.battleTarget.state.isConfused && !this.battleTarget.state.isStunned) {
+        if(!this.battleTarget.state.isConfused && !this.battleTarget.state.isStunned && !this.battleTarget.state.hasMissChance) {
           this.battleTarget.hit(this.battleOpponent);
           this.battleTarget.state.onHit = false;
         }
 
         if(this.battleTarget.state.isStunned) {
-          console.info(this.effectTarget.name, 'is stunned this turn!');
+          console.info(this.battleTarget.name, 'is stunned this turn!');
           this.battleTarget.state.onHit = false;
           this.battleTarget.state.isStunned = false;
         }
 
+        if(this.battleTarget.state.hasMissChance) {
+          console.info(this.battleTarget.name, 'misses!');
+          this.battleTarget.state.onHit = false;
+          this.battleTarget.state.hasMissChance = false;
+        }
       }
       if(val==false) {
         //Turn ends after monster's last hit

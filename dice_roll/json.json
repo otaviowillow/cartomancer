@@ -1,0 +1,209 @@
+{
+  "trumps" : {
+    "The Fool" :     {
+      "name" : "The Fool",
+      "number" : 0,
+      "commonPositive" : "",
+      "rarePositive" : "",
+      "negativeCommon" : "",
+      "rareNegative" : ""
+    },
+    "The Magician" :     {
+      "name" : "The Magician",
+      "number" : 1,
+      "commonPositive" : "",
+      "rarePositive" : "",
+      "negativeCommon" : "",
+      "rareNegative" : ""
+    },
+    "The High Priestess" :     {
+      "name" : "The High Priestess",
+      "number" : 2,
+      "commonPositive" : "Cleanses and heals up some health. If full health, gives a small shield",
+      "rarePositive" : "Peace of Mind (passive x5CD): Resting also cleanses Curses",
+      "negativeCommon" : "Silence: Can't use Attack Boosts or Specials this turn",
+      "rareNegative" : "Something (passive): Healing Effects heals for 50% less"
+    },
+    "The Empress" :     {
+      "name" : "The Empress",
+      "number" : 3,
+      "commonPositive" : "",
+      "rarePositive" : "",
+      "negativeCommon" : "",
+      "rareNegative" : ""
+    },
+    "The Emperor" :     {
+      "name" : "The Emperor",
+      "number" : 4,
+      "commonPositive" : "",
+      "rarePositive" : "",
+      "negativeCommon" : "",
+      "rareNegative" : ""
+    },
+    "The Hierophant" :     {
+      "name" : "The Hierophant",
+      "number" : 5,
+      "commonPositive" : "Summons a random protective minion",
+      "rarePositive" : "Talisman (active x3CD): Summons a random protective minion",
+      "negativeCommon" : "Summons a random protective minion to your next target",
+      "rareNegative" : "Chance to summon a random protective minion to opponnent on attack"
+    },
+    "The Lovers" :     {
+      "name" : "The Lovers",
+      "number" : 6,
+      "commonPositive" : "Scanner (Active, x1): See the positions of enemies on the map",
+      "rarePositive" : "You share a part of damage you suffer with your opponents",
+      "negativeCommon" : "Your opponents can see your position in the map",
+      "rareNegative" : "Weakest opponent gains Linked (active, 3AP): Teleports next to who gave you this"
+    },
+    "The Chariot" :     {
+      "name" : "The Chariot",
+      "number" : 7,
+      "commonPositive" : "You can move anywhere within 3 tiles this turn. You cant use move as an action.",
+      "rarePositive" : "Something (active x3CD): You have one free movement this turn",
+      "negativeCommon" : "Slow: Moving costs 2AP",
+      "rareNegative" : "Stun: You can't use move this turn"
+    },
+    "Strength" :     {
+      "name" : "Strength",
+      "number" : 8,
+      "commonPositive" : "Your next boosted attack against players has knockback",
+      "rarePositive" : "Lion's Aura (passive): Your attacks do additional damage",
+      "negativeCommon" : "Your next b. attacks have no effects except damage",
+      "rareNegative" : "Cowardy Lion's Aura (passive): Your attacks do less damage"
+    },
+    "The Hermit" :     {
+      "name" : "The Hermit",
+      "number" : 9,
+      "commonPositive" : "Somthing (Active, X1): Everything within 5 tiles is pushed away",
+      "rarePositive" : "Staff (passive x5CD): When hit, teleports the attacker away",
+      "negativeCommon" : "",
+      "rareNegative" : "Take damage whenever an opponent is in view"
+    },
+    "Wheel of Fortune" :     {
+      "name" : "Wheel of Fortune",
+      "number" : 10,
+      "commonPositive" : "Random Positive Common Fate",
+      "rarePositive" : "Random Positive Rare Fate",
+      "negativeCommon" : "Random Negative Common Fate",
+      "rareNegative" : "Random Negative Rare Fate"
+    },
+    "Justice" :     {
+      "name" : "Justice",
+      "number" : 11,
+      "commonPositive" : "",
+      "rarePositive" : "",
+      "negativeCommon" : "",
+      "rareNegative" : ""
+    },
+    "The Hanged Man" :     {
+      "name" : "The Hanged Man",
+      "number" : 12,
+      "commonPositive" : "You get a Common Trap",
+      "rarePositive" : "Get a Rare Trap",
+      "negativeCommon" : "Step on a Common Trap next movement",
+      "rareNegative" : "Step on a Common Trap next movement"
+    },
+    "Death" :     {
+      "name" : "Death",
+      "number" : 13,
+      "commonPositive" : "Your next boosted attack against players will Cripple them",
+      "rarePositive" : "Phoenix (passive x1): Instead of dying, ressurrect with 50% health",
+      "negativeCommon" : "Cripple: You only have two AP this turn",
+      "rareNegative" : "Summons a Dark Spirit (On contact with players, kills them and despawns)"
+    },
+    "Temperance" :     {
+      "name" : "Temperance",
+      "number" : 14,
+      "commonPositive" : "",
+      "rarePositive" : "",
+      "negativeCommon" : "",
+      "rareNegative" : ""
+    },
+    "The Devil" :     {
+      "name" : "The Devil",
+      "number" : 15,
+      "commonPositive" : "Summons a random aggressive minion",
+      "rarePositive" : "Talisman (active x3CD): Summons a random aggressive minion",
+      "negativeCommon" : "Summons a random aggressive minion to your next target",
+      "rareNegative" : "Chance to summon a random aggressive minion to opponnent on attack"
+    },
+    "The Tower" :     {
+      "name" : "The Tower",
+      "number" : 16,
+      "commonPositive" : "Top of the Tower (active, x3): Reveals a 5x5 portion of the map this turn",
+      "rarePositive" : "Defensor (passive): Increased damage resistance",
+      "negativeCommon" : "Move in only one direction this turn",
+      "rareNegative" : "Take increased damage"
+    },
+    "The Star" :     {
+      "name" : "The Star",
+      "number" : 17,
+      "commonPositive" : "",
+      "rarePositive" : "",
+      "negativeCommon" : "",
+      "rareNegative" : ""
+    },
+    "The Moon" :     {
+      "name" : "The Moon",
+      "number" : 18,
+      "commonPositive" : "Invisible Potion (active x1): Stealth during this turn",
+      "rarePositive" : "Invisible Ring (active x5CD): Stealth until hit ",
+      "negativeCommon" : "Decreases visibility during this turn",
+      "rareNegative" : "Blindness (passive x5CD): Your attacks have X chance of missing"
+    },
+    "The Sun" :     {
+      "name" : "The Sun",
+      "number" : 19,
+      "commonPositive" : "Sun Help (active, x1): + visibility during this turn. Reveals stealth and traps",
+      "rarePositive" : "Ward (active x1): Permanently reveals a 5x5 portion of the map",
+      "negativeCommon" : "Burn: Take 5 damage per movement this turn",
+      "rareNegative" : "Sun Burst: Gives reasonable damage and applies Burn on target this turn"
+    },
+    "The World" :     {
+      "name" : "The World",
+      "number" : 20,
+      "commonPositive" : "Get a Common Item",
+      "rarePositive" : "Get a Special Item",
+      "negativeCommon" : "Weakest Opponent gets a Common Item",
+      "rareNegative" : "Weakest Opponent gets a Special Item"
+    },
+    "Jugdment" :     {
+      "name" : "Jugdment",
+      "number" : 21,
+      "commonPositive" : "",
+      "rarePositive" : "",
+      "negativeCommon" : "",
+      "rareNegative" : ""
+    }
+  },
+  "traps" : {
+    "Freeze Trap" :     {
+      "" : "Freeze Trap",
+      "" : "Common",
+      "" : "Movement Costs 2AP this Turn"
+    },
+    "Fire Trap" :     {
+      "" : "Fire Trap",
+      "" : "Common",
+      "" : "Take 10 Damage"
+    },
+    "" :     {
+      "" : "",
+      "" : "",
+      "" : ""
+    },
+    "Macumba Trap" :     {
+      "" : "Macumba Trap",
+      "" : "Rare",
+      "" : "You can only use movement this turn"
+    }
+  },
+  "summons" : {
+    "Tank" :     {
+      "" : "Tank",
+      "" : "Defensive",
+      "" : "Will tank one hit"
+    }
+  }
+}

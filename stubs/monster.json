@@ -1,1 +1,1 @@
-{"monster":{"name":"monster","health":30,"armor":0.2,"attack":{"base":3,"min":1,"max":4},"state":{"onHit":false,"isConfused":false,"isStunned":false,"isDead":false,"isOpponent":false}}}
+{"monster":{"name":"monster","health":30,"summons": [],"armor":0.2,"attack":{"base":3,"min":1,"max":4},"state":{"onHit":false,"isConfused":false,"isStunned":false,"hasMissChance":false,"isDead":false,"isOpponent":false}}}

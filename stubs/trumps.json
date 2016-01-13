@@ -369,6 +369,28 @@
         "modifier": [
           20
         ]
+      },
+      {
+        "name": "Archangel Uriel",
+        "isTank": false,
+        "isDPS": true,
+        "isSupport": false,
+        "isSummoned": false,
+        "health": 100,
+        "currentHealth": 100,
+        "shield": 0,
+        "armor": 0.2,
+        "attack": {
+          "base": 3,
+          "min": 1,
+          "max": 4
+        },
+        "state": {
+          "onHit": false,
+          "isConfused": false,
+          "isDead": false,
+          "isOpponent": false
+        }
       }
     ],
     "card": [
@@ -836,12 +858,12 @@
               },
               {
                 "type": "heal",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "mainProc",
                 "duration": 1,
                 "proc": 1,
                 "modifier": [
-                  0.1 
+                  0.1
                 ]
               }
             ]
@@ -2024,7 +2046,7 @@
                 "duration": null,
                 "proc": 1,
                 "modifier": [
-                  "Archangel Seraphim Angel"
+                  "Seraphim Angel"
                 ]
               }
             ]
@@ -2076,11 +2098,11 @@
             "type": "battle",
             "name": "The Eaten Fruit",
             "rarity": "rare",
-            "description": "20% of health lost is shared with all other players and heals you for the same amount",
+            "description": "20% of health lost is shared with all other players and heals target for the same amount",
             "effects": [
               {
-                "type": "lifeSteal",
-                "target": "self",
+                "type": "lifeLink",
+                "target": "otherPlayers",
                 "trigger": "onHit",
                 "duration": null,
                 "proc": 1,
@@ -2107,7 +2129,7 @@
             "description": "10% of health lost is shared with all other players and heals you for the same amount",
             "effects": [
               {
-                "type": "lifeSteal",
+                "type": "lifeLink",
                 "target": "self",
                 "trigger": "onHit",
                 "duration": null,
@@ -2169,7 +2191,7 @@
             "description": "20% of health lost is shared with all other players. Damages random battle enemy for the same value.",
             "effects": [
               {
-                "type": "lifeSteal",
+                "type": "lifeLink",
                 "target": "self",
                 "trigger": "onHit",
                 "duration": null,
@@ -2197,7 +2219,7 @@
             "description": "10% of health lost is shared with all other players and heals you for the same amount",
             "effects": [
               {
-                "type": "lifeSteal",
+                "type": "lifeLink",
                 "target": "self",
                 "trigger": "onHit",
                 "duration": null,
@@ -2259,7 +2281,7 @@
             "description": "40% of health lost is shared with all other players.",
             "effects": [
               {
-                "type": "lifeSteal",
+                "type": "lifeLink",
                 "target": "self",
                 "trigger": "onHit",
                 "duration": null,
@@ -2277,7 +2299,7 @@
             "description": "20% of health lost is shared with all other players.",
             "effects": [
               {
-                "type": "lifeSteal",
+                "type": "lifeLink",
                 "target": "self",
                 "trigger": "onHit",
                 "duration": null,
@@ -2335,24 +2357,26 @@
             "type": "battle",
             "name": "The Wand",
             "rarity": "rare",
-            "description": "Stuns Target Opponent. Stunned targets take 30% more damage",
+            "description": "Stuns Target Opponent. Reduces Target Opponent armor by 50%",
             "effects": [
               {
-                "type": "stun",
-                "target": "effectOpponent",
+                "type": "reduceArmor",
+                "target": "opponent",
                 "trigger": "firstHit",
                 "duration": 1,
                 "proc": 1,
-                "modifier": []
+                "modifier": [
+                  0.5
+                ]
               },
               {
-                "type": "extraDamage",
-                "target": "self",
-                "trigger": "mainProc",
-                "duration": null,
+                "type": "reduceArmor",
+                "target": "opponent",
+                "trigger": "firstHit",
+                "duration": 1,
                 "proc": 1,
                 "modifier": [
-                  0.3
+                  0.5
                 ]
               }
             ]
@@ -2361,11 +2385,11 @@
             "type": "battle",
             "name": "The Crown",
             "rarity": "common",
-            "description": "Stuns Target Opponent. Stunned targets take 15% more damage",
+            "description": "Stuns Target Opponent. Reduces Target Opponent armor by 25%",
             "effects": [
               {
                 "type": "stun",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "firstHit",
                 "duration": 1,
                 "proc": 1,
@@ -2378,7 +2402,7 @@
                 "duration": null,
                 "proc": 1,
                 "modifier": [
-                  0.15
+                  0.25
                 ]
               }
             ]
@@ -2425,7 +2449,7 @@
             "effects": [
               {
                 "type": "stun",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "onHit",
                 "duration": 1,
                 "proc": 0.4,
@@ -2441,7 +2465,7 @@
             "effects": [
               {
                 "type": "stun",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "onHit",
                 "duration": 1,
                 "proc": 0.2,
@@ -2491,7 +2515,7 @@
             "effects": [
               {
                 "type": "stun",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "firstHit",
                 "duration": 1,
                 "proc": 1,
@@ -2499,7 +2523,7 @@
               },
               {
                 "type": "miss",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "onHit",
                 "duration": 1,
                 "proc": 0.3,
@@ -2515,7 +2539,7 @@
             "effects": [
               {
                 "type": "stun",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "firstHit",
                 "duration": 1,
                 "proc": 1,
@@ -2523,10 +2547,10 @@
               },
               {
                 "type": "miss",
-                "target": "effectOpponent",
+                "target": "opponent",
                 "trigger": "onHit",
                 "duration": 1,
-                "proc": 0.15,
+                "proc": 1,
                 "modifier": []
               }
             ]
