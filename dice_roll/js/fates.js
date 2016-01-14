@@ -14,7 +14,7 @@ var vm = new Vue({
   methods: {
     fetchData: function() {
       var self = this;
-      var jsonCards = 'https://api.myjson.com/bins/2phr9';
+      var jsonCards = 'https://api.myjson.com/bins/4epjd';
 
       $.getJSON(jsonCards, function(response) {
         for (var trump of response.trumps) {

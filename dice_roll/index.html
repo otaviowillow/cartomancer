@@ -18,19 +18,21 @@
 
 <body>
 
-  <div id="fate" class="common {{ description }}" @click="handleFate">
-    <ul>
-      <li v-for="fate in fates">
-        {{ fate.name }}
-      </li>
-    </ul>
+  <div class="outer">
+    <div id="fate" class="common {{ description }}" @click="handleFate">
+      <h2>{{ mainFate.name }}</h2>
+      <p>{{ mainFate[description] }}</p>
+    </div>
 
-    <h1>{{ mainFate.name }}</h1>
-    <p>{{ mainFate[description] }}</p>
+    <div id="item" @click="randomItem">
+      <h2>{{ loot.name }}</h2>
+      <p>{{ loot.description }}</p>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.14/vue.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/fates.js"></script>
+  <script src="js/items.js"></script>
 </body>
 </html>
