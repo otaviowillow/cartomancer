@@ -1,0 +1,70 @@
+[
+  {
+    "name": "player 1",
+    "health": 100,
+    "armor": 0.2,
+    "summons": [],
+    "attack": {
+      "base": 3,
+      "min": 1,
+      "max": 4
+    },
+    "state": {
+      "onHit": false,
+      "isConfused": false,
+      "isDead": false,
+      "isOpponent": false
+    }
+  },
+  {
+    "name": "player 2",
+    "health": 100,
+    "armor": 0.2,
+    "summons": [],
+    "attack": {
+      "base": 3,
+      "min": 1,
+      "max": 4
+    },
+    "state": {
+      "onHit": false,
+      "isConfused": false,
+      "isDead": false,
+      "isOpponent": false
+    }
+  },
+  {
+    "name": "player 3",
+    "health": 100,
+    "armor": 0.2,
+    "summons": [],
+    "attack": {
+      "base": 3,
+      "min": 1,
+      "max": 4
+    },
+    "state": {
+      "onHit": false,
+      "isConfused": false,
+      "isDead": false,
+      "isOpponent": false
+    }
+  },
+  {
+    "name": "player 4",
+    "health": 100,
+    "armor": 0.2,
+    "summons": [],
+    "attack": {
+      "base": 3,
+      "min": 1,
+      "max": 4
+    },
+    "state": {
+      "onHit": false,
+      "isConfused": false,
+      "isDead": false,
+      "isOpponent": false
+    }
+  }
+]

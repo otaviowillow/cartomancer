@@ -1,0 +1,24 @@
+.cards-view,
+.combat-view {
+	float: left;
+}
+.cards-view {
+	width: 30%;
+}
+.combat-view {
+	width: 50%;
+}
+
+.player {
+  padding: 20px;
+  border: 1px solid black;
+}
+.player h1,
+.player h2,
+.player h3 {
+  display: inline-block;
+  padding: 0 20px;
+}
+.player h1 {
+  padding: 0 20px 0 0;
+}

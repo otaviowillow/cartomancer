@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Cartomancer</title>
+  <link rel="stylesheet" href="cartomancer/style.css">
+  <meta name="description" content="Let's play">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="style.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <script id="trump-template" type="x-template">
+    <li v-class="show: cardIsOpen" v-on="click: toggleCard">
+      <img src="img/{{ number }}.jpg" />
+      <article>
+        <header>
+          <h2 v-on="click: toggleCard">{{ name }}</h2>
+          <h3>{{ keyword }}</h3>
+        </header>
+
+        <table class="positive">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-repeat="goodFate">
+                <td v-repeat="fate" v-on="click: selectFate">
+                    <p>{{ description }}</p>
+                </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <table class="negative">
+          <thead>
+            <tr>
+              <th><span class="icon-rare"></span></th>
+              <th><span class="icon-common"></span></th>
+              <th><span class="icon-attack"></span></th>
+              <th><span class="icon-attack"></span></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr v-repeat="badFate">
+              <td v-repeat="fate" v-on="click: selectFate">
+                  <p>{{ description }}</p>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </article>
+    </li>
+  </script>
+
+  <script id="effect-template" type="x-template">
+    <li>
+      <p>{{name}}</p>
+      <p>{{description}}</p>
+    </li>
+  </script>
+
+  <div id="trumps">
+    <ul class="concatenated-effects">
+      <effect v-repeat="effects | filterBy selectedEffect" selected="{{selectedEffect}}" v-show="selectedEffect"></effect>
+    </ul>
+
+    <ol class="tarot-cards">
+      <trump 
+          v-repeat="trumps" 
+          active-effect="{{@ selectedEffect}}" 
+          v-transition
+          stagger="100">
+      </trump>
+    </ol>    
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/fates.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

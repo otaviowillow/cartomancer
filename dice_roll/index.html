@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class="outer">
+    <div id="fate" class="common {{ description }}" @click="handleFate">
+      <h2>{{ mainFate.name }}</h2>
+      <p>{{ mainFate[description] | replaceX }}</p>
+      <em v-show="hasEffect" v-for="fateEffect in fateEffects | filterBy effect in 'name'">{{ fateEffect.description }}</em>
+    </div>
+
+    <div id="item" @click="randomItem">
+      <h2>{{ loot.name }}</h2>
+      <p>{{ loot.description }}</p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.14/vue.js"></script>
+  <script src="js/fates.js"></script>
+  <script src="js/items.js"></script>
+</body>
+</html>

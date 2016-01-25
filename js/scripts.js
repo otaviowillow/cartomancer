@@ -3,9 +3,9 @@ $('.tarot-cards li').each(function(index){
 
   /* open tarot card */
   $(this).on('click', function() {
-    $('body').css('overflow', 'hidden');
-    $('li').removeClass('show');
-    $(this).addClass('show');
+      $('body').css('overflow', 'hidden');
+      $('li').removeClass('show');
+      $(this).addClass('show');
   })
 
   /* close tarot card */
