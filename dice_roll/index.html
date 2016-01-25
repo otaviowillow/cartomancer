@@ -25,9 +25,16 @@
       <em v-show="hasEffect" v-for="fateEffect in fateEffects | filterBy effect in 'name'">{{ fateEffect.description }}</em>
     </div>
 
-    <div id="item" @click="randomItem">
-      <h2>{{ loot.name }}</h2>
-      <p>{{ loot.description }}</p>
+    <div class="effects">
+      <div id="item" @click="randomCommonItem">
+        <h2>{{ loot.name }}</h2>
+        <p>{{ loot.description }}</p>
+      </div>
+
+      <div @click="randomSummon">
+        <h2>{{ summon.name }}</h2>
+        <p>{{ summon.description }}</p>
+      </div>
     </div>
   </div>
 
