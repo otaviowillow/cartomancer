@@ -22,18 +22,23 @@
     <div id="fate" class="common {{ description }}" @click="handleFate">
       <h2>{{ mainFate.name }}</h2>
       <p>{{ mainFate[description] | replaceX }}</p>
-      <em v-show="hasEffect" v-for="fateEffect in fateEffects | filterBy effect in 'name'">{{ fateEffect.description }}</em>
+      <em v-show="hasEffect" v-for="fateEffect in fateEffects | filterBy effect in 'name'">{{ fateEffect.description}}</em>
     </div>
 
-    <div class="effects">
-      <div id="item" @click="randomCommonItem">
+    <div id="effects" class="effects">
+      <div @click="randomCommonItem">
         <h2>{{ loot.name }}</h2>
         <p>{{ loot.description }}</p>
       </div>
 
-      <div @click="randomSummon">
+      <div @click="randomSummon" class="{{ summon.type }}">
         <h2>{{ summon.name }}</h2>
         <p>{{ summon.description }}</p>
+      </div>
+
+      <div @click="randomTrap" class="{{ trap.rarity }}">
+        <h2>{{ trap.name }}</h2>
+        <p>{{ trap.description }}</p>
       </div>
     </div>
   </div>

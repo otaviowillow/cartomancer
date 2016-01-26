@@ -1,7 +1,7 @@
 var colorCombo = '';
 
 Vue.filter('replaceX', function (value) {
-  return value.replace('X ' || ' X ', this.colorCombo + ' ')
+  return value.replace('X ', this.colorCombo + ' ')
 })
 
 var vm = new Vue({
@@ -25,7 +25,7 @@ var vm = new Vue({
   methods: {
     fetchData: function() {
       var self = this;
-      var jsonCards = 'https://api.myjson.com/bins/3saaj';
+      var jsonCards = 'https://api.myjson.com/bins/5497z';
 
       $.getJSON(jsonCards, function(response) {
         for (var arcana of response.arcanas) {
@@ -36,8 +36,8 @@ var vm = new Vue({
           self.fateEffects.push(trap);
         }
 
-        for (var item of response.items) {
-          self.fateEffects.push(item);
+        for (var effect of response.effects) {
+          self.fateEffects.push(effect);
         }
 
         for (var summon of response.summons) {
@@ -80,22 +80,22 @@ var vm = new Vue({
       if(karma == 0) {
         self.description = 'rareNegative';
         self.colorCode = 'rn';
-        self.effectRarity = 'rareNegativeItem';
+        self.effectRarity = 'rareNegativeEffect';
       }
       if(karma == 1) {
         self.description = 'commonNegative';
         self.colorCode = 'cn';
-        self.effectRarity = 'commonNegativeItem';
+        self.effectRarity = 'commonNegativeEffect';
       }
       if(karma == 2) {
         self.description = 'commonPositive';
         self.colorCode = 'cp';
-        self.effectRarity = 'commonPositiveItem';
+        self.effectRarity = 'commonPositiveEffect';
       }
       if(karma == 3) {
         self.description = 'rarePositive';
         self.colorCode = 'rp';
-        self.effectRarity = 'rarePositiveItem';
+        self.effectRarity = 'rarePositiveEffect';
       }
     },
 
@@ -136,8 +136,6 @@ var vm = new Vue({
       } else {
         self.hasEffect = false;
       }
-
-      console.log(self.effect)
     },
 
     handleFate: function() {

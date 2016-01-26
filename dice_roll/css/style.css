@@ -16,12 +16,11 @@ body {
   height: 100%;
 }
 #fate,
-.effects,
-#item {
+.effects {
   background: #f1f1f1;
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   flex-flow: column;
   cursor: pointer;
@@ -34,42 +33,61 @@ body {
 }
 #fate {
   background: #f9f9f9;
-  flex: 2;
+  flex: 3;
 }
 .effects {
   display: flex;
   flex-flow: row;
-  border: 1px solid blue;
 }
 .effects div {
+  display: flex;
+  flex-flow: column;
   flex: 1;
-  width: 100%;
-  border: 1px solid red;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+}
+.effects div:last-child {
+  border: none;
+}
+.effects div p {
+  font-size: 1.5em;
+}
+h2, p, em {
+  padding: 0 10%;
+  text-align: center;
 }
 h2 {
   font-size: 1.5em;
   font-weight: 400;
+  text-align: center;
 }
 p {
   font-size: 2em;
   font-weight: 700;
-  text-align: center;
-  padding: 0 10%;
-}
-#fate.rarePositive,
-#fate.rareNegative {
-  background: #4527A0;
 }
 #fate.commonPositive,
-#fate.commonNegative {
+#fate.commonNegative,
+.common {
   background: #81D4FA;
 }
-
 #fate.rarePositive,
-#fate.commonPositive {
-  color: #4CAF50;
+#fate.rareNegative,
+.rare {
+  background: #4527A0;
 }
+
+.aggressive {
+  background: #B71C1C;
+}
+.protective {
+  background: #4CAF50;
+}
+
 #fate.rareNegative, 
 #fate.commonNegative {
   color: #B71C1C;
+}
+#fate.rarePositive,
+#fate.commonPositive {
+  color: #4CAF50;
 }
